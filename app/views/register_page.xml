@@ -1,8 +1,75 @@
 <!-- registration page -->
 <Alloy>
-	<Window >
-	<View class="container">
-		<Label>register</Label>
-	</View>
+	<Window class="container" id="window2" >
+		<View class="to_center_child">
+	<ScrollView class="scroll_view">
+		
+				<View class="label_container">
+					<Label id="neolabel" class="gautum">NeoSTORE</Label>
+				</View>
+					
+		       <View class="small_container-1" id="first" top="2%">
+		       	    <Label text="\uf007" class="icon_in_text font-icon"></Label>
+		       	    <TextField class="input" hintText="First Name" id="first_name"></TextField>
+		       </View>	
+		       
+		        <View class="small_container-1" id="second">
+		        	<Label text="\uf007" class="icon_in_text font-icon"></Label>
+		       	    <TextField class="input" hintText="Last Name" id="last_name"></TextField>
+		        </View>
+		        
+		        
+				<View class="small_container-1" id="fifth">
+		         	<Label text="\uf0e0" class="icon_in_text font-icon"></Label>
+		       	    <TextField class="input" hintText="Email" id="email"></TextField>
+		         </View>
+		         		        
+		         <View class="small_container-1" id="third">
+		         	<Label text="\uf023 " class="icon_in_text font-icon"></Label>
+		       	    <TextField class="input" hintText="Password" id="password" passwordMask="true"></TextField>
+		         </View>
+		         
+		         <View class="small_container-1" id="fourth">
+		         	<Label text="\uf13e" class="icon_in_text font-icon"></Label>
+		       	    <TextField class="input" hintText="Confirm Password" id="re_password" passwordMask="true"></TextField>
+		         </View>
+		         
+ 				<View class="radio_container" id="seventh">
+ 					<!-- <view class="tocenetr"> -->
+ 					<View class="tocenetr">
+		         	<Label class="gender" left="2%">Gender</Label>
+		         	 <View onClick="toggle" class="gender-radio" left="15">
+		         	 	<Label text="\uf1db" class="font-icon icon_in_text" id="male" onClick="toggle" left="20%"></Label>
+		         	 	<Label class="labels">Male</Label>
+		         	 </View>
+		         	 
+		         	 <View onClick="toggle" class="gender-radio">
+		         	 	<Label text="\uf1db" class="font-icon icon_in_text" id="female" onClick="toggle"></Label>
+		         	 	<Label class="labels">Female</Label>
+		         	 </View>
+		         	 </View>
+		         </View>		         
+		         
+		         
+		         <View class="small_container-1" id="sixth" top="0">
+		         	<Label text="\uf098 " class="icon_in_text font-icon"></Label>
+		       	    <TextField class="input" hintText="Phone Number" id="phone_number"></TextField>
+		         </View>
+		         
+		        	
+		         		      		         
+		         <View class="radio_container" id="thirtheen">
+		         	 <View onClick="termselect">
+		         	 	<Label text="\uf096" class="font-icon icon_in_text" id="terms"></Label>
+		         	 	<Label color="white" left="15%">I agree the Terms & Conditions</Label>
+		         	 </View>
+		         	
+		         </View>
+		         <View class="radio_container">	         	
+		         <Button id="register" onClick="validate"></Button>	
+		         </View>
+		         </ScrollView>
+		         </View>
+			
 	</Window>
 </Alloy>

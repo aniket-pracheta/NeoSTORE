@@ -1,4 +1,140 @@
 
-".container" : {
-  
+".container" : {	
+	backgroundImage:'images/neobackgound.jpg',
+ 
+},
+".to_center_child":{
+	layout:"composite",
+	
+	
+	
 }
+//##############################################################
+"#neolabel": {
+	color: '#ffffff',
+	//text:"neosoft",
+	textAlign:"center",
+	font: {
+		
+		fontSize: "45dp",
+		fontWeight:'bold',
+	}
+},
+".label_container":{
+	borderColor:'blue',
+	width:Titanium.UI.FILL,
+	height:"50dp",
+	left:"10%",
+	right:"10%",
+	top:"10%",
+},
+".scroll_view":{
+	layout:"vertical",
+	//height:"50dp",
+	//left:"10%",
+	//right:"10%",		
+}
+
+".small_container-1":{
+	top:"40px",
+	left:"10%",
+	right:"10%",
+	height:"120px",
+	width:"880px",
+	borderColor:"white",
+	borderWidth:"2dp",
+	//center:"true",
+	//layout: "horizontal"
+	//backgroundColor:"yellow"
+},
+".radio_container":{
+	top:0,
+	left:"10%",
+	right:"10%",
+	height:"186px",
+	width:"880px",
+	//borderColor:"white",
+	layout: "horizontal"
+},
+".input":{
+	width:Titanium.UI.FILL,
+	left:"14%",
+	color:"#ffffff",
+	backgroundColor : 'transparent',
+	focusable :"true",
+    font: {
+		fontSize: "18dpi",
+		fontWeight:'medium',
+	},
+	hintTextColor:"#ffffff"
+},
+
+".icon_in_text":{
+
+    color:"white",
+	left:"5%",
+	
+	font: {
+		fontSize: "20dpi",
+		fontWeight:'bold',
+	},
+	
+},
+
+
+".gender-radio": {
+	width: "33%",
+	height:"100%",
+	layout: "horizontal",
+	
+	font: {
+		color:"white",
+		//fontSize: "45dp",
+		fontWeight:'bold',
+	},
+	//borderColor:"green"
+},
+
+".labels":{	
+	font : {
+
+   fontSize : "19sp",    
+    },
+	color:"white",
+
+	top:0
+},
+".gender":{
+font : {
+
+   fontSize : "20dpi",    
+    },
+    textAlign:"center",
+    top:"0",
+   left:"5" ,
+   width:"25%",	
+   color:"white"
+},
+
+".tocenetr":{
+	top:"24%",
+	height:"40%",
+	width:Titanium.UI.FILL,
+    //borderColor:"black",
+    layout:"horizontal"
+}
+
+"#register":{
+	color:"RED",
+	width:"70%",
+    left:"16%",
+    title:"REGISTER",
+    backgroundColor:"white",
+    borderRadius:5
+
+}
+
+"#terms":{
+	left:"5%",
+	},
+

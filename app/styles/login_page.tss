@@ -17,7 +17,7 @@
 		fontSize: "45dp",
 		fontWeight:'bold',
 	}
-}
+},
 ".label_container":{
 	//borderColor:'blue',
 	width:Titanium.UI.FILL,
@@ -29,8 +29,8 @@
 ".small_container-1":{
 	borderColor:'#ffffff',
 	borderWidth:"2dp",
-	width:Titanium.UI.FILL,
-	height:"42dp",
+	width:"880px",
+	height:"120px",
 	left:"20%",
 	right:"20%",
 	top:"148px",
