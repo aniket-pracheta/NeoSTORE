@@ -1,0 +1,22 @@
+".container": {
+	//backgroundColor:"white",
+	
+}
+".big_view":{
+	backgroundImage:'images/neobackgound.jpg',
+	height:Titanium.UI.FILL,
+	width:Titanium.UI.FILL,	
+}
+"Label": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000"
+}
+
+"#neolabel": {
+	color: '#ffffff',
+	font: {
+		fontSize: "45dp",
+		fontWeight:'bold',
+	}
+}

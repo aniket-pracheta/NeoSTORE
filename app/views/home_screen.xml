@@ -1,0 +1,10 @@
+
+								<!-- home screen -->
+
+<Alloy>
+	<Window>
+	<View class="container">
+		<Label onClick="products">home scree</Label>
+	</View>
+	</Window>
+</Alloy>

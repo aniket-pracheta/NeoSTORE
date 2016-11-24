@@ -1,0 +1,121 @@
+
+".container" : {	
+	backgroundImage:'images/neobackgound.jpg', 
+},
+".big_view_container":{
+	//backgroundColor:"black",
+	borderWidth:"1%",
+    layout:"vertical",
+	width:Titanium.UI.FILL,
+	height:Titanium.UI.FILL,
+	bottom:15,
+},
+"#neolabel": {
+	color: '#ffffff',
+	//text:"neosoft",
+	font: {
+		fontSize: "45dp",
+		fontWeight:'bold',
+	}
+}
+".label_container":{
+	//borderColor:'blue',
+	width:Titanium.UI.FILL,
+	height:"50dp",
+	left:"100px",
+	right:"100px",
+	top:"20%",
+},
+".small_container-1":{
+	borderColor:'#ffffff',
+	borderWidth:"2dp",
+	width:Titanium.UI.FILL,
+	height:"42dp",
+	left:"20%",
+	right:"20%",
+	top:"148px",
+},
+
+".icon_custom":{
+   color:"white",
+	left:"5%",
+	//top:"31%",
+	font: {
+		fontSize: "20dpi",
+		fontWeight:'bold',
+	},
+},
+".input":{
+	width:Titanium.UI.FILL,
+	left:"12%",
+	//top: "1px",
+	//height:"80dp",
+	color:"#ffffff",
+	backgroundColor : 'transparent',
+	focusable :"true",
+    font: {
+		fontSize: "18dpi",
+		fontWeight:'medium',
+	},
+	hintTextColor:"#ffffff"
+},
+
+"#login":{
+	color:"#E91C1A",
+	width:"100%",
+    //left:"16%",
+    textAlign:"center",
+    title:"LOGIN",
+    font: {
+		fontSize: "26dp",
+		fontWeight:'medium',
+	},
+    backgroundColor:"white",
+    borderRadius:10,
+
+},
+".container_forget":{
+	//borderColor:'#ffffff',
+	//borderWidth:"2dp",
+	width:Titanium.UI.FILL,
+	height:"20dp",
+	left:"20%",
+	right:"20%",
+	top:"65px",	
+},
+".foget_label":{
+	color:"#ffffff",
+	font: {
+		fontSize: "18dp",
+		fontWeight:'medium',
+	},
+},
+".container_Account":{
+	//borderColor:"white",
+	width:Titanium.UI.FILL,
+	height:"46dp",
+	left:"10%",
+	right:"10%",
+	top:"20%"
+},
+".account":{
+	color:"#ffffff",
+	left:0,
+	font: {
+		fontSize: "18dp",
+		fontWeight:'medium',
+	},
+		
+},
+".plus":{
+	color:"#ffffff",
+	right:0,
+	//borderColor:'#ffffff',
+	height:"46dp",
+	width:"46dp",
+	textAlign:"center",
+	font: {
+		fontSize: "24dp",
+		//fontWeight:'medium',
+	},
+}

@@ -1,0 +1,10 @@
+								
+								<!-- product list -->
+
+<Alloy>
+	<Window>
+	<View class="container">
+		<Label>product in a list</Label>
+	</View>
+	</Window>
+</Alloy>

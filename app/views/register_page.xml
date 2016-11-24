@@ -1,0 +1,8 @@
+<!-- registration page -->
+<Alloy>
+	<Window >
+	<View class="container">
+		<Label>register</Label>
+	</View>
+	</Window>
+</Alloy>

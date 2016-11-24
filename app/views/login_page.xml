@@ -1,0 +1,32 @@
+<Alloy>
+	<Window class="container">	
+		
+			<ScrollView class="big_view_container">
+		    	
+			<View class="label_container">
+				<Label id="neolabel" class="gautum">NeoSTORE</Label>
+			</View>
+			<View class="small_container-1" id="first">
+		       	    <Label text="\uf007" class="icon_custom font-icon"></Label>
+		       	    <TextField class="input gautum" hintText="Username" id="first_name"></TextField>
+		    </View>
+		    
+		    <View class="small_container-1"top="40px">
+		         	<Label text="\uf023" class="icon_custom font-icon"></Label>
+		       	    <TextField class="input gautum" hintText="Password" id="password" passwordMask="true"></TextField>
+		    </View>
+		    <View class="small_container-1" top="100px" borderColor="transparent">
+		    	   <Button id="login" class="gautum"></Button> 
+		    </View>		    
+		    <View class="container_forget">
+		       	    <Label class="gautum foget_label">Forgot Password?</Label>		       	    
+		    </View>
+		    
+		     <View class="container_Account">
+		       	    <Label class="gautum account">DONT HAVE ACCOUNT?</Label>
+		       	    <Label text="\uf067" class="font-icon plus" onClick="register"></Label>		       	    
+		    </View>
+		    
+	</ScrollView>
+	</Window>
+</Alloy>

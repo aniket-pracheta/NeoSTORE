@@ -1,0 +1,7 @@
+<Alloy>
+	<Window class="container">
+		<View class="big_view">
+		<Label id="neolabel" onClick="doClick">NeoSTORE</Label>
+		</View>
+	</Window>
+</Alloy>
