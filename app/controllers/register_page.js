@@ -414,25 +414,43 @@ function validate() {
 			gender:"M",
 			phone_no:$.phone_number.value,
 		};
-		
 		Ti.API.log(formdata);
-		var xhr = Ti.Network.createHTTPClient({
-			onload:function(e) {
-				 Ti.API.info(e.message);
-			  alert(e.message);
-			  Ti.API.info(e.user_msg);
+		
+	function sucesss(data_recieved){
+			 Ti.API.info(data_recieved.message);
+			  alert(data_recieved.message);
+			  Ti.API.info(data_recieved.user_msg);
 			  alert("sucess");
-			},
-			onerror:function(e){
-		 Ti.API.info(JSON.parse(this.responseText));
-		var err=(JSON.parse(this.responseText));
-        alert("fail");
-        alert(err.message);
-			}
-			});
-		xhr.open('POST',"http://staging.php-dev.in:8844/trainingapp/api/users/register");
-	xhr.send(formdata);
-	Ti.API.log("done");
+	}
+		// var xhr = Ti.Network.createHTTPClient({
+			// onload:function(e) {
+				 // Ti.API.info(e.message);
+			  // alert(e.message);
+			  // Ti.API.info(e.user_msg);
+			  // alert("sucess");
+			// },
+	function failure(data_recieved){
+		Ti.API.info(data_recieved.message);
+			  alert(data_recieved.message);
+			  Ti.API.info(data_recieved.user_msg);
+			  alert("error");
+	}		
+			// onerror:function(e){
+		 // Ti.API.info(JSON.parse(this.responseText));
+		// var err=(JSON.parse(this.responseText));
+        // alert("fail");
+        // alert(err.message);
+			// }
+			// });
+		// xhr.open('POST',"http://staging.php-dev.in:8844/trainingapp/api/users/register");
+	// xhr.send(formdata);
+	// Ti.API.log("done");
+	var option={
+				method:"POST",
+				send_url:"http://staging.php-dev.in:8844/trainingapp/api/users/register",
+				data:formdata
+				};
+	Alloy.Globals.someGlobalFunction(option,sucesss,failure);
 }
 }
 $.window2.open();
