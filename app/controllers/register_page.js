@@ -359,12 +359,7 @@ function validate() {
 	$.sixth.backgroundColor = "none";
 	$.seventh.backgroundColor = "none";
 	$.eight.backgroundColor = "none";
-	$.cont.backgroundColor = "none";
-	$.nine.backgroundColor = "none";
-	$.ten.backgroundColor = "none";
-	$.eleven.backgroundColor = "none";
-	$.twelth.backgroundColor = "none";
-	$.thirtheen.backgroundColor = "none";
+
 	if ($.first_name.value == "") {
 		flag[i] = 1;
 		Ti.API.info("first");
@@ -403,55 +398,41 @@ function validate() {
 		alert("Select gender");
 		$.seventh.backgroundColor = "orange";
 		//$.seventh.focus();
-	} else if (($.dob.text == " Date Of Birth")) {
-		flag[i++] = 1;
-		alert("Select date of birth");
-		$.eight.backgroundColor = "orange";
-		//$.eight.focus();
-	} else if (($.country.text == "Country")) {
-		flag[i++] = 1;
-		alert("Select country");
-		$.cont.backgroundColor = "orange";
-		//$.country.focus();
-	} else if (($.state.text == "State")) {
-		flag[i++] = 1;
-		alert("Select state");
-		$.nine.backgroundColor = "orange";
-		//$.state.focus();
-	} else if (($.city.text == "City")) {
-		flag[i++] = 1;
-		alert("Select city");
-		$.ten.backgroundColor = "orange";
-		//$.city.focus();
-	} else if (!($.zipcode.value.match(/^\d{6}$/))) {
-		flag[i++] = 1;
-		alert("Enter zipcode in numbers");
-		$.eleven.backgroundColor = "orange";
-		$.zipcode.focus();
-	} else if ($.address.value == "") {
-		flag[i++] = 1;
-		alert("Eneter address");
-		$.twelth.backgroundColor = "orange";
-		$.address.focus();
-	} else if (!($.terms.text == "\uf14a")) {
+	}  else if (!($.terms.text == "\uf14a")) {
 		flag[i++] = 1;
 		alert("Select terms and condition");
-		$.thirtheen.backgroundColor = "orange";
+		//$.eight.backgroundColor = "orange";
 		//$.terms.focus();
 	} else if (flag.length == 0) {
-		var endview = Titanium.UI.createView({
-			backgroundColor : '#283747',
-			width : Ti.UI.FILL,
-			height : Ti.UI.FILL,
-		});
-
-		var endtext = Titanium.UI.createLabel({
-			text : "Successfully Registered...!"
-		});
-		endview.add(endtext);
-		$.window2.add(endview);
-	}
-
+		
+		var formdata={
+			first_name:$.first_name.value,
+			last_name:$.last_name.value,
+			email:$.email.value,
+			password:$.password.value,
+			confirm_password:$.re_password.value,
+			gender:"M",
+			phone_no:$.phone_number.value,
+		};
+		
+		Ti.API.log(formdata);
+		var xhr = Ti.Network.createHTTPClient({
+			onload:function(e) {
+				 Ti.API.info(e.message);
+			  alert(e.message);
+			  Ti.API.info(e.user_msg);
+			  alert("sucess");
+			},
+			onerror:function(e){
+		 Ti.API.info(JSON.parse(this.responseText));
+		var err=(JSON.parse(this.responseText));
+        alert("fail");
+        alert(err.message);
+			}
+			});
+		xhr.open('POST',"http://staging.php-dev.in:8844/trainingapp/api/users/register");
+	xhr.send(formdata);
+	Ti.API.log("done");
 }
-
+}
 $.window2.open();

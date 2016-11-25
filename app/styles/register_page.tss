@@ -21,7 +21,7 @@
 	}
 },
 ".label_container":{
-	borderColor:'blue',
+	//borderColor:'blue',
 	width:Titanium.UI.FILL,
 	height:"50dp",
 	left:"10%",
@@ -37,8 +37,8 @@
 
 ".small_container-1":{
 	top:"40px",
-	left:"10%",
-	right:"10%",
+//	left:"10%",
+//	right:"10%",
 	height:"120px",
 	width:"880px",
 	borderColor:"white",
@@ -49,8 +49,8 @@
 },
 ".radio_container":{
 	top:0,
-	left:"10%",
-	right:"10%",
+//	left:"10%",
+//	right:"10%",
 	height:"186px",
 	width:"880px",
 	//borderColor:"white",
@@ -106,8 +106,8 @@
 },
 ".gender":{
 font : {
-
-   fontSize : "20dpi",    
+  // fontWeight:'bold',
+   fontSize : "20dp",    
     },
     textAlign:"center",
     top:"0",
@@ -122,7 +122,7 @@ font : {
 	width:Titanium.UI.FILL,
     //borderColor:"black",
     layout:"horizontal"
-}
+},
 
 "#register":{
 	color:"RED",
@@ -132,9 +132,18 @@ font : {
     backgroundColor:"white",
     borderRadius:5
 
-}
+},
 
 "#terms":{
-	left:"5%",
+	//left:"10%",
 	},
+	".terms_condition":{
+			top:"24%",
+	height:"40%",
+	width:Titanium.UI.FILL,
+   // borderColor:"black",
+    layout:"horizontal"	,
+    focusable:"true"
+    	
+	}
 
