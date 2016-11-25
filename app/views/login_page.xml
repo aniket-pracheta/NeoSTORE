@@ -12,13 +12,13 @@
 		       	    <TextField class="input gautum" hintText="Username" id="first_name"></TextField>
 		    </View>
 		    
-		    <View class="small_container-1"top="40px">
+		    <View class="small_container-1" top="40px" id="second">
 		         	<Label text="\uf023" class="icon_custom font-icon"></Label>
 		       	    <TextField class="input gautum" hintText="Password" id="password" passwordMask="true"></TextField>
 		    </View>
 		   
 		    <View class="small_container-1" top="100px" borderColor="transparent">
-		    	   <Button id="login" class="gautum"></Button> 
+		    	   <Button id="login" class="gautum" onClick="goto_homepage"></Button> 
 		    </View>		    
 		    
 		    <View class="container_forget">
