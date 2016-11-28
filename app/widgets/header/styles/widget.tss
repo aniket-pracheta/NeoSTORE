@@ -1,0 +1,29 @@
+"#widget":{
+	top:"2%",
+	height:"40dp",
+	layout:"horizontal",
+	backgroundColor:"#d61314"
+},
+"#BACK":{
+	color:"#FFFFFF",
+	top:"30%",,
+	left:"40px",
+}
+"#page_name":{
+	color:"#FFFFFF",
+	top:"30%",
+	left:"29%",
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	font: {
+		fontWeight:'bold',
+	},
+},
+"#search":{
+	//right:0,
+	color:"#FFFFFF",
+	top:"30%",
+	left:"31%",
+	font: {
+		fontWeight:'bold',
+	},
+}

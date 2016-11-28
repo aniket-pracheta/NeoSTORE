@@ -3,18 +3,31 @@
 
 <Alloy>
 	<Window class="window_container" id="home_screen">
+		<Widget src="header" id="home_screen_header"></Widget>
 		  <ScrollView class="big_view">
 		  		<ScrollableView class="slide_images" id="scrolling_images">  	
 		  </ScrollableView>
 		<View class="big_product">	
-			<View class="small_products"></View>
-			<View class="small_products"></View>
+			<View class="small_products" onClick="createProductList">
+				<Label class="gautum table">Tables</Label>
+				<Label text="\ue902" class="product_icon sofa product_size"></Label>
+			</View>
+			<View class="small_products">
+				<Label class="gautum sofa">Sofas</Label>
+				<Label text="\ue901" class="product_icon table product_size"></Label>
+			</View>
 			</View>
 		<View class="big_product">	
-			<View class="small_products" top="10px"></View>
-			<View class="small_products" top="10px"></View>
+			<View class="small_products" top="10px">
+				<Label class="gautum chair">Chairs</Label>
+				<Label text="\ue900" class="product_icon cupboard product_size"></Label>
+			</View>
+			<View class="small_products" top="10px">
+				<Label class="gautum cupboard ">Cupboards</Label>
+				<Label text="\ue903" class="product_icon chair product_size"></Label>
+			</View>
 			</View>	
-		</ScrollView>>
+		</ScrollView>
 	<View class="container">
 		<!-- <Label onClick="products">home scree</Label> -->
 	</View>

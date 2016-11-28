@@ -55,3 +55,19 @@ overrode the settings with other TSS, XML, or JS settings:
    },
 },
 
+".product_icon[platform=ios]":{
+	color:"white",
+	font : {
+      fontFamily :"icomoon",
+       //fontSize : "20sp",
+   },
+},
+
+".product_icon[platform=android]":{
+	font : {
+      fontFamily : "icomoon",
+      // fontSize : "20sp",
+   },
+},
+
+
