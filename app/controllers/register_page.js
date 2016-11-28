@@ -4,15 +4,20 @@ var args = $.args;
 
 function toggle(e) {
 	//Ti.API.info(JSON.stringify(e));
+	$.gender_value.text="";
 	if (e.source.text == "Male" || e.source.id == "male") {
-		//Ti.API.info("In Male");
+		Ti.API.info("In Male");
+		$.gender_value.text="M";
 		$.male.text = "\uf111";
+		Ti.API.info($.gender_value.text);
 		//Fill
 		$.female.text = "\uf1db";
 		//Unfill
 	} else {
-		//Ti.API.info("In Female");
+		Ti.API.info("In Female");
 		$.male.text = "\uf1db";
+		$.gender_value.text="F";
+		Ti.API.info($.gender_value.text);
 		//Unfill
 		$.female.text = "\uf111";
 		//Fill
@@ -411,7 +416,7 @@ function validate() {
 			email:$.email.value,
 			password:$.password.value,
 			confirm_password:$.re_password.value,
-			gender:"M",
+			gender:$.gender_value.text,
 			phone_no:$.phone_number.value,
 		};
 		Ti.API.log(formdata);

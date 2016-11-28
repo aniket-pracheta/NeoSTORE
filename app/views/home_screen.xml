@@ -2,9 +2,21 @@
 								<!-- home screen -->
 
 <Alloy>
-	<Window>
+	<Window class="window_container" id="home_screen">
+		  <ScrollView class="big_view">
+		  		<ScrollableView class="slide_images" id="scrolling_images">  	
+		  </ScrollableView>
+		<View class="big_product">	
+			<View class="small_products"></View>
+			<View class="small_products"></View>
+			</View>
+		<View class="big_product">	
+			<View class="small_products" top="10px"></View>
+			<View class="small_products" top="10px"></View>
+			</View>	
+		</ScrollView>>
 	<View class="container">
-		<Label onClick="products">home scree</Label>
+		<!-- <Label onClick="products">home scree</Label> -->
 	</View>
 	</Window>
 </Alloy>

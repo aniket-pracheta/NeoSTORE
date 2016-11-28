@@ -36,6 +36,7 @@
 		         
  				<View class="radio_container" id="seventh">
  					<!-- <view class="tocenetr"> -->
+ 					<Label id="gender_value" visible="false"></Label>
  					<View class="tocenetr">
 		         	<Label class="gender gautum" left="2%">Gender</Label>
 		         	 <View onClick="toggle" class="gender-radio" left="15">

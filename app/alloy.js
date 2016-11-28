@@ -14,6 +14,10 @@ Alloy.Globals.someGlobalFunction = function(options, sucesscall,failurecall) {
 		},
 	});
 	xhr.open(options.method,options.send_url);
+	if (options.access_token) {
+		//Ti.API.info("header present");
+		xhr.setRequestHeader('access_token',options.access_token);
+	};
 	xhr.send(options.data);
 };
 

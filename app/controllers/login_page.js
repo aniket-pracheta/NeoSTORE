@@ -37,7 +37,7 @@ function goto_homepage(){
 			  alert("sucess");
 			  if(data_recieved.user_msg=="Logged In successfully")
 			  { 
-			  	var win=Alloy.createController('home_screen').getView();
+			  	var win=Alloy.createController('home_screen',data_recieved).getView();
 						win.open();
 			  	}
 	}
@@ -55,7 +55,7 @@ function goto_homepage(){
 				data:formdata
 				};
 	Alloy.Globals.someGlobalFunction(option,sucesss,failure);
-} 	
+	} 	
 }
 
 function register () {
