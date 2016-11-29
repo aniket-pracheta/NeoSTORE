@@ -1,10 +1,42 @@
-								
-								<!-- product list -->
-
+<!-- product list -->
 <Alloy>
-	<Window>
-	<View class="container">
-		<Label>product in a list</Label>
-	</View>
+	<Window class="container" id="product_list_window">
+		<Widget src="header" id="product_list_header"></Widget>
+		<ListView id="listview2" >
+			<Templates>
+				<ItemTemplate name="first" class="templates">
+					<View class="list_view">						
+						<ImageView bindId="image" id="image" ></ImageView>
+						<View class="right_view">
+								<Label bindId="label" id="label1"  class="gautum" text="aniketsdfjgdsjkfgdksgf"  />
+								<Label bindId="label2" id="label2" class="gautum" text="samll text"/>
+							<View class="cost_star">
+								<Label bindId="cost"  id="cost" class="gautum" text="Rs.600000"/>
+								<Label bindId="stars" id="stars" class="font-icon" text="\uf005\uf005\uf005\uf005\uf005 "/>
+							</View>
+						</View>
+					</View>
+				</ItemTemplate>
+			</Templates>
+			<ListSection id="sect" ></ListSection>
+
+		</ListView>
+		<!-- <View class="list_view">
+			
+			<ImageView bindId="image" id="image" ></ImageView>
+			<View class="right_view">
+				<View class="firstlabel">
+					<Label bindId="label" id="label1"  class="gautum" text="aniketsdfjgdsjkfgdksgf"  />
+				</View>
+				<View class="secondlabel">
+					<Label bindId="label2" id="label2" class="gautum" text="samll text"/>
+				</View>
+				<View class="cost_star">
+					<Label bindId="cost"  id="cost" class="gautum" text="Rs.600000"/>
+					<Label bindId="stars" id="stars" class="font-icon" text="\uf005\uf005\uf005\uf005\uf005 "/>
+				</View>
+			</View>
+		</View> -->
+
 	</Window>
 </Alloy>

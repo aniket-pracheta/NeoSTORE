@@ -5,11 +5,16 @@ Alloy.Globals.someGlobalFunction = function(options, sucesscall,failurecall) {
 	var xhr;
 	xhr = Ti.Network.createHTTPClient({
 		onload : function(e) {
-			//Ti.API.info("hello"+JSON.stringify(this.responseText));
+			Ti.API.info("SUCCESS");
+			Ti.API.info(JSON.stringify(this.responseText));
+			
+			
 			sucesscall(JSON.parse(this.responseText));
+			
 			//alert(JSON.parse(this.responseText));
 		},
 		onerror:function(e){
+			Ti.API.info("FAILURE");
 			failurecall(JSON.parse(this.responseText));
 		},
 	});
@@ -18,6 +23,7 @@ Alloy.Globals.someGlobalFunction = function(options, sucesscall,failurecall) {
 		//Ti.API.info("header present");
 		xhr.setRequestHeader('access_token',options.access_token);
 	};
+	Ti.API.info("here"+JSON.stringify(options.send_url));
 	xhr.send(options.data);
 };
 

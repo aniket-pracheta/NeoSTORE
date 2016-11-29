@@ -1,4 +1,99 @@
 
 ".container" : {
-  
+  //top:"10%",
+  backgroundColor:"white",
+},
+".list_view":{
+	height:"97dp",
+	backgroundColor:"white",
+	touchEnabled:"true",
+	//layout:"horizontal"	
+},
+
+"#image":{
+	height:"240px",
+	width:"220px",
+	//borderColor:"red",
+	left:"2%",
+	top:"30px"
+},
+".firstlabel":{
+	// font:{
+		// fontsize:"45px",
+	// },
+	top:"1%",
+	height:"80px",	
+	borderColor:"blue",
+	width:"70%",
+	left:"2%"
+},
+"#label1":{	
+	//borderColor:"yellow",
+	color:"#4F4F4F",
+	font: {
+		fontSize: "20dp",
+		//fontWeight:'bold',
+	},
+	left:"0",
+},
+".secondlabel":{
+	top:"1%",
+	height:"70px",	
+	borderColor:"yellow",
+	width:"70%",
+	left:"2%",
+	
+},
+"#label2":{
+	//top:"24px",
+	textAlign:"left",
+	//borderColor:"yellow",
+	color:"#4F4F4F",
+	font: {
+		fontSize: "16dp",
+		//fontWeight:'bold',
+	},
+	left:"0",
+},
+".right_view":{
+	top:"40px",
+	width:"80%",
+	height:"70%",
+	left: "23%",
+	//borderColor:"yellow",
+	layout:"vertical"
+	
+},
+".cost_star":{
+	top:"0",
+	height:"80px",	
+	//borderColor:"blue",
+	width:"95%",
+	left:"0",
+},
+"#cost":{
+	left:"0",
+	color:"#FE4040",
+	font: {
+		fontSize: "20dp",
+		//fontWeight:'bold',
+	},
+	
+},
+"#stars":{
+	right:"2%",
+	//color:"#4F4F4F",
+	color:"#ffb003",
+	font: {
+		fontSize: "16dp",
+		//fontWeight:'bold',
+	},
+	
+},
+"#listview2":{
+	top:"8%"
+},
+".templates":{
+	
 }
+

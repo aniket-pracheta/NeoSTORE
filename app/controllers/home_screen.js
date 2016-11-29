@@ -10,10 +10,9 @@ function fetch_sucess(data_recieved){
 	 var  view=Ti.UI.createImageView({image:data_recieved.data.product_categories[i].icon_image,
 	 								width:Titanium.UI.FILL,
 	 								height:Titanium.UI.FILL});
-			$.scrolling_images.addView(view);	
+									$.scrolling_images.addView(view);	
 	};
-
-   
+  
 	$.home_screen.open();
 	Ti.API.info(data_recieved.data.product_categories.length);
 	alert("sucess");
@@ -31,20 +30,31 @@ $.home_screen_header.page_name.text="NeoSTORE";
 $.home_screen_header.BACK.text="\uf0c9";
 $.home_screen_header.BACK.addEventListener('click',function(e)
 {
-	var win=Ti.UI.createScrollableView({
-		height:"100%",
-		width:"70%",
-		backgroundColor:"green",
+	var leftmenu=Ti.UI.createWindow({
+			backgroundColor: 'red',
+	        top:   0,
+			left:  0,
+			width: 150,
+			zIndex: 1,		
 	});
-	$.home_screen.add(win);
-   $.home_screen.open();
+	
+	var animateRight = Ti.UI.createAnimation({
+	left : 0,
+	curve : Ti.UI.ANIMATION_CURVE_EASE_IN,
+	duration : 150
+    });
+    leftmenu.animate(animateRight);
+	//$.home_screen.add(win);
+   leftmenu.open();
   Titanium.API.info("You clicked the button");
   // $.window2.close();
 });
 
 
 
-function createProductList() {
-	var win=Alloy.createController('product_page').getView();
+function createProductList(e) {
+	Ti.API.info(JSON.stringify("send"+e.source.productid));
+	var product_clicked=e.source.productid;
+	var win=Alloy.createController('product_page',product_clicked).getView();
 	win.open();
 }
