@@ -1,4 +1,125 @@
 
 ".container" : {
-  
+	left:"14dp",
+	right:"14dp",
+	backgroundColor:"white",
+	layout:"vertical" 
+},
+".bigview":{
+	top:"8%",
+	backgroundColor:"white",
+},
+".biglabel":{
+	color:"#262626",
+	left:0,
+	top:"2%",	
+	font: {
+		fontSize: "20dp",
+		fontWeight:'bold',
+	},
+},
+".category":{
+color:"#4f4f4f",
+	font: {
+		fontSize: "16dp",
+		
+	},
+	left:0,
+},
+".producer":{
+	color:"#4f4f4f",
+	font: {
+		fontSize: "12dp",		
+	},
+	left:0,
+},
+".star":{
+	font: {
+		fontSize: "16dp",
+		
+	},
+	right:0,
+	top:0,
+},
+".pro_star":{
+	//borderColor:"red",
+	height:"20dp",
+	width:Titanium.UI.FILL,
+},
+".cost":{
+	top:"20dp",
+	//borderColor:"red",
+	height:"25dp",
+	width:Titanium.UI.FILL,
+},
+".rupee":{
+	left:"0",
+	font: {
+		fontSize: "16dp",		
+	},
+	color:"#FE4040"
+},
+".share":{
+	right:"8%",
+	color:"#7F7F7F",
+	font: {
+		fontSize: "20dp",		
+	},
 }
+".image_big":{
+	width:"260dp",
+	height:"178dp",
+	//borderColor:"cyan"
+},
+".detail_images":{
+	layout:"horizontal",
+	height:"85dp",
+	width:"265dp",
+	top:"7dp",
+	//borderColor:"red"
+},
+".small_image":{
+	height:"79dp",
+	width:"70dp",
+	//borderColor:"cyan",
+	left:"5%",	
+},
+".describe":{
+	font: {
+		fontSize: "15dp",		
+	},
+	color:"#111111",
+	left:0,
+	top:"30dp",
+	left:"2%",
+},
+".detail":{
+	font: {
+		fontSize: "14dp",		
+	},
+	//height:"80dp",
+	width:Titanium.UI.FILL,
+	color:"#333333",
+	left:"2%",
+},
+".buttons_view":{
+	//borderColor:"red",
+	top:"15dp",
+	width:"265dp",
+	height:"35dp",
+	layout:"horizontal",
+	bottom:"5%",
+},
+".custom_button":{
+	color:"white",
+	width:"110dp",
+    //left:"16%",
+    textAlign:"center",
+    title:"BUY",
+    font: {
+		fontSize: "16dp",
+		fontWeight:'medium',
+	},
+   backgroundColor:"#db1514",
+    borderRadius:10,
+},

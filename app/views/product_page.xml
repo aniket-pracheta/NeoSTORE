@@ -5,7 +5,7 @@
 		<ListView id="listview2" >
 			<Templates>
 				<ItemTemplate name="first" class="templates">
-					<View class="list_view">						
+					<View class="list_view" onClick="go_to_detail">						
 						<ImageView bindId="image" id="image" ></ImageView>
 						<View class="right_view">
 								<Label bindId="label" id="label1"  class="gautum" text="aniketsdfjgdsjkfgdksgf"  />

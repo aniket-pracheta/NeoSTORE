@@ -1,4 +1,31 @@
 <Alloy>
+	<Window id="product_detail">
+		<Widget src="header" id="product_detail_header"></Widget>
+	<ScrollView class="bigview">
 	<View class="container">
+		<Label class="biglabel" id="pro_label1">hi this is a table</Label>
+		<Label class="category" id="pro_label2">hi this is a tablefgf</Label>
+		<View class="pro_star">
+		<Label class="producer" id="pro_producer">hi this is a tablefgf</Label>
+		<Label class="star" id="pro_star">9999</Label>
+		</View>
+		<View class="cost">
+		<Label class="rupee" id="pro_cost">rs.900000</Label>
+		<Label class="share">9</Label>
+		</View>
+		<ImageView class="image_big" id="pro_image_big"></ImageView>
+		<View class="detail_images">
+			<ImageView class="small_image" id="pro_image1"></ImageView>
+			<ImageView class="small_image" id="pro_image2"></ImageView>
+			<ImageView class="small_image" id="pro_image3" visible="false"></ImageView>
+		</View>
+		<Label class="describe">DESCRIPTION</Label>
+		<Label class="detail" id="pro_detail">Mild Steel Base In Poder Coated White Finish.8 mm Tempered Glass Table Top.Bottom Shelf In Paimted Brown Glas</Label>
+		<View class="buttons_view">
+			<Button class="custom_button" left="8%">BUY</Button>
+			<Button class="custom_button" left="5%">RATE</Button>
+		</View>
 	</View>
+	</ScrollView>
+	</Window>
 </Alloy>

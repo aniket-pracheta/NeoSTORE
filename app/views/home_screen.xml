@@ -8,9 +8,9 @@
 		  		<ScrollableView class="slide_images" id="scrolling_images">  	
 		  </ScrollableView>
 		<View class="big_product">	
-			<View class="small_products" onClick="createProductList" productid="5">
-				<Label class="gautum table" productid="5">Tables</Label>
-				<Label text="\ue902" class="product_icon sofa product_size" productid="5"></Label>
+			<View class="small_products" onClick="createProductList" productid="1">
+				<Label class="gautum table" productid="1">Tables</Label>
+				<Label text="\ue902" class="product_icon sofa product_size" productid="1"></Label>
 			</View>
 			<View class="small_products" onClick="createProductList" productid="3">
 				<Label class="gautum sofa" productid="3">Sofas</Label>
@@ -22,9 +22,9 @@
 				<Label class="gautum chair" productid="2">Chairs</Label>
 				<Label text="\ue900" class="product_icon cupboard product_size" productid="2"></Label>
 			</View>
-			<View class="small_products" top="10px" onClick="createProductList" productid="1">
-				<Label class="gautum cupboard " productid="1">Cupboards</Label>
-				<Label text="\ue903" class="product_icon chair product_size" productid="1"></Label>
+			<View class="small_products" top="10px" onClick="createProductList" productid="5">
+				<Label class="gautum cupboard " productid="5">Cupboards</Label>
+				<Label text="\ue903" class="product_icon chair product_size" productid="5"></Label>
 			</View>
 			</View>	
 		</ScrollView>
