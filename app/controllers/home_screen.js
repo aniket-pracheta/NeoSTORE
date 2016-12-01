@@ -65,6 +65,7 @@ $.view_main.addEventListener('swipe',function(e)
 	height:"100%",
 	transform:viewtrans,
 	left:"0",
+	right:0,
 	curve : Ti.UI.ANIMATION_CURVE_EASE_IN,
 	duration : 200
     });  
