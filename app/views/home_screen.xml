@@ -3,6 +3,12 @@
 
 <Alloy>
 	<Window class="window_container" id="home_screen">
+			
+			<View class="menu" id="menu">
+			<Label > hiiii</Label>
+		</View>	
+		
+		<View class="view_main" id="view_main">
 		<Widget src="header" id="home_screen_header"></Widget>
 		  <ScrollView class="big_view">
 		  		<ScrollableView class="slide_images" id="scrolling_images">  	
@@ -28,8 +34,7 @@
 			</View>
 			</View>	
 		</ScrollView>
-	<View class="container">
-		<!-- <Label onClick="products">home scree</Label> -->
 	</View>
+	
 	</Window>
 </Alloy>

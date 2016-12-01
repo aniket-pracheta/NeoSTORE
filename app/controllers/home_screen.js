@@ -25,32 +25,60 @@ var option={
 				send_url:"http://staging.php-dev.in:8844/trainingapp/api/users/getUserData",
 				access_token:access_token,			
 				};	
-//Alloy.Globals.someGlobalFunction(option,fetch_sucess,fetch_failure);	
+// Alloy.Globals.someGlobalFunction(option,fetch_sucess,fetch_failure);
+
 $.home_screen_header.page_name.text="NeoSTORE";
 $.home_screen_header.BACK.text="\uf0c9";
-$.home_screen_header.BACK.addEventListener('click',function(e)
-{
-	var leftmenu=Ti.UI.createWindow({
-			backgroundColor: 'red',
-	        top:   0,
-			left:  0,
-			width: 150,
-			zIndex: 1,		
-	});
-	
-	var animateRight = Ti.UI.createAnimation({
-	left : 0,
-	curve : Ti.UI.ANIMATION_CURVE_EASE_IN,
-	duration : 150
-    });
-    leftmenu.animate(animateRight);
-	//$.home_screen.add(win);
-   leftmenu.open();
+
+$.home_screen_header.BACK.addEventListener('click', function(e) 
+{	
   Titanium.API.info("You clicked the button");
-  // $.window2.close();
+  var animateRight = Ti.UI.createAnimation({
+	left : 0,
+	curve :Titanium.UI.ANIMATION_CURVE_EASE_IN_OUT,
+	duration : 200
+    });
+    
+    var viewtrans=Ti.UI.create2DMatrix();
+    viewtrans=viewtrans.scale(0.8);
+    
+    var animateheight = Ti.UI.createAnimation({
+ 	transform:viewtrans,
+ 	height:"100%",
+ 	width:"100%",
+	left:"200",
+	right: '-200',
+	curve : Titanium.UI.ANIMATION_CURVE_EASE_IN_OUT,
+	duration : 200
+    });   
+    $.view_main.animate(animateheight);
+    $.menu.animate(animateRight);
+  //	$.home_screen.open();
+  
 });
 
+$.view_main.addEventListener('swipe',function(e)
+{
+	var viewtrans=Ti.UI.create2DMatrix();
+    viewtrans=viewtrans.scale(1);
+	 var animateheight = Ti.UI.createAnimation({
+	height:"100%",
+	transform:viewtrans,
+	left:"0",
+	curve : Ti.UI.ANIMATION_CURVE_EASE_IN,
+	duration : 200
+    });  
+        
 
+    var animateRight = Ti.UI.createAnimation({
+	left : "-200",
+	curve : Ti.UI.ANIMATION_CURVE_EASE_IN,
+	duration : 200
+    }); 
+    $.menu.animate(animateRight);
+    $.view_main.animate(animateheight);
+	//alert("swipe");
+});
 
 function createProductList(e) {
 	Ti.API.info(JSON.stringify("send"+e.source.productid));

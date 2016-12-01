@@ -1,9 +1,10 @@
 ".window_container":{
-	backgroundColor:"white",
-	layout:"vertical",
+	backgroundColor:"#1E1E1E",
+	//layout:"vertical",
 },
 ".big_view":{
 	top:0,
+	//backgroundColor:"black",
 	borderColor:"cyan",
 	height:"100%",
 	width:"100%",
@@ -80,4 +81,26 @@
 },
 ".container" : {
   
-}
+},
+/////////////////////
+
+".view_main":{
+	backgroundColor:"cyan",
+	height:"100%",
+	width:Titanium.UI.FILL,
+	touchEnabled:"true",
+},
+
+"#home_screen_header":{
+	bubbleParent: true,
+},
+
+".menu":{
+	width:"200",
+	backgroundColor:"#1E1E1E",
+	left:"-200",
+	height:Titanium.UI.FILL,
+	touchEnabled:"true",	
+	//zIndex:"1"
+},
+

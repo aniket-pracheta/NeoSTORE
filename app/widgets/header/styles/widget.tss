@@ -2,7 +2,8 @@
 	top:"2%",
 	height:"40dp",
 	layout:"horizontal",
-	backgroundColor:"#d61314"
+	backgroundColor:"#d61314",
+	zIndex: 1000
 },
 "#BACK":{
 	color:"#FFFFFF",
