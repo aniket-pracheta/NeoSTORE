@@ -5,7 +5,49 @@
 	<Window class="window_container" id="home_screen">
 			
 			<View class="menu" id="menu">
-			<Label > hiiii</Label>
+				<ScrollView class="menu_scroll">
+					<ImageView class="menu_image" id="user_image"></ImageView>
+					<Label class="user_name" id="user_name"> hiiii</Label>
+					<Label class="user_email" id="user_email">hellow</Label>
+					<View class="menu_container" top="14dp">
+						<Label text="\uf217" class="font-icon icon_menu_size"></Label>
+						<Label class="icon_menu_text">My Cart</Label>
+					</View>
+					<View class="menu_container" onClick="createProductList" productid="1">
+						<Label text="\ue902" class="product_icon icon_menu_size" productid="1"></Label>
+						<Label class="icon_menu_text" productid="1">Table</Label>
+					</View>
+					<View class="menu_container" onClick="createProductList" productid="3">
+						<Label text="\ue901" class="product_icon icon_menu_size" productid="3"></Label>
+						<Label class="icon_menu_text" productid="3">Sofa</Label>
+					</View>
+					<View class="menu_container" onClick="createProductList" productid="2">
+						<Label text="\ue900" class="product_icon icon_menu_size" productid="2"></Label>
+						<Label class="icon_menu_text" productid="2">Chair</Label>
+					</View>
+					<View class="menu_container" onClick="createProductList" productid="5">
+						<Label text="\ue903" class="product_icon icon_menu_size" productid="5"></Label>
+						<Label class="icon_menu_text" productid="5">Cupboards</Label>
+					</View>
+					<View class="menu_container">
+						<Label text="\uf007" class="font-icon icon_menu_size"></Label>
+						<Label class="icon_menu_text">My Account</Label>
+					</View>
+					<View class="menu_container">
+						<Label text="\uf041" class="font-icon icon_menu_size"></Label>
+						<Label class="icon_menu_text">Store Locator</Label>
+					</View>
+					<View class="menu_container">
+						<Label text="\uf022" class="font-icon icon_menu_size"></Label>
+						<Label class="icon_menu_text">My Order</Label>
+					</View>
+					<View class="menu_container">
+						<Label text="\uf08b" class="font-icon icon_menu_size"></Label>
+						<Label class="icon_menu_text">Logout</Label>
+					</View>
+					
+				</ScrollView>
+			
 		</View>	
 		
 		<View class="view_main" id="view_main">

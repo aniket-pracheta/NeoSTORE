@@ -34,8 +34,13 @@ function make_list_sucess(jsondata) {
 	//Ti.API.info(jsondata.data);
 	 product_list = jsondata.data;
 	_.each(jsondata.data, function(products, index, products_list) {
-		Ti.API.info(index);
-		data.push({
+		Ti.API.info(products);
+		 if (products.rating=="1") {
+				 stars1:{
+				 color:"cyan";
+			 }}
+		
+			data.push({
 			label2 : {
 				text : products.name
 			},
@@ -47,7 +52,12 @@ function make_list_sucess(jsondata) {
 			},
 			image : {
 				image : products.product_images
-			},
+			},	
+			// if (products.rating=="1") {
+				// stars1:{
+				// color:"cyan"
+			// },
+		 	stars1:{},			
 			template : "first",
 			properties : {
 				height : "97dp"

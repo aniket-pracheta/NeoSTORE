@@ -7,11 +7,18 @@
 		<Label class="category" id="pro_label2">hi this is a tablefgf</Label>
 		<View class="pro_star">
 		<Label class="producer" id="pro_producer">hi this is a tablefgf</Label>
-		<Label class="star" id="pro_star">9999</Label>
+		<!-- <Label class="star" id="pro_star">9999</Label> -->
+		<View class="star_box">
+		<Label bindId="stars1" id="stars1" class="font-icon star_color" text="\uf005"/>
+		<Label  id="stars2" class="font-icon star_color" text="\uf005"/>
+		<Label id="stars3" class="font-icon star_color" text="\uf005"/>
+		<Label  id="stars4" class="font-icon star_color" text="\uf005"/>
+		<Label  id="stars5" class="font-icon star_color" text="\uf005"/>
+		</View>
 		</View>
 		<View class="cost">
 		<Label class="rupee" id="pro_cost">rs.900000</Label>
-		<Label class="share">9</Label>
+		<Label class="font-icon share" text="\uf1e0 "></Label>
 		</View>
 		<ImageView class="image_big" id="pro_image_big"></ImageView>
 		<View class="detail_images">
@@ -22,7 +29,7 @@
 		<Label class="describe">DESCRIPTION</Label>
 		<Label class="detail" id="pro_detail">Mild Steel Base In Poder Coated White Finish.8 mm Tempered Glass Table Top.Bottom Shelf In Paimted Brown Glas</Label>
 		<View class="buttons_view">
-			<Button class="custom_button" left="8%">BUY</Button>
+			<Button class="custom_button" left="8%" onClick="buy_pop">BUY</Button>
 			<Button class="custom_button" left="5%">RATE</Button>
 		</View>
 	</View>

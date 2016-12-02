@@ -13,7 +13,7 @@
 "#page_name":{
 	color:"#FFFFFF",
 	top:"30%",
-	left:"29%",
+	left:"32%",
 	textAlign:Titanium.UI.TEXT_ALIGNMENT_CENTER,
 	font: {
 		fontWeight:'bold',

@@ -35,16 +35,27 @@ color:"#4f4f4f",
 },
 ".star":{
 	font: {
-		fontSize: "16dp",
-		
+		fontSize: "16dp",		
 	},
 	right:0,
 	top:0,
 },
+".star_color":{
+	color:"#747474"
+}
 ".pro_star":{
 	//borderColor:"red",
 	height:"20dp",
 	width:Titanium.UI.FILL,
+},
+".star_box":{
+	width:"80dp",
+	top:"4dp",
+	height:Titanium.UI.FILL,
+	right:"0",
+	layout:"horizontal",
+	//left:"45%",
+	//borderColor:"cyan"
 },
 ".cost":{
 	top:"20dp",

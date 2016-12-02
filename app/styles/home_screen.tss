@@ -11,12 +11,12 @@
 	layout:"vertical",
 },
 ".slide_images":{
+	top:"45dp",
 	borderColor:"green",
 	height:'229dp',
 	width:"100%",
 	showPagingControl:"true",
 	overlayEnabled:"true",	
-
 },
 ".big_product":{
 	width:"100%",
@@ -82,10 +82,9 @@
 ".container" : {
   
 },
-/////////////////////
-
+////////
 ".view_main":{
-	backgroundColor:"cyan",
+	backgroundColor:"white",
 	height:"100%",
 	width:Titanium.UI.FILL,
 	touchEnabled:"true",
@@ -96,11 +95,67 @@
 },
 
 ".menu":{
-	width:"200",
+	width:"300",
 	backgroundColor:"#1E1E1E",
-	left:"-200",
+	left:"0",
 	height:Titanium.UI.FILL,
-	touchEnabled:"true",	
+	touchEnabled:"true",
+		
 	//zIndex:"1"
 },
+".menu_scroll":{
+	layout:"vertical",
+}
+".menu_image":{
+	top:"35dp",
+	height:"82dp",
+	width:"82dp",
+	borderColor:"white",
+	borderRadius:"50",
+	borderWidth:"4dp"
+},
+".user_name":{
+	top:"18dp",
+	color:"#FFFFFF",
+	font: {		
+		fontSize: "23dp",
+		fontWeight:"bold",
+	},
+	
+},
+".user_email":{
+	top:"13dp",
+	color:"#FFFFFF",
+	font: {		
+		fontSize: "13dp",
+		fontWeight:"bold",
+	},
+},
+".menu_container":{
+	//top:"1dp",
+	borderColor:"black",
+	//borderWidth:"2dp",
+	height:"45dp",
+	width:Titanium.UI.FILL,
+	layout:"horizontal",
+	touchEnabled:true,
+},
+".icon_menu_size":{
+	left:"10%",
+	top:"10dp",
+	color:"white",
+	font: {		
+		fontSize: "30dp",
+		//fontWeight:"bold",
+	},
+},
+".icon_menu_text":{
+	left:"6%",
+	top:"15dp",
+	color:"white",
+	font: {		
+		fontSize: "20dp",
+		fontWeight:"bold",
+	},
+}
 

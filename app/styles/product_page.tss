@@ -70,6 +70,7 @@
 	//borderColor:"blue",
 	width:"95%",
 	left:"0",
+	layout:"horizontal"
 },
 "#cost":{
 	left:"0",
@@ -80,16 +81,28 @@
 	},
 	
 },
-"#stars":{
-	right:"2%",
-	//color:"#4F4F4F",
-	color:"#ffb003",
+".view_cost":{
+	height:Titanium.UI.FILL,
+	width:"90dp",
+	//borderColor:"cyan",
+	left:"0",
+}
+".star_box":{
+	//borderColor:"red",
+	width:"80dp",
+	height:Titanium.UI.FILL,
+	//right:"0",
+	layout:"horizontal",
+	left:"45%"
+},
+".star_color":{
+	top:"5dp",
+	color:"#4F4F4F",
 	font: {
 		fontSize: "16dp",
 		//fontWeight:'bold',
 	},
-	
-},
+}
 "#listview2":{
 	top:"8%"
 },

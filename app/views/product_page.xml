@@ -11,8 +11,16 @@
 								<Label bindId="label" id="label1"  class="gautum" text="aniketsdfjgdsjkfgdksgf"  />
 								<Label bindId="label2" id="label2" class="gautum" text="samll text"/>
 							<View class="cost_star">
+								<View class="view_cost">
 								<Label bindId="cost"  id="cost" class="gautum" text="Rs.600000"/>
-								<Label bindId="stars" id="stars" class="font-icon" text="\uf005\uf005\uf005\uf005\uf005 "/>
+								</View>
+								<View class="star_box">
+								<Label bindId="stars1" id="stars1" class="font-icon star_color" text="\uf005"/>
+								<Label bindId="stars2" id="stars2" class="font-icon star_color" text="\uf005"/>
+								<Label bindId="stars3" id="stars3" class="font-icon star_color" text="\uf005"/>
+								<Label bindId="stars4" id="stars4" class="font-icon star_color" text="\uf005"/>
+								<Label bindId="stars5" id="stars5" class="font-icon star_color" text="\uf005"/>
+							</View>
 							</View>
 						</View>
 					</View>
@@ -33,10 +41,13 @@
 				</View>
 				<View class="cost_star">
 					<Label bindId="cost"  id="cost" class="gautum" text="Rs.600000"/>
-					<Label bindId="stars" id="stars" class="font-icon" text="\uf005\uf005\uf005\uf005\uf005 "/>
+					<Label bindId="stars1" id="stars1" class="font-icon stars" left="40%" text="\uf005"/>
+					<Label bindId="stars2" id="stars2" class="font-icon" text="\uf005"/>
+					<Label bindId="stars3" id="stars3" class="font-icon" text="\uf005"/>
+					<Label bindId="stars3" id="stars3" class="font-icon" text="\uf005"/>
+					<Label bindId="stars3" id="stars3" class="font-icon" text="\uf005"/>
 				</View>
 			</View>
 		</View> -->
-
 	</Window>
 </Alloy>

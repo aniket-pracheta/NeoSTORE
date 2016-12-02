@@ -2,7 +2,13 @@
 //var args = $.args;
 var args = arguments[0] || {};
 // Alloy.Globals.user_data_fetch=args;
-// var access_token=Alloy.Globals.user_data_fetch.data.access_token;
+ //Ti.API.info(Alloy.Globals.user_data_fetch);
+ // var access_token=Alloy.Globals.user_data_fetch.data.access_token;
+ // {
+ 	// $.user_name.text=Alloy.Globals.user_data_fetch.data.first_name+" "+Alloy.Globals.user_data_fetch.data.last_name;
+ 	// $.user_email.text=Alloy.Globals.user_data_fetch.data.email;
+ 	// $.user_image.image=Alloy.Globals.user_data_fetch.data.profile_pic;
+ // }
 // Ti.API.info(access_token);
 function fetch_sucess(data_recieved){
 	for (var i=0; i < data_recieved.data.product_categories.length; i++) {
@@ -25,12 +31,13 @@ var option={
 				send_url:"http://staging.php-dev.in:8844/trainingapp/api/users/getUserData",
 				access_token:access_token,			
 				};	
-// Alloy.Globals.someGlobalFunction(option,fetch_sucess,fetch_failure);
+//Alloy.Globals.someGlobalFunction(option,fetch_sucess,fetch_failure);
 
 $.home_screen_header.page_name.text="NeoSTORE";
 $.home_screen_header.BACK.text="\uf0c9";
 
-$.home_screen_header.BACK.addEventListener('click', function(e) 
+$.home_screen_header.BACK.addEventListener('click', move);
+function move() 
 {	
   Titanium.API.info("You clicked the button");
   var animateRight = Ti.UI.createAnimation({
@@ -46,19 +53,19 @@ $.home_screen_header.BACK.addEventListener('click', function(e)
  	transform:viewtrans,
  	height:"100%",
  	width:"100%",
-	left:"200",
-	right: '-200',
+	left:"300",
+	right: '-300',
 	curve : Titanium.UI.ANIMATION_CURVE_EASE_IN_OUT,
 	duration : 200
     });   
     $.view_main.animate(animateheight);
     $.menu.animate(animateRight);
-  //	$.home_screen.open();
   
-});
+}
 
 $.view_main.addEventListener('swipe',function(e)
-{
+{   
+	
 	var viewtrans=Ti.UI.create2DMatrix();
     viewtrans=viewtrans.scale(1);
 	 var animateheight = Ti.UI.createAnimation({
@@ -70,15 +77,15 @@ $.view_main.addEventListener('swipe',function(e)
 	duration : 200
     });  
         
-
     var animateRight = Ti.UI.createAnimation({
-	left : "-200",
+	left : "-300",
 	curve : Ti.UI.ANIMATION_CURVE_EASE_IN,
 	duration : 200
     }); 
     $.menu.animate(animateRight);
     $.view_main.animate(animateheight);
 	//alert("swipe");
+	
 });
 
 function createProductList(e) {
@@ -87,3 +94,4 @@ function createProductList(e) {
 	var win=Alloy.createController('product_page',product_clicked).getView();
 	win.open();
 }
+
