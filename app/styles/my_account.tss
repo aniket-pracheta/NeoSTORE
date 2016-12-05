@@ -1,0 +1,78 @@
+
+".container" : {
+  layout:"vertical",
+  top:"8%"
+},
+".myaccount_window":{
+	backgroundColor:"red"
+},
+".small_container-1":{
+	top:"40px",
+	height:"120px",
+	width:"880px",
+	borderColor:"white",
+	borderWidth:"2dp",
+},
+".icon_in_text":{
+
+    color:"white",
+	left:"5%",
+	
+	font: {
+		fontSize: "20dpi",
+		fontWeight:'bold',
+	},
+	
+},
+".input":{
+	width:Titanium.UI.FILL,
+	left:"14%",
+	color:"#ffffff",
+	backgroundColor : 'transparent',
+	focusable :"true",
+    font: {
+		fontSize: "18dpi",
+		//fontWeight:'medium',
+	},
+	hintTextColor:"#ffffff",
+	editable:false
+},
+
+".user_image":{
+	top:"35dp",
+	height:"133dp",
+	width:"133dp",
+	borderColor:"white",
+	borderRadius:"80",
+	borderWidth:"4dp"
+},
+"#register":{
+	color:"#E31C1A",
+	width:"70%",
+    left:"16%",
+    title:"EDIT PROFILE",
+    backgroundColor:"white",
+    borderRadius:5,
+    top:"20dp"
+
+},
+".rest_pass":{
+	top:"20%",
+    backgroundColor:"white",
+	height:"120px",
+	width:Titanium.UI.FILL,
+	borderColor:"white",
+	borderWidth:"2dp",
+	touchEnabled:true
+},
+".big_view":{
+	height:Titanium.UI.FILL,
+	width:Titanium.UI.FILL
+},
+".reset_label":{
+	 font: {
+		fontSize: "18dpi",
+		
+	},
+	color:"#333333"
+}	

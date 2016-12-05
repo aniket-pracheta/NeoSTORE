@@ -1,9 +1,9 @@
 // Arguments passed into this controller can be accessed via the `$.args` object directly or:
 //var args = $.args;
 var args = arguments[0] || {};
-// Alloy.Globals.user_data_fetch=args;
+ Alloy.Globals.user_data_fetch=args;
  //Ti.API.info(Alloy.Globals.user_data_fetch);
- // var access_token=Alloy.Globals.user_data_fetch.data.access_token;
+  var access_token=Alloy.Globals.user_data_fetch.data.access_token;
  // {
  	// $.user_name.text=Alloy.Globals.user_data_fetch.data.first_name+" "+Alloy.Globals.user_data_fetch.data.last_name;
  	// $.user_email.text=Alloy.Globals.user_data_fetch.data.email;
@@ -31,7 +31,7 @@ var option={
 				send_url:"http://staging.php-dev.in:8844/trainingapp/api/users/getUserData",
 				access_token:access_token,			
 				};	
-//Alloy.Globals.someGlobalFunction(option,fetch_sucess,fetch_failure);
+Alloy.Globals.someGlobalFunction(option,fetch_sucess,fetch_failure);
 
 $.home_screen_header.page_name.text="NeoSTORE";
 $.home_screen_header.BACK.text="\uf0c9";
@@ -92,6 +92,11 @@ function createProductList(e) {
 	Ti.API.info(JSON.stringify("send"+e.source.productid));
 	var product_clicked=e.source.productid;
 	var win=Alloy.createController('product_page',product_clicked).getView();
+	win.open();
+}
+
+function goto_myaccount(){
+	var win=Alloy.createController('my_account').getView();
 	win.open();
 }
 

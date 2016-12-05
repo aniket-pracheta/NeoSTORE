@@ -148,7 +148,7 @@ font : {
     font : {
   // fontWeight:'bold',
    fontSize : "24dp",    
-    },
-    	
-	}
+    },   	
+	},
+
 

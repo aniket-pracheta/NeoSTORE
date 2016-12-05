@@ -1,0 +1,41 @@
+<Alloy>
+	<Window class="myaccount_window">
+	<View class="big_view">
+		<Widget src="header" id="myaccount_header"></Widget>
+		<ScrollView class="container">
+		<ImageView class="user_image" id="user_image"></ImageView>
+		
+		<View class="small_container-1" id="first" top="20dp">
+		       	    <Label text="\uf007" class="icon_in_text font-icon"></Label>
+		       	    <TextField class="input gautum" id="first_name"></TextField>
+		       </View>	
+		       
+		        <View class="small_container-1" id="second">
+		        	<Label text="\uf007" class="icon_in_text font-icon"></Label>
+		       	    <TextField class="input gautum" hintText="Last Name" id="last_name"></TextField>
+		        </View>
+		        
+		        
+				<View class="small_container-1" id="fifth">
+		         	<Label text="\uf0e0" class="icon_in_text font-icon"></Label>
+		       	    <TextField class="input gautum" hintText="Email" id="email"></TextField>
+		         </View>
+		         
+		         <View class="small_container-1" id="sixth">
+		         	<Label text="\uf098 " class="icon_in_text font-icon"></Label>
+		       	    <TextField class="input gautum" hintText="Phone Number" id="phone_number"></TextField>
+		         </View>
+		         
+		         <View class="small_container-1" id="fourth">
+		         	<Label text="\uf1fd" class="icon_in_text font-icon"></Label>
+		       	    <TextField class="input gautum" hintText="DOB" id="dob" ></TextField>
+		         </View>
+		         
+		         <Button id="register" class="gautum"></Button>
+		         <View class="rest_pass"  >
+		         	<Label class="reset_label gautum">RESET PASSWORD</Label>
+		         </View>
+		</ScrollView>         
+	</View>
+	</Window>
+</Alloy>

@@ -29,7 +29,7 @@
 						<Label text="\ue903" class="product_icon icon_menu_size" productid="5"></Label>
 						<Label class="icon_menu_text" productid="5">Cupboards</Label>
 					</View>
-					<View class="menu_container">
+					<View class="menu_container" onClick="goto_myaccount">
 						<Label text="\uf007" class="font-icon icon_menu_size"></Label>
 						<Label class="icon_menu_text">My Account</Label>
 					</View>
