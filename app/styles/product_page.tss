@@ -83,7 +83,7 @@
 },
 ".view_cost":{
 	height:Titanium.UI.FILL,
-	width:"90dp",
+	width:"100dp",
 	//borderColor:"cyan",
 	left:"0",
 }
@@ -93,7 +93,7 @@
 	height:Titanium.UI.FILL,
 	//right:"0",
 	layout:"horizontal",
-	left:"45%"
+	left:"40%"
 },
 ".star_color":{
 	top:"5dp",

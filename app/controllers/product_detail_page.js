@@ -99,73 +99,83 @@ $.pro_image2.addEventListener('click', chnage_image);
 $.pro_image3.addEventListener('click', chnage_image);
 
 function buy_pop(){
-	var view=Ti.UI.createView({
-		top:"10%",
-		height:"80%",
-		width:"90%",
-		backgroundColor:"white",
-		borderRadius:"10",
-		layout:"vertical",
-		opacity:100000,
-		backgroundSelectedColor:"black",
-		//backgroundFocusedColor:"cyan",
-	});
-	var view_big=Ti.UI.createView({
-		height:"90%",
-		width:"100%",
-		backgroundColor:"cyan",
-		borderRadius:"10",
-		layout:"vertical",
-		backgroundDisabledColor:"#2C2B2B",
-		//backgroundFocusedColor:"cyan",
-		opacity:"0.8",
-	});
-	var label1=Ti.UI.createLabel({
-		text:args.name,
-		top:"5%",
-		color:"#2C2B2B",
-		font:{
-			fontSize:"25dp"
-		},
-			});
-	var imge=Ti.UI.createImageView({
-		width:"240dp",
-		height:"178dp",
-		top:"34dp",
-		image:args.product_images,
-		borderColor:"#2C2B2B"
-	});	
-	var label2=Ti.UI.createLabel({
-		text:"Enter Qty",
-		top:"5%",
-		color:"#2C2B2B",
-		font:{
-			fontSize:"20dp"
-		}
-		});
-	var field=Ti.UI.createTextField({
-			id:"qty",
-			height:"30dp",
-			width:"45dp",
-			borderColor:"#2C2B2B",
-			top:"22dp"
-		});
-	
-	var btn=Ti.UI.createButton({
-		title:"SUBMIT",
-		color:"white",
-		width:"80dp",
-		backgroundColor:"red",
-		textAlign:"center",
-		borderRadius:10,
-		top:"22dp",
-	});
-		
-	view.add(label1);
-	view.add(imge);
-	view.add(label2);
-	view.add(field);
-	view.add(btn);
-	//view_big.add(view);
-	$.product_detail.add(view);
-}
+	$.label_buy_1.text=args.name;
+	$.image_buy.image=args.product_images;
+	$.transperent_view_buy.visible=true;
+ }
+
+function popup_rate(){
+	$.label_pop.text=args.name;
+	$.image_of_product.image=args.product_images;
+ $.transperent_view.visible=true;
+ }
+
+
+var rating_send={product_id:args.id
+	,rating:args.rating};
+$.star_raing_view.addEventListener('click',function(e)
+{   
+		Ti.API.info(e.source.id);
+	if(e.source.id=="starschange1")
+	 			{ $.starschange1.color="#ffb003";
+	 			  $.starschange2.color="#747474";
+	 			  $.starschange3.color="#747474";
+	 			  $.starschange4.color="#747474";
+	 			  $.starschange5.color="#747474";
+	 			  rating=1;
+	 			}
+	 			if(e.source.id=="starschange2")
+	 			{ 
+	 			$.starschange1.color="#ffb003";
+	 			$.starschange2.color="#ffb003";
+	 			$.starschange3.color="#747474";
+	 		    $.starschange4.color="#747474";
+	 			$.starschange5.color="#747474";
+	 			rating=2;
+	 			}
+	 			if(e.source.id=="starschange3")
+	 			{ 
+	 			$.starschange1.color="#ffb003";
+	 			$.starschange2.color="#ffb003";
+	 			$.starschange3.color="#ffb003";
+	 			$.starschange4.color="#747474";
+	 			$.starschange5.color="#747474";
+	 			rating=3;
+	 			}
+	 			if(e.source.id=="starschange4")
+	 			{ 
+	 			$.starschange1.color="#ffb003";
+	 			$.starschange2.color="#ffb003";
+	 			$.starschange3.color="#ffb003";
+	 			$.starschange4.color="#ffb003";
+	 			$.starschange5.color="#747474";
+	 			rating=4;
+	 			}
+	 			if(e.source.id=="starschange5")
+	 			{ 
+	 			$.starschange1.color="#ffb003";
+	 			$.starschange2.color="#ffb003";
+	 			$.starschange3.color="#ffb003";
+	 			$.starschange4.color="#ffb003";
+	 			$.starschange5.color="#ffb003";
+	 			rating=5;
+	 			}
+    });
+    
+    function rate_sending(){
+    	var option = {
+	method : "POST",
+	send_url :"http://staging.php-dev.in:8844/trainingapp/api/products/setRating",
+	data:rating_send
+					};
+    	Alloy.Globals.someGlobalFunction(option,rate_sucess,rate_fail);
+    	$.transperent_view.visible=false;
+    }
+    
+    function rate_sucess(data_recieved){
+    	alert(data_recieved.user_msg);
+    }
+    
+     function rate_fail(data_recieved){
+    	alert(data_recieved.user_msg);
+    }

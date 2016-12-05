@@ -1,13 +1,19 @@
 
 ".container" : {
+	// left:"14dp",
+	// right:"14dp",
+	backgroundColor:"white",
+	// layout:"vertical" 
+	height:Titanium.UI.FILL,
+	width:Titanium.UI.FILL
+},
+".bigview":{
+	top:"5%",
+	backgroundColor:"white",
 	left:"14dp",
 	right:"14dp",
 	backgroundColor:"white",
 	layout:"vertical" 
-},
-".bigview":{
-	top:"8%",
-	backgroundColor:"white",
 },
 ".biglabel":{
 	color:"#262626",
@@ -134,3 +140,92 @@ color:"#4f4f4f",
    backgroundColor:"#db1514",
     borderRadius:10,
 },
+".name_of_product":{
+			
+		top:"5%",
+		color:"#2C2B2B",
+		font:{
+			fontSize:"25dp"
+		},
+},
+".image_of_product":{
+	width:"240dp",
+		height:"178dp",
+		top:"34dp",
+		//image:args.product_images,
+		borderColor:"#2C2B2B"
+},
+".star_rating":{
+	top:"5%",
+	width:"200dp",
+	layout:"horizontal",
+	//borderColor:"blue",
+	height:"43dp",
+},
+"#pop_rating":{
+	height:"64%",
+	width:"90%",
+	backgroundColor:"white",
+	top:"8%",
+	layout:"vertical",
+	borderRadius:"10",
+	//visible:false
+	//left:"-640",
+	//left:0
+},
+".star_pop_color":{
+	color:"#747474",
+	font:{
+		fontSize:"42dp"
+	}
+},
+".transperent_view":{
+	top:"7%",
+height:Titanium.UI.FILL,
+width:Titanium.UI.FILL,
+backgroundColor:"rgba(142,142,142,0.5)",
+visible:"false",
+},
+".pop_buy":{
+	top:"8%",
+		height:"70%",
+		width:"80%",
+		backgroundColor:"white",
+		borderRadius:"10",
+		layout:"vertical",
+},
+".label_buy_1":{
+	top:"2%",
+		color:"#2C2B2B",
+		font:{
+			fontSize:"25dp"
+		},
+	},
+	".image_buy":{
+		width:"240dp",
+		height:"178dp",
+		top:"34dp",
+		borderColor:"#2C2B2B"
+	}
+".label_buy_2":{
+	top:"5%",
+		color:"#2C2B2B",
+		font:{
+			fontSize:"20dp"
+		}
+},
+".enter_qty":{
+	width:"45dp",
+			borderColor:"#2C2B2B",
+			color:"black",
+			top:"22dp"
+},	
+".buy_button_in_view":{
+	color:"white",
+		width:"80dp",
+		backgroundColor:"red",
+		textAlign:"center",
+		borderRadius:10,
+		top:"22dp",
+}
+

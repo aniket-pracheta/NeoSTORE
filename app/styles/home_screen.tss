@@ -12,7 +12,7 @@
 },
 ".slide_images":{
 	top:"45dp",
-	borderColor:"green",
+	//borderColor:"green",
 	height:'229dp',
 	width:"100%",
 	showPagingControl:"true",
@@ -82,7 +82,7 @@
 ".container" : {
   
 },
-////////
+
 ".view_main":{
 	backgroundColor:"white",
 	height:"100%",

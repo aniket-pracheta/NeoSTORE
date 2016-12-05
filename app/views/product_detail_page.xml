@@ -1,14 +1,14 @@
 <Alloy>
 	<Window id="product_detail">
-		<Widget src="header" id="product_detail_header"></Widget>
-	<ScrollView class="bigview">
+
 	<View class="container">
-		<Label class="biglabel" id="pro_label1">hi this is a table</Label>
+		<Widget src="header" id="product_detail_header"></Widget>
+		<ScrollView class="bigview">
+	    <Label class="biglabel" id="pro_label1">hi this is a table</Label>
 		<Label class="category" id="pro_label2">hi this is a tablefgf</Label>
 		<View class="pro_star">
 		<Label class="producer" id="pro_producer">hi this is a tablefgf</Label>
-		<!-- <Label class="star" id="pro_star">9999</Label> -->
-		<View class="star_box">
+	    <View class="star_box">
 		<Label bindId="stars1" id="stars1" class="font-icon star_color" text="\uf005"/>
 		<Label  id="stars2" class="font-icon star_color" text="\uf005"/>
 		<Label id="stars3" class="font-icon star_color" text="\uf005"/>
@@ -30,9 +30,37 @@
 		<Label class="detail" id="pro_detail">Mild Steel Base In Poder Coated White Finish.8 mm Tempered Glass Table Top.Bottom Shelf In Paimted Brown Glas</Label>
 		<View class="buttons_view">
 			<Button class="custom_button" left="8%" onClick="buy_pop">BUY</Button>
-			<Button class="custom_button" left="5%">RATE</Button>
+			<Button class="custom_button" left="5%" onClick="popup_rate">RATE</Button>
 		</View>
+		</ScrollView>
 	</View>
-	</ScrollView>
+	
+	
+	<!-- for rating -->
+	<View class="transperent_view" id="transperent_view">
+	<View id="pop_rating">
+		<Label class="name_of_product" id="label_pop"></Label>
+		<ImageView class="image_of_product" id="image_of_product"></ImageView>
+		<View class="star_rating" id="star_raing_view">
+		<Label  id="starschange1" class="font-icon star_pop_color" text="\uf005"/>
+		<Label  id="starschange2" class="font-icon star_pop_color" text="\uf005"/>
+		<Label  id="starschange3" class="font-icon star_pop_color" text="\uf005"/>
+		<Label  id="starschange4" class="font-icon star_pop_color" text="\uf005"/>
+		<Label  id="starschange5" class="font-icon star_pop_color" text="\uf005"/>
+	    </View>
+		<Button onClick="rate_sending" class="custom_button" top="5%">RATE NOW</Button>
+	</View>
+	</View>
+	
+	<!-- for buying -->
+	<View class="transperent_view" id="transperent_view_buy">
+		 <View class="pop_buy">
+			 <Label class="label_buy_1" id="label_buy_1">hiiii</Label>
+			<ImageView class="image_buy" id="image_buy"></ImageView>
+			<Label class="label_buy_2">Enter Qty</Label>
+			<TextField class="enter_qty"></TextField>
+			<Button class="buy_button_in_view">SUBMIT</Button> 	
+			</View>
+		</View>
 	</Window>
 </Alloy>

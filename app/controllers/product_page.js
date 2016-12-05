@@ -79,7 +79,7 @@ var option = {
 	send_url :"http://staging.php-dev.in:8844/trainingapp/api/products/getList?product_category_id="+product_category_id+"&limit=4"
 };
 Alloy.Globals.someGlobalFunction(option, make_list_sucess, make_list_failure);
-//"http://staging.php-dev.in:8844/trainingapp/api/products/getList?product_category_id=" + product_category_id+"&limit=5"
+//"http://staging.php-dev.in:8844/trainingapp/api/products/getList?product_category_id=" + product_category_id+"&limit=4"
 function go_to_detail(e){
 	//alert(e.itemIndex);
  var itemindex=e.itemIndex;
