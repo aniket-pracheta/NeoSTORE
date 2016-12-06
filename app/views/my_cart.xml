@@ -1,4 +1,63 @@
 <Alloy>
-	<View class="container">
+	<Window id="mycart_window">
+		<View class="transperent_view" id="transperent_view_buy">
+		 <View class="pop_buy">
+		 	<ScrollView class="just_to-scrool">
+			 <Label id="label_buy_1">Quntity</Label>
+			 <Picker id="picker" top="50" selectionIndicator="true">
+			<PickerColumn id="column1">
+                <PickerRow title="1"/>
+                <PickerRow title="2"/>
+                <PickerRow title="3"/>
+                <PickerRow title="4"/>
+                <PickerRow title="5"/>
+                <PickerRow title="6"/>
+                <PickerRow title="7"/>
+            </PickerColumn>
+            </Picker>
+			<Button class="buy_button_in_view" id="set_qty" onClick="edit_qty_update" >SUBMIT</Button> 
+			</ScrollView>	
+			</View>
+		</View>
+		
+		<View>
+		<View class="big_list_view">
+		<Widget src="header" id="mycart_header"></Widget>
+				<ListView id="listview2" >
+			<Templates>
+				<ItemTemplate name="first" class="templates">
+
+		
+		<View class="list_view">	
+				<View class="just_a_view">
+			<ImageView bindId="image" id="image" ></ImageView>		
+				<View class="right_view">
+		  			<Label bindId="label" id="label1"  class="gautum" text="aniketsdfjgdsjkfgdksgffkdghkdfghkdf"  />
+					<Label bindId="label2" id="label2" class="gautum" text="samll text"/>	
+					<View class="dropdown">
+						<Label bindId="qty" id="quntity" onClick="change_qty" product_id="giveit">5</Label>
+						<Label text="\uf107" class="drop font-icon"></Label>
+					</View>		
+                <Label bindId="cost"  id="cost" class="gautum" text="Rs.600000"/>
+				</View>								
+				</View>				
+				
+		</View>
+			
+				</ItemTemplate>
+			</Templates>
+			<ListSection id="sect"  ></ListSection>
+
+		</ListView>
+		
 	</View>
+	<View class="total_view"> 
+		<Label class="text_total">TOTAL</Label>
+		<Label id="grand_total" class="gautum">5000</Label>
+		</View>
+	<Button class="order_button">ORDER NOW</Button>
+	</View>
+	
+	
+	</Window>
 </Alloy>

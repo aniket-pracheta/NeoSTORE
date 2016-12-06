@@ -8,3 +8,111 @@ var args = $.args;
 							//or
 //var win=Alloy.createController('add_address').getView();
 //win.open();
+
+
+$.mycart_header.page_name.text ="My Cart";
+$.mycart_header.BACK.addEventListener('click', function(e) {
+
+	Titanium.API.info("You clicked the button");
+	$.mycart_window.close();
+});
+
+////
+var access_token=Alloy.Globals.user_data_fetch.data.access_token;
+ var data = [];
+ var product_list;
+function mycart_sucess(jsondata) {
+	$.grand_total.text="Rs."+jsondata.total;
+	_.each(jsondata.data, function(products, index, products_list) {
+		Ti.API.info("cart"+(products));
+		//Ti.API.info("mycart"+products.product.product_images);
+				 
+			data.push({
+			label : {
+				text : products.product.name
+			},
+			label2 : {
+				text : "("+products.product.product_category+")"
+			},
+			cost : {
+				text : "Rs." + products.product.cost
+			},
+			qty : {
+				text : products.quantity,
+				product_id:products.product_id,
+			},
+			image : {
+				image : products.product.product_images
+			},	
+		
+			template : "first",
+			properties : {
+				height : "97dp"
+			},
+		});
+	});
+	 $.sect.setItems(data);
+	 $.listview2.sections = [$.sect];
+	 $.mycart_window.add($.listview2);
+	 $.mycart_window.open();
+}
+
+function mycart_failure(data_recieved) {
+	Ti.API.info("error" + data_recieved);
+}
+
+var option = {
+	method : "GET",
+	send_url :"http://staging.php-dev.in:8844/trainingapp/api/cart",
+	access_token:access_token
+};
+Alloy.Globals.someGlobalFunction(option, mycart_sucess, mycart_failure);
+
+//
+var get_qty_view;
+var pro_id;
+function change_qty(e){
+	Ti.API.info(JSON.stringify(e));
+	 Ti.API.info((e.source.text));
+	 Ti.API.info((e.source.product_id));
+	 pro_id=e.source.product_id;
+	 $.transperent_view_buy.visible=true;
+// function setting_qty(){
+	// alert("fun called");
+	// e.source.text=get_qty_view;
+// }
+// Ti.API.info("setting"+get_qty_view);
+}
+$.picker.addEventListener('change', function(e) {
+	 	Ti.API.info("clicked_picker"+(e.row.title));
+	 	get_qty_view=e.row.title;
+           
+});
+
+function edit_qty_update(){
+	Ti.API.info("qty="+get_qty_view);
+	Ti.API.info("pro_id="+pro_id);
+	// Ti.API.info("to send"+JSON.stringify(update_data));
+	// Ti.API.info("to send"+(update_data));
+	var formdata={
+			product_id:pro_id,
+			quantity:get_qty_view,
+			};
+	var option1 = {
+	method : "POST",
+	send_url :"http://staging.php-dev.in:8844/trainingapp/api/editCart",
+	access_token:access_token,
+	data:formdata
+				};
+		Alloy.Globals.someGlobalFunction(option1, update_sucess, update_failure);		
+	var win=Alloy.createController('my_cart').getView();
+	win.open();
+}
+function update_sucess(data_recieved){
+	//alert("sucess bhai");
+	alert(data_recieved.user_msg);
+}
+
+function update_failure(data_recieved) {
+	Ti.API.info("error" + data_recieved);
+}

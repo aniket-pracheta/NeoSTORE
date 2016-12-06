@@ -173,6 +173,9 @@ color:"#4f4f4f",
 	//left:"-640",
 	//left:0
 },
+".just_to-scrool":{
+	layout:"vertical",
+}
 ".star_pop_color":{
 	color:"#747474",
 	font:{

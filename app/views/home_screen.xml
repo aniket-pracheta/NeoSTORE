@@ -9,7 +9,7 @@
 					<ImageView class="menu_image" id="user_image"></ImageView>
 					<Label class="user_name" id="user_name"> hiiii</Label>
 					<Label class="user_email" id="user_email">hellow</Label>
-					<View class="menu_container" top="14dp">
+					<View class="menu_container" top="14dp" onClick="gotocart">
 						<Label text="\uf217" class="font-icon icon_menu_size"></Label>
 						<Label class="icon_menu_text">My Cart</Label>
 					</View>

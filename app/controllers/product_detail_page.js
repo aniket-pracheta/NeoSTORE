@@ -111,6 +111,7 @@ function popup_rate(){
  }
 
 
+//################################# Rating products  ###################################
 var rating_send={product_id:args.id
 	,rating:args.rating};
 $.star_raing_view.addEventListener('click',function(e)
@@ -179,3 +180,29 @@ $.star_raing_view.addEventListener('click',function(e)
      function rate_fail(data_recieved){
     	alert(data_recieved.user_msg);
     }
+    
+//################################# Adding products to cart ###################################
+   var access_token=Alloy.Globals.user_data_fetch.data.access_token;  
+    function addtocart(){
+    	Ti.API.info($.quantity.value);
+    	Ti.API.info(pro_id);
+    	var parameters={product_id:pro_id,quantity:$.quantity.value};
+    	var option = {
+	method : "POST",
+	send_url :"http://staging.php-dev.in:8844/trainingapp/api/addToCart",
+	access_token:access_token,
+	data:parameters
+					};
+    	Alloy.Globals.someGlobalFunction(option,cart_sucess,cart_fail);
+    	$.transperent_view_buy.visible=false;
+    	
+    }
+    
+    function cart_sucess(data_recieved){
+    	alert(data_recieved.user_msg);
+    }
+    
+     function cart_fail(data_recieved){
+    	alert(data_recieved.user_msg);
+    }
+    
