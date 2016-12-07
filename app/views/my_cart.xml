@@ -3,7 +3,7 @@
 		<View class="transperent_view" id="transperent_view_buy">
 		 <View class="pop_buy">
 		 	<ScrollView class="just_to-scrool">
-			 <Label id="label_buy_1">Quntity</Label>
+			 <Label id="label_buy_1" color="black">Quntity</Label>
 			 <Picker id="picker" top="50" selectionIndicator="true">
 			<PickerColumn id="column1">
                 <PickerRow title="1"/>
@@ -28,7 +28,7 @@
 				<ItemTemplate name="first" class="templates">
 
 		
-		<View class="list_view">	
+		<View class="list_view" onClick="todelete">	
 				<View class="just_a_view">
 			<ImageView bindId="image" id="image" ></ImageView>		
 				<View class="right_view">
@@ -37,11 +37,14 @@
 					<View class="dropdown">
 						<Label bindId="qty" id="quntity" onClick="change_qty" product_id="giveit">5</Label>
 						<Label text="\uf107" class="drop font-icon"></Label>
-					</View>		
+					</View>	
+					
                 <Label bindId="cost"  id="cost" class="gautum" text="Rs.600000"/>
 				</View>								
 				</View>				
-				
+				<View class="delete" >	
+					<Label text="\uf1f8" class="delete_font font-icon"></Label>
+					</View>	
 		</View>
 			
 				</ItemTemplate>

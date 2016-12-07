@@ -27,7 +27,7 @@ function goto_homepage(){
 		var formdata={
 			email:$.first_name.value,
 			password:$.password.value,
-		};
+			};
 		Ti.API.log(formdata);
 		
 	function sucesss(data_recieved){

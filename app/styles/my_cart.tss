@@ -1,4 +1,3 @@
-
 ".container" : {
   backgroundColor:"white",
 },
@@ -121,11 +120,7 @@
 ".templates":{
 	
 },
-".delete":{
-	left:"0",
-	top:"30%"
-	//right:"-10"
-},
+
 ".dropdown":{
 	backgroundColor:"#EDEDED",
 	bottom:"5%",
@@ -148,6 +143,9 @@
 },
 ".just_a_view":{
 	touchEnabled:true,
+	height:Titanium.UI.FILL,
+	width:Titanium.UI.FILL,
+	borderColor:"cyan"
 },
 ".order_button":{
 	bottom:"2%",
@@ -220,5 +218,39 @@ zIndex:"1000"
 		backgroundColor:"red",
 		textAlign:"center",
 		borderRadius:10,
-		top:"22dp",
+		top:"30%",
+},
+".delete":{
+	top:"0",
+	left:"0",
+	width:"50dp",
+	height:"50dp",
+		backgroundColor:"red",
+		borderRadius:"25dp",
+},
+"#picker":{
+	left : '40%',
+   // right : '14dp',
+    width :"80dp",
+    height:"40dp",
+    font: {
+        fontFamily:'Arial',
+        fontSize: '18dp',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontcolor:'black'
+  },
+    paddingLeft : '10dp',
+   // top:"15dp",
+    borderWidth : '1dp',
+    borderColor: "#000",
+    backgroundColor:"#2F2F2F",
+    color:"black"
+}
+".delete_font":{
+	color:"white",
+	font: {
+		fontSize: "20dp",
+		
+	},
 }

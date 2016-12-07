@@ -17,7 +17,7 @@ $.mycart_header.BACK.addEventListener('click', function(e) {
 	$.mycart_window.close();
 });
 
-////
+//########################## Getting list in my cart ##################################
 var access_token=Alloy.Globals.user_data_fetch.data.access_token;
  var data = [];
  var product_list;
@@ -68,20 +68,19 @@ var option = {
 };
 Alloy.Globals.someGlobalFunction(option, mycart_sucess, mycart_failure);
 
-//
+//######################### Editing the quntity ###############################3
 var get_qty_view;
 var pro_id;
 function change_qty(e){
 	Ti.API.info(JSON.stringify(e));
-	 Ti.API.info((e.source.text));
-	 Ti.API.info((e.source.product_id));
-	 pro_id=e.source.product_id;
+	 //Ti.API.info((e.source.text));
+	     var itemindex=e.itemIndex;
+	 	 if(Ti.Platform.osname == "android")
+	 	 {pro_id=e.section.items[itemindex].qty.product_id;}
+	 	 else
+	 	 {pro_id=e.source.product_id;}
 	 $.transperent_view_buy.visible=true;
-// function setting_qty(){
-	// alert("fun called");
-	// e.source.text=get_qty_view;
-// }
-// Ti.API.info("setting"+get_qty_view);
+
 }
 $.picker.addEventListener('change', function(e) {
 	 	Ti.API.info("clicked_picker"+(e.row.title));
@@ -92,8 +91,6 @@ $.picker.addEventListener('change', function(e) {
 function edit_qty_update(){
 	Ti.API.info("qty="+get_qty_view);
 	Ti.API.info("pro_id="+pro_id);
-	// Ti.API.info("to send"+JSON.stringify(update_data));
-	// Ti.API.info("to send"+(update_data));
 	var formdata={
 			product_id:pro_id,
 			quantity:get_qty_view,
@@ -115,4 +112,12 @@ function update_sucess(data_recieved){
 
 function update_failure(data_recieved) {
 	Ti.API.info("error" + data_recieved);
+}
+
+//################################## to delete product ############################
+function todelete(e){
+	alert(e);
+	Ti.API.info("error" +JSON.stringify(e));
+	//e.source.left="-40dp";
+
 }
