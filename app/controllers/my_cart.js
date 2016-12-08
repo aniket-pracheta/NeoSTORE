@@ -101,7 +101,9 @@ function edit_qty_update(){
 	access_token:access_token,
 	data:formdata
 				};
-		Alloy.Globals.someGlobalFunction(option1, update_sucess, update_failure);		
+		Alloy.Globals.someGlobalFunction(option1, update_sucess, update_failure);
+		$.transperent_view_buy.visible=false;	
+		$.mycart_window.close();	
 	var win=Alloy.createController('my_cart').getView();
 	win.open();
 }
@@ -115,9 +117,29 @@ function update_failure(data_recieved) {
 }
 
 //################################## to delete product ############################
+var previous;
+var latest;
 function todelete(e){
-	alert(e);
+	//alert(e);
 	Ti.API.info("error" +JSON.stringify(e));
-	//e.source.left="-40dp";
+	
+	// if(previous!=latest)
+	//{e.source.left="-40dp";}
+//previous=e.source;
+}
+//####################3 palcing the order ##############################3
 
+function placeorder(){
+	var rows = db.execute('SELECT * FROM ADDRESS');
+    Ti.API.info('Row count: ' + rows.rowCount);
+    if(rows.rowCount>0)
+    {
+    		var win=Alloy.createController('address_list').getView();
+			win.open();
+    }
+    else{
+    	var win=Alloy.createController('add_address').getView();
+		win.open();
+
+    }
 }

@@ -1,4 +1,87 @@
 
 ".container" : {
   
+},
+".list_view":{
+	height:"100dp",
+	width:"450dp",
+	left:"0",
+	backgroundColor:"white",
+	touchEnabled:true,
+	//borderColor:"cyan",
+	layout:"horizontal"	
+},
+".just_a_view":{
+	touchEnabled:true,
+	height:"100%",
+	width:Titanium.UI.FILL,
+	borderColor:"cyan",
+	left:0,
+	layout:"horizontal"
+},
+".right_view":{
+	top:"5%",
+	width:"302dp",
+	height:"86dp",
+	left: "20dp",
+	touchEnabled:true,
+	borderColor:"#333333",
+	//layout:"vertical"
+	//color:"#333333",
+},
+".order_button":{
+	bottom:"2%",
+	color:"#FFFFFF",
+	width:"250dp",
+    //left:"16%",
+    textAlign:"center",
+    title:"ORDER NOW",
+    font: {
+		fontSize: "26dp",
+		fontWeight:'medium',
+	},
+    backgroundColor:"#db1514",
+    borderRadius:10,
+},
+".select":{
+	left:"30dp",
+	color:"#333333",
+},
+"#listview2":{
+	top:"15dp",
+	touchEnabled:true,
+	height:"70%",
+},
+".big_list_view":{
+	//height:"65%"
+	layout:"vertical",
+	backgroundColor:"white",
+},
+".ship":{
+	color:"#333333",
+	top:"11dp",
+	left:"10dp",
+	font: {
+		fontSize: "22dp",
+		fontWeight:'medium',
+	},
+},
+".del":{
+	right:"10dp",
+	top:"0",
+	color:"#333333",
+	//color:"red",
+	font: {
+		fontSize: "15dp",
+		fontWeight:'medium',
+	},
+},
+"#label2":{
+	top:"15dp",
+	left:"10dp",
+	color:"#333333",
+	font: {
+		fontSize: "15dp",
+		fontWeight:'medium',
+	},
 }

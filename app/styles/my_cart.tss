@@ -5,10 +5,10 @@
 ////
 ".list_view":{
 	height:"97dp",
-	width:Titanium.UI.FILL,
+	width:"450dp",
 	left:"0",
 	backgroundColor:"white",
-	touchEnabled:"true",
+	touchEnabled:true,
 	//borderColor:"cyan",
 	layout:"horizontal"	
 },
@@ -18,7 +18,9 @@
 	width:"220px",
 	//borderColor:"cyan",
 	left:"2%",
-	top:"30px"
+	top:"30px",
+	touchEnabled:false,
+	
 },
 ".firstlabel":{
 	// font:{
@@ -39,6 +41,7 @@
 		//fontWeight:'bold',
 	},
 	left:"0",
+	touchEnabled:false,
 },
 ".secondlabel":{
 	top:"1%",
@@ -59,13 +62,15 @@
 		//fontWeight:'bold',
 	},
 	left:"0",
+	touchEnabled:false,
 },
 ".right_view":{
 	//top:"40px",
-	width:"80%",
+	width:"300dp",
 	height:"80%",
-	left: "25%",
-	//borderColor:"yellow",
+	left: "20dp",
+	touchEnabled:true,
+	borderColor:"yellow",
 	//layout:"vertical"
 	
 },
@@ -143,9 +148,11 @@
 },
 ".just_a_view":{
 	touchEnabled:true,
-	height:Titanium.UI.FILL,
+	height:"90%",
 	width:Titanium.UI.FILL,
-	borderColor:"cyan"
+	borderColor:"cyan",
+	left:0,
+	layout:"horizontal"
 },
 ".order_button":{
 	bottom:"2%",
@@ -222,7 +229,8 @@ zIndex:"1000"
 },
 ".delete":{
 	top:"0",
-	left:"0",
+	left:"5dp",
+	//right:0,
 	width:"50dp",
 	height:"50dp",
 		backgroundColor:"red",

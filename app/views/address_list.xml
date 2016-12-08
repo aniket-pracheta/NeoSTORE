@@ -1,4 +1,43 @@
 <Alloy>
-	<View class="container">
+	<Window id="address_list_window">
+	<View>
+		<View class="big_list_view">
+			<Widget src="header" id="address_list_header"></Widget>
+			<Label class="ship">Shipping Address</Label>
+				<ListView id="listview2" >
+			<Templates>
+				<ItemTemplate name="first" class="templates">
+
+		
+			<View class="list_view"  id="list_view">	
+				<View class="just_a_view" >
+				<Label class="select font-icon" text="\uf10c" onClick="select_circle"></Label>		
+					<View class="right_view">
+		  			<Label bindId="label1" class="del font-icon" text="\uf00d" onClick="deleterow" address_id="text" ></Label>
+					<Label bindId="label2" id="label2" class="gautum" address_id="text" text="After setting Content-Type, server side script would send an Event: tag followed by event name. Following example w"/>	
+					</View>	
+				</View>				
+			</View>
+			
+				</ItemTemplate>
+			</Templates>
+			<ListSection id="sect"  ></ListSection>
+
+		</ListView>
+		
 	</View>
+	
+	<!-- <View class="list_view"  id="list_view">	
+				<View class="just_a_view" >
+				<Label class="select font-icon" text="\uf10c"></Label>		
+					<View class="right_view">
+		  			<Label class="del font-icon" text="\uf00d"></Label>
+					<Label bindId="label2" id="label2" class="gautum" text="After setting Content-Type, server side script would send an Event: tag followed by event name. Following example w"/>	
+					</View>	
+				</View>				
+			</View> -->
+	
+	<Button class="order_button">PLACE ORDER</Button>
+	</View>
+	</Window>
 </Alloy>

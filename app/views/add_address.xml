@@ -1,4 +1,37 @@
 <Alloy>
+	<Window id="add_address">
+		<Widget src="header" id="add_address_header"></Widget>
 	<View class="container">
+		
+		<ScrollView class="scrollview">
+			<View class="uper_view">
+				<Label class="labels_address gautum" top="5%">ADDRESS</Label>
+				<TextArea class="txtarea" id="address"></TextArea>
+				<Label class="labels_address gautum" top="10%">CITY</Label>
+				<TextArea class="samll_text" id="city"></TextArea>
+			</View>
+			<View class="lower_view" top="5%">
+				<View class="sub_low_view">
+					<Label class="sub_labels gautum">CITY</Label>
+					<TextArea class="sub_text" id="landmark"></TextArea>
+				</View>
+				<View class="sub_low_view">
+					<Label class="sub_labels gautum">STATE</Label>
+					<TextArea class="sub_text" id="state"></TextArea>
+				</View>
+			</View>
+			<View class="lower_view">
+				<View class="sub_low_view">
+					<Label class="sub_labels gautum" id="zipcode">ZIP CODE</Label>
+					<TextArea class="sub_text" id="zipcode"></TextArea>
+				</View>
+				<View class="sub_low_view">
+					<Label class="sub_labels gautum">COUNTRY</Label>
+					<TextArea class="sub_text" id="country"></TextArea>
+				</View>
+			</View>
+			<Button class="btn_save gautum" onClick="push">SAVE ADDRESS</Button>
+		</ScrollView>
 	</View>
+	</Window>
 </Alloy>
