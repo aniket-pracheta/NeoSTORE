@@ -32,9 +32,9 @@ function goto_homepage(){
 		
 	function sucesss(data_recieved){
 			 Ti.API.info(data_recieved.message);
-			  alert(data_recieved.message);
+			  //alert(data_recieved.message);
 			  Ti.API.info(data_recieved.user_msg);
-			  alert("sucess");
+			 // alert("sucess");
 			  if(data_recieved.user_msg=="Logged In successfully")
 			  { 
 			  	var win=Alloy.createController('home_screen',data_recieved).getView();

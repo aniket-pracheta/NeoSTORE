@@ -1,4 +1,72 @@
-
-".container" : {
-  
+".big_list_view":{
+	//height:"65%"
+	//layout:"vertical",
+	backgroundColor:"white",
+},
+"#listview2":{
+	top:"60dp",
+	//top:"40%",
+	touchEnabled:true,
+	//height:"70%",
+},
+".list_view":{
+	height:"80dp",
+	//width:"450dp",
+	left:"0",
+	backgroundColor:"white",
+	touchEnabled:true,
+	borderColor:"cyan",
+	//layout:"horizontal"	
+},
+".orderid":{
+	color:"#1c1c1c",
+	top:"15%",
+	left:"0",
+ font: {
+		fontSize: "16dp",
+		fontWeight:'medium',
+	},
+},
+".orderdate":{
+	color:"#4f4f4f",
+	top:"15%",
+	left:"0",
+ font: {
+		fontSize: "13dp",
+		fontWeight:'medium',
+	},
+},
+".cost":{
+	color:"#333333",
+	right:"5%",
+ font: {
+		fontSize: "20dp",
+		fontWeight:'medium',
+	},
+},
+".line":{
+	height:2,
+    top:"40dp",
+    left:"10%",
+    width:"150dp",
+    borderWidth:1,
+    borderColor:'#aaa'
+},
+".small_container":{
+	borderColor:"red",
+	touchEnabled:true,
+	layout:"horizontal",
+	height:"30dp",
+	width:"60%",
+	left:"10%",
+	top:"5%",
+},
+".lowercontainer":{
+	borderColor:"red",
+	layout:"horizontal",
+	height:"30dp",
+	width:"60%",
+	left:"10%",
+	bottom:"5%",
+	touchEnabled:true,
 }

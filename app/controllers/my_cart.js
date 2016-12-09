@@ -22,6 +22,7 @@ var access_token=Alloy.Globals.user_data_fetch.data.access_token;
  var data = [];
  var product_list;
 function mycart_sucess(jsondata) {
+	Ti.API.info("cart is here"+JSON.stringify(jsondata));
 	$.grand_total.text="Rs."+jsondata.total;
 	_.each(jsondata.data, function(products, index, products_list) {
 		Ti.API.info("cart"+(products));

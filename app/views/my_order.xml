@@ -1,4 +1,38 @@
 <Alloy>
-	<View class="container">
-	</View>
+	<Window id="my_order_window">
+	<View class="big_list_view">
+				<Widget src="header" id="myorder_header"></Widget>
+     				<ListView id="listview2" >
+					<Templates>
+						<ItemTemplate name="first" class="templates">
+							<View class="list_view"  id="list_view" onClick="order_unique" bindId="orderid" orderid="1">
+								<View class="small_container">
+								<Label  class="orderid">Order Id:</Label>
+								<Label bindId="id" class="orderid">2265</Label>
+							</View>
+								<View class="line"></View>
+								<View class="lowercontainer">
+								<Label  class="orderdate">Order Date:</Label>
+								<Label bindId="orderdate" class="orderdate">08 aug 15</Label>
+								</View>
+								<Label bindId="cost" class="cost">price</Label>
+							</View>
+						</ItemTemplate>
+					</Templates>
+					<ListSection id="sect"></ListSection>
+				</ListView>
+				<!-- <View class="list_view"  id="list_view">
+								<View class="small_container">
+								<Label  class="orderid">Order Id:</Label>
+								<Label bindId="orderid" class="orderid">2265</Label>
+							</View>
+								<View class="line"></View>
+								<View class="lowercontainer">
+								<Label  class="orderdate">Order Date:</Label>
+								<Label bindId="orderdate" class="orderdate">08 aug 15</Label>
+								</View>
+								<Label bindId="cost" class="cost">price</Label>
+							</View> -->
+			</View>
+	</Window>
 </Alloy>

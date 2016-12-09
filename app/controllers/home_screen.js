@@ -106,3 +106,8 @@ function gotocart(){
 	//var win=Alloy.createController('my_cart',access_token).getView();
 	win.open();
 }
+//#################3 go to my order ##########################
+function my_order(){
+	var win=Alloy.createController('my_order').getView();
+		win.open();
+}

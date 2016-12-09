@@ -37,7 +37,7 @@
 						<Label text="\uf041" class="font-icon icon_menu_size"></Label>
 						<Label class="icon_menu_text">Store Locator</Label>
 					</View>
-					<View class="menu_container">
+					<View class="menu_container" onClick="my_order">
 						<Label text="\uf022" class="font-icon icon_menu_size"></Label>
 						<Label class="icon_menu_text">My Order</Label>
 					</View>
