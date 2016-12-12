@@ -1,0 +1,45 @@
+<Alloy>
+	<Window id="order_detail_window">
+	<Widget src="header" id="order_detail_header"></Widget>
+		<ListView id="listview2" >
+			<Templates>
+				<ItemTemplate name="first" class="templates">
+					<View class="list_view">						
+						<ImageView bindId="image" id="image" ></ImageView>
+						<View class="right_view">
+								<Label bindId="label" id="label1"  class="gautum" text="aniketsdfjg"  />
+								<Label bindId="label2" id="label2" class="gautum" text="samll text"/>
+							<View class="cost_star">
+								<!-- <View class="view_cost"> -->
+								<Label bindId="qty"  id="qty" class="gautum" text="qty:5"/>
+								<Label bindId="cost"  id="cost" class="gautum" text="Rs.600000"/>
+								<!-- </View> -->
+								
+							</View>
+						</View>
+					</View>
+				</ItemTemplate>
+			</Templates>
+			<ListSection id="sect" ></ListSection>
+
+		</ListView>
+		<!-- <View class="list_view">						
+						<ImageView bindId="image" id="image" ></ImageView>
+						<View class="right_view">
+								<Label bindId="label" id="label1"  class="gautum" text="aniketsdfjg"  />
+								<Label bindId="label2" id="label2" class="gautum" text="samll text"/>
+							<View class="cost_star"> -->
+								<!-- <View class="view_cost"> -->
+								<!-- <Label bindId="qty"  id="qty" class="gautum" text="qty:5"/>
+								<Label bindId="cost"  id="cost" class="gautum" text="Rs.600000"/> -->
+								 <!-- </View> -->
+								
+							<!-- </View>
+						</View>
+					</View> -->
+					<View class="total_view"> 
+		<Label class="text_total">TOTAL</Label>
+		<Label id="grand_total" class="gautum">5000</Label>
+		</View>
+	</Window>
+</Alloy>

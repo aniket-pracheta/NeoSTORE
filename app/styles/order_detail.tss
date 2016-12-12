@@ -1,0 +1,143 @@
+"#order_detail_window":{
+	backgroundColor:"white",
+},
+".container" : {
+  //top:"10%",
+  backgroundColor:"white",
+},
+".list_view":{
+	height:"100dp",
+	backgroundColor:"white",
+	touchEnabled:"true",
+	//layout:"horizontal"	
+},
+
+"#image":{
+	height:"220px",
+	width:"220px",
+	//borderColor:"red",
+	left:"2%",
+	top:"30px"
+},
+".firstlabel":{
+	// font:{
+		// fontsize:"45px",
+	// },
+	top:"1%",
+	height:"80px",	
+	borderColor:"blue",
+	width:"70%",
+	left:"2%"
+},
+"#label1":{	
+	//borderColor:"yellow",
+	color:"#1c1c1c",
+	font: {
+		fontSize: "20dp",
+		//fontWeight:'bold',
+	},
+	left:"0",
+},
+".secondlabel":{
+	top:"1%",
+	height:"70px",	
+	borderColor:"yellow",
+	width:"70%",
+	left:"2%",
+	
+},
+"#label2":{
+	//top:"24px",
+	textAlign:"left",
+	//borderColor:"yellow",
+	color:"#6b6b6b",
+	font: {
+		fontSize: "16dp",
+		//fontWeight:'bold',
+	},
+	left:"0",
+},
+".right_view":{
+	top:"40px",
+	width:"80%",
+	height:"80%",
+	left: "23%",
+	//borderColor:"yellow",
+	layout:"vertical"
+	
+},
+".cost_star":{
+	top:"8dp",
+	height:"80px",	
+	//borderColor:"blue",
+	width:"95%",
+	left:"0",
+	layout:"horizontal"
+},
+"#cost":{
+	//right:"5%",
+	left:"60%",
+	color:"#333333",
+	font: {
+		fontSize: "14dp",
+		//fontWeight:'bold',
+	},
+	
+},
+"#qty":{
+	left:0,
+	color:"#333333",
+	font: {
+		fontSize: "14dp",
+		//fontWeight:'bold',
+	},
+},
+
+".star_box":{
+	//borderColor:"red",
+	width:"80dp",
+	height:Titanium.UI.FILL,
+	//right:"0",
+	layout:"horizontal",
+	left:"40%"
+},
+".star_color":{
+	top:"5dp",
+	color:"#4F4F4F",
+	font: {
+		fontSize: "16dp",
+		//fontWeight:'bold',
+	},
+}
+"#listview2":{
+	top:"8%",
+	height:"75%"
+},
+".templates":{
+	
+},
+////////
+".total_view":{
+	backgroundColor:"white",
+	borderColor:"black",
+	height:"70dp",
+	width:Titanium.UI.FILL,
+	layout:"horizontal",
+	bottom:"2%"
+},
+".text_total":{
+	color:"#1c1c1c",
+	top:"40%",
+	left:"10%"
+},
+"#grand_total":{
+	top:"43%",
+	left:"58%",
+	//left:"90%",
+	color:"#1c1c1c",
+	font: {
+		fontSize: "15dp",
+		
+	},
+},
+

@@ -15,11 +15,12 @@
 	left:"0",
 	backgroundColor:"white",
 	touchEnabled:true,
-	borderColor:"cyan",
+	//borderColor:"cyan",
 	//layout:"horizontal"	
 },
 ".orderid":{
 	color:"#1c1c1c",
+	touchEnabled:false,
 	top:"15%",
 	left:"0",
  font: {
@@ -53,8 +54,8 @@
     borderColor:'#aaa'
 },
 ".small_container":{
-	borderColor:"red",
-	touchEnabled:true,
+	//borderColor:"red",
+	touchEnabled:false,
 	layout:"horizontal",
 	height:"30dp",
 	width:"60%",
@@ -62,11 +63,11 @@
 	top:"5%",
 },
 ".lowercontainer":{
-	borderColor:"red",
+	//borderColor:"red",
 	layout:"horizontal",
 	height:"30dp",
 	width:"60%",
 	left:"10%",
 	bottom:"5%",
-	touchEnabled:true,
+	touchEnabled:false,
 }

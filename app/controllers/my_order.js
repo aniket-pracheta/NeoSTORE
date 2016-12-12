@@ -54,7 +54,7 @@ function orderlist_failure(data_recieved) {
 var option = {
 	method : "GET",
 	send_url :"http://staging.php-dev.in:8844/trainingapp/api/orderList",
-	access_token:access_token
+	access_token:access_token,
 };
 Alloy.Globals.someGlobalFunction(option, orderlist_sucess, orderlist_failure);
 //######################
@@ -66,4 +66,10 @@ $.listview2.addEventListener('click', function(e) {
 
 function order_unique(e){
 	Titanium.API.info("cliked the order"+JSON.stringify(e));
+	var send=e.section.items[e.itemIndex].orderid.orderid;
+	Titanium.API.info(send);
+	//alert("send"+send);
+	var w=Alloy.createController('order_detail',send).getView();
+    w.open(); 
+	
 }

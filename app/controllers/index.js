@@ -13,5 +13,6 @@ function doClick(e) {
 //var w=Alloy.createController('add_address').getView();
 //var w=Alloy.createController('address_list').getView();
 //var w=Alloy.createController('my_order').getView();
+//var w=Alloy.createController('order_detail').getView();
     w.open();    
 //$.index.open();
