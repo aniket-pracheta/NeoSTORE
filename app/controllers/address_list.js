@@ -33,9 +33,9 @@ var load_list = function() {
 				address_id : id
 			},
 			icon : {
-				// text:"\uf10c",
-				text : id,
-				address_full:add,
+				text:"\uf10c",
+				//text : id,
+				address_full : add,
 
 			},
 			label2 : {
@@ -83,35 +83,46 @@ function select_circle(e) {
 	Ti.API.info(JSON.stringify(e));
 	//Ti.API.info('Before' + JSON.stringify(e.section.items[e.itemIndex].icon.text));
 	//e.section.items[e.itemIndex].icon.text = "10";
-		//Ti.API.info('A' + JSON.stringify(e.section.items[e.itemIndex].icon.text));
+	//Ti.API.info('A' + JSON.stringify(e.section.items[e.itemIndex].icon.text));
 	// $.sect.updateItemAt(e.itemIndex,e.itemIndex);
 	//Ti.API.info((e.bindId.text));
-	Ti.API.info(typeof past);
-	e.source.text="\uf192";
-	address=e.source.address_full;
-	if(typeof past!="undefined")
-	{
-	past.source.text="\uf10c";
-	Ti.API.info("pastdfhfghjson"+typeof past);
+	Ti.API.info( typeof past);
+	e.source.text = "\uf192";
+	address = e.source.address_full;
+	if ( typeof past != "undefined") {
+		past.source.text = "\uf10c";
+		Ti.API.info("pastdfhfghjson" + typeof past);
 	}
-	if(Ti.Platform.osname == "android")
-	{}
-	else
-	{address=e.source.address_full;}
-	past=e;
-	Ti.API.info("pastjson"+(past));
+	if (Ti.Platform.osname == "android") {
+	} else {
+		address = e.source.address_full;
+	}
+	past = e;
+	Ti.API.info("pastjson" + (past));
 
 }
-// $.listview2.addEventListener('itemclick', function (e) {
-  // Ti.API.info(JSON.stringify(e));
-  // Ti.API.info('Before' + JSON.stringify(e.section.items[e.itemIndex].icon.text));
-	// e.section.items[e.itemIndex].icon.text="10";
-	// Ti.API.info('A' + JSON.stringify(e.section.items[e.itemIndex].icon.text));
-//   
-// });
+
+$.listview2.addEventListener('itemclick', function(e) {
+	var user = e.section.getItemAt(e.itemIndex);
+	Ti.API.info(JSON.stringify(e));
+	Ti.API.info('A' + e.section.items[e.itemIndex].icon.text);
+	var latest=e.section.items[e.itemIndex];
+	latest.icon.text="\uf192";
+	//update the list
+	e.section.updateItemAt(e.itemIndex, latest);
+	if ( typeof past != "undefined") {
+	var change_past=past.section.items[past.itemIndex];
+	change_past.icon.text="\uf10c";
+	//update the list
+	past.section.updateItemAt(past.itemIndex,change_past);
+		Ti.API.info("pastdfhfghjson" + typeof past);
+		Ti.API.info("pastdfhfghjson123456" +JSON.stringify(past));
+	}
+	 past=e;
+});
 
 //######################## sending final address for order#######################
-var access_token = Alloy.Globals.user_data_fetch.data.access_token;
+var access_token=Alloy.Globals.user_data_fetch.data.access_token;
 function order_now() {
 	Ti.API.info("send address" + address);
 
@@ -124,10 +135,10 @@ function order_now() {
 		access_token : access_token,
 		data : formdata
 	};
-	Alloy.Globals.someGlobalFunction(option1, order_sucess, fail_failure);
+//	Alloy.Globals.someGlobalFunction(option1, order_sucess, fail_failure);
 
-	var win = Alloy.createController('home_screen').getView();
-	win.open();
+	//var win = Alloy.createController('home_screen').getView();
+	//win.open();
 }
 
 function order_sucess(data_recieved) {

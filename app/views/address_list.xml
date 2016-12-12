@@ -9,7 +9,7 @@
 						<ItemTemplate name="first" class="templates">
 							<View class="list_view"  id="list_view" >
 								<View class="just_a_view" >
-									<Label bindId="icon" id="icon" class="select font-icon"  text="1" address_full="1" onClick="select_circle"></Label><!-- address="1" -->
+									<Label bindId="icon" id="icon" class="select font-icon"  text="\uf10c" address_full="1" onClick="select_circle"></Label><!-- address="1" -->
 									<View class="right_view">
 										<Label bindId="label1"  class="del font-icon" text="\uf00d" onClick="deleterow" address_id="text" ></Label>
 										<Label bindId="label2" id="label2" class="gautum" address_id="text" text="After setting Content-Type, server side script would send an Event: tag followed by event name. Following example w"/>

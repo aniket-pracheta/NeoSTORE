@@ -15,7 +15,7 @@
 	touchEnabled:true,
 	height:"100%",
 	width:Titanium.UI.FILL,
-	borderColor:"cyan",
+	//borderColor:"cyan",
 	left:0,
 	layout:"horizontal"
 },

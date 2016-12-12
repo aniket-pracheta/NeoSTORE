@@ -3,7 +3,7 @@
 var args = arguments[0] || {};
  Alloy.Globals.user_data_fetch=args;
  //Ti.API.info(Alloy.Globals.user_data_fetch);
- // var access_token=Alloy.Globals.user_data_fetch.data.access_token;
+  var access_token=Alloy.Globals.user_data_fetch.data.access_token;
  // {
  	// $.user_name.text=Alloy.Globals.user_data_fetch.data.first_name+" "+Alloy.Globals.user_data_fetch.data.last_name;
  	// $.user_email.text=Alloy.Globals.user_data_fetch.data.email;
@@ -31,7 +31,7 @@ var option={
 				send_url:"http://staging.php-dev.in:8844/trainingapp/api/users/getUserData",
 				access_token:access_token,			
 				};	
-//Alloy.Globals.someGlobalFunction(option,fetch_sucess,fetch_failure);
+Alloy.Globals.someGlobalFunction(option,fetch_sucess,fetch_failure);
 
 $.home_screen_header.page_name.text="NeoSTORE";
 $.home_screen_header.BACK.text="\uf0c9";
