@@ -35,7 +35,7 @@
 		//fontWeight:'medium',
 	},
 	hintTextColor:"#ffffff",
-	editable:false
+	
 },
 
 ".user_image":{
@@ -50,29 +50,17 @@
 	color:"#E31C1A",
 	width:"70%",
     left:"16%",
-    title:"EDIT PROFILE",
+    title:"SUBMIT",
     backgroundColor:"white",
     borderRadius:5,
     top:"20dp"
 
 },
-".rest_pass":{
-	top:"20%",
-    backgroundColor:"white",
-	height:"120px",
-	width:Titanium.UI.FILL,
-	borderColor:"white",
-	borderWidth:"2dp",
-	touchEnabled:true
-},
+
 ".big_view":{
 	height:Titanium.UI.FILL,
 	width:Titanium.UI.FILL
 },
-".reset_label":{
-	 font: {
-		fontSize: "18dpi",
-		
-	},
-	color:"#333333"
-}	
+"#dob":{
+	editable:false,
+}

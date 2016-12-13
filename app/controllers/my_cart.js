@@ -48,7 +48,8 @@ function mycart_sucess(jsondata) {
 		
 			template : "first",
 			properties : {
-				height : "97dp"
+				height : "100dp",
+				left:"0dp",
 			},
 		});
 	});
@@ -118,18 +119,54 @@ function update_failure(data_recieved) {
 }
 
 //################################## to delete product ############################
-var previous;
+var past;
 var latest;
+$.listview2.addEventListener('itemclick', function(e) {
+	 Ti.API.info(JSON.stringify(e));
+	 var latest=e.section.items[e.itemIndex];
+	 latest.properties.left="-70dp";
+	//update the list
+	 e.section.updateItemAt(e.itemIndex, latest);
+	 if ( typeof past != "undefined") {
+	 var change_past=past.section.items[past.itemIndex];
+	 change_past.properties.left="0";
+	//update the list
+	 past.section.updateItemAt(past.itemIndex,change_past);
+	 }
+	  past=e;
+});
+
+function delete_sucess(data_recieved){
+	//alert("sucess bhai");
+	alert(data_recieved.user_msg);
+}
+
+function delete_failure(data_recieved) {
+	Ti.API.info("error" + data_recieved);
+}
+
 function todelete(e){
 	//alert(e);
 	Ti.API.info("error" +JSON.stringify(e));
+	var latest_pro=e.section.items[e.itemIndex].qty.product_id;
+	Ti.API.info("product_id"+latest_pro);
 	
-	// if(previous!=latest)
-	//{e.source.left="-40dp";}
-//previous=e.source;
+	var formdata={
+			product_id:latest_pro,
+				};
+	var option2 = {
+	method : "POST",
+	send_url :"http://staging.php-dev.in:8844/trainingapp/api/deleteCart",
+	access_token:access_token,
+	data:formdata
+				};
+		Alloy.Globals.someGlobalFunction(option2, delete_sucess, delete_failure);
+		$.mycart_window.close();	
+	var win=Alloy.createController('my_cart').getView();
+	win.open();
 }
-//####################3 palcing the order ##############################3
 
+//####################3 palcing the order ##############################3
 function placeorder(){
 	var rows = db.execute('SELECT * FROM ADDRESS');
     Ti.API.info('Row count: ' + rows.rowCount);

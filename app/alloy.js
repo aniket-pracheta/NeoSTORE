@@ -5,14 +5,11 @@ Alloy.Globals.someGlobalFunction = function(options, sucesscall,failurecall) {
 	var xhr;
 	xhr = Ti.Network.createHTTPClient({
 		onload : function(e) {
-			//Ti.API.info("SUCCESS");
-			Ti.API.info(JSON.parse(this.responseText)); 			
+			Ti.API.info(JSON.parse(this.responseText));
 			sucesscall(JSON.parse(this.responseText));
-			
-			//alert(JSON.parse(this.responseText));
-		},
+				},
+				
 		onerror:function(e){
-			Ti.API.info("FAILURE");
 			Ti.API.info(JSON.stringify(e));
 			failurecall(JSON.parse(this.responseText));
 		},

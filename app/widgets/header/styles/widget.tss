@@ -1,7 +1,7 @@
 "#widget":{
 	top:"2%",
 	height:"40dp",
-	layout:"horizontal",
+//	layout:"horizontal",
 	backgroundColor:"#d61314",
 	zIndex: 1000
 },
@@ -13,7 +13,7 @@
 "#page_name":{
 	color:"#FFFFFF",
 	top:"30%",
-	left:"32%",
+	left:"40%",
 	textAlign:Titanium.UI.TEXT_ALIGNMENT_CENTER,
 	font: {
 		fontWeight:'bold',
@@ -23,7 +23,7 @@
 	//right:0,
 	color:"#FFFFFF",
 	top:"30%",
-	left:"31%",
+	right:"5%",
 	font: {
 		fontWeight:'bold',
 	},

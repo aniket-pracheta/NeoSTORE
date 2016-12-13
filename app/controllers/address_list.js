@@ -8,18 +8,20 @@ var args = $.args;
 
 $.address_list_header.search.text = "\uf067";
 $.address_list_header.page_name.text = "Address List";
-$.address_list_header.BACK.addEventListener('click', function(e) {
 
+$.address_list_header.BACK.addEventListener('click', function(e) {
 	Titanium.API.info("You clicked the button");
 	$.address_list_window.close();
 });
 
+//############# going to add new address to adress list ##############
 $.address_list_header.search.addEventListener('click', function(e) {
 	$.address_list_window.close();
 	var win = Alloy.createController('add_address').getView();
 	win.open();
 });
 
+//################ fetching users adress list from local data base #################
 var data = [];
 var load_list = function() {
 	var rows = db.execute('SELECT * FROM ADDRESS');
@@ -34,15 +36,11 @@ var load_list = function() {
 			},
 			icon : {
 				text:"\uf10c",
-				//text : id,
 				address_full : add,
-
 			},
 			label2 : {
 				text : add,
-
 			},
-
 			template : "first",
 			properties : {
 				height : "100dp"
@@ -57,6 +55,7 @@ var load_list = function() {
 
 };
 load_list();
+
 //########### delete address #################3
 function deleterow(e) {
 	Ti.API.info("todelete" + (e.section.items[e.itemIndex].label1.address_id));
@@ -79,28 +78,6 @@ function deleterow(e) {
 //####################### select address ########################
 var past;
 var address;
-function select_circle(e) {
-	Ti.API.info(JSON.stringify(e));
-	//Ti.API.info('Before' + JSON.stringify(e.section.items[e.itemIndex].icon.text));
-	//e.section.items[e.itemIndex].icon.text = "10";
-	//Ti.API.info('A' + JSON.stringify(e.section.items[e.itemIndex].icon.text));
-	// $.sect.updateItemAt(e.itemIndex,e.itemIndex);
-	//Ti.API.info((e.bindId.text));
-	Ti.API.info( typeof past);
-	e.source.text = "\uf192";
-	address = e.source.address_full;
-	if ( typeof past != "undefined") {
-		past.source.text = "\uf10c";
-		Ti.API.info("pastdfhfghjson" + typeof past);
-	}
-	if (Ti.Platform.osname == "android") {
-	} else {
-		address = e.source.address_full;
-	}
-	past = e;
-	Ti.API.info("pastjson" + (past));
-
-}
 
 $.listview2.addEventListener('itemclick', function(e) {
 	var user = e.section.getItemAt(e.itemIndex);
@@ -108,6 +85,7 @@ $.listview2.addEventListener('itemclick', function(e) {
 	Ti.API.info('A' + e.section.items[e.itemIndex].icon.text);
 	var latest=e.section.items[e.itemIndex];
 	latest.icon.text="\uf192";
+	address=latest.icon.address_full;
 	//update the list
 	e.section.updateItemAt(e.itemIndex, latest);
 	if ( typeof past != "undefined") {
@@ -123,6 +101,16 @@ $.listview2.addEventListener('itemclick', function(e) {
 
 //######################## sending final address for order#######################
 var access_token=Alloy.Globals.user_data_fetch.data.access_token;
+
+function order_sucess(data_recieved) {
+	//alert("sucess bhai");
+	alert(data_recieved.user_msg);
+}
+
+function fail_failure(data_recieved) {
+	Ti.API.info("error" + data_recieved);
+}
+
 function order_now() {
 	Ti.API.info("send address" + address);
 
@@ -135,17 +123,9 @@ function order_now() {
 		access_token : access_token,
 		data : formdata
 	};
-//	Alloy.Globals.someGlobalFunction(option1, order_sucess, fail_failure);
+	Alloy.Globals.someGlobalFunction(option1, order_sucess, fail_failure);
 
-	//var win = Alloy.createController('home_screen').getView();
-	//win.open();
+	var win = Alloy.createController('home_screen').getView();
+	win.open();
 }
 
-function order_sucess(data_recieved) {
-	//alert("sucess bhai");
-	alert(data_recieved.user_msg);
-}
-
-function fail_failure(data_recieved) {
-	Ti.API.info("error" + data_recieved);
-}

@@ -1,13 +1,13 @@
 <Alloy>
-	<Window class="myaccount_window" id="myaccount_window">
+	<Window class="myaccount_window" id="edit_profile_window">
 	<View class="big_view">
-		<Widget src="header" id="myaccount_header"></Widget>
+		<Widget src="header" id="edit_profile_header"></Widget>
 		<ScrollView class="container">
 		<ImageView class="user_image" id="user_image"></ImageView>
 		
 		<View class="small_container-1" id="first" top="20dp">
 		       	    <Label text="\uf007" class="icon_in_text font-icon"></Label>
-		       	    <TextField class="input gautum" id="first_name"></TextField>
+		       	    <TextField class="input gautum" hintText="First Name" id="first_name"></TextField>
 		       </View>	
 		       
 		        <View class="small_container-1" id="second">
@@ -28,13 +28,11 @@
 		         
 		         <View class="small_container-1" id="fourth">
 		         	<Label text="\uf1fd" class="icon_in_text font-icon"></Label>
-		       	    <TextField class="input gautum" hintText="DOB" id="dob" ></TextField>
+		       	    <TextField class="input gautum" hintText="DOB" id="dob" onClick="getpicker"></TextField>
 		         </View>
 		         
-		         <Button id="register" class="gautum" onClick="editprofile"></Button>
-		         <View class="rest_pass" onClick="resetpassword"  >
-		         	<Label class="reset_label gautum" onClick="resetpassword">RESET PASSWORD</Label>
-		         </View>
+		         <Button id="register" class="gautum" onClick="submit"></Button>
+		        
 		</ScrollView>         
 	</View>
 	</Window>

@@ -5,7 +5,7 @@
 ////
 ".list_view":{
 	height:"97dp",
-	width:"450dp",
+	width:"500dp",
 	left:"0",
 	backgroundColor:"white",
 	touchEnabled:true,
@@ -14,8 +14,10 @@
 },
 
 "#image":{
-	height:"240px",
-	width:"220px",
+	//height:"240px",
+	//width:"220px",
+	height:"74dp",
+	width:"74dp",
 	//borderColor:"cyan",
 	left:"2%",
 	top:"30px",
@@ -66,11 +68,11 @@
 },
 ".right_view":{
 	//top:"40px",
-	width:"300dp",
+	width:"320dp",
 	height:"80%",
-	left: "20dp",
+	left: "24dp",
 	touchEnabled:true,
-	borderColor:"yellow",
+	//borderColor:"yellow",
 	//layout:"vertical"
 	
 },
@@ -83,6 +85,7 @@
 	layout:"horizontal"
 },
 "#cost":{
+	touchEnabled:false,
 	right:"10%",
 	bottom:"10%",
 	color:"#FE4040",
@@ -150,7 +153,7 @@
 	touchEnabled:true,
 	height:"90%",
 	width:Titanium.UI.FILL,
-	borderColor:"cyan",
+	//borderColor:"cyan",
 	left:0,
 	layout:"horizontal"
 },
@@ -228,9 +231,10 @@ zIndex:"1000"
 		top:"30%",
 },
 ".delete":{
-	top:"0",
-	left:"5dp",
-	//right:0,
+	top:"15dp",
+	//left:"0dp",
+	touchEnabled:true,
+	right:0,
 	width:"50dp",
 	height:"50dp",
 		backgroundColor:"red",
@@ -256,6 +260,8 @@ zIndex:"1000"
     color:"black"
 }
 ".delete_font":{
+	//right:"0dp",
+	//bottom:"10%",
 	color:"white",
 	font: {
 		fontSize: "20dp",

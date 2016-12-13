@@ -17,6 +17,7 @@
 	width:"100%",
 	showPagingControl:"true",
 	overlayEnabled:"true",	
+	//currentPage :2
 },
 ".big_product":{
 	width:"100%",

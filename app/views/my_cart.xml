@@ -28,8 +28,8 @@
 				<ItemTemplate name="first" class="templates">
 
 		
-		<View class="list_view" onClick="todelete" id="list_view">	
-				<View class="just_a_view" onClick="todelete">
+		<View class="list_view"  id="list_view">	
+				<View class="just_a_view" id="move_this">
 			<ImageView bindId="image" id="image" ></ImageView>		
 				<View class="right_view">
 		  			<Label bindId="label" id="label1"  class="gautum" text="aniketsdfjgdsjkfgdksgffkdghkdfghkdf"  />
@@ -40,9 +40,10 @@
 					</View>	
 					
                 <Label bindId="cost"  id="cost" class="gautum" text="Rs.600000"/>
+                <!-- <Label text="\uf1f8" class="delete_font font-icon"></Label> -->
 				</View>	
 				<!-- <delete left to impemented> -->
-				<View class="delete" >	
+				<View class="delete" onClick="todelete">	
 					<Label text="\uf1f8" class="delete_font font-icon"></Label>
 					</View>								
 				</View>				
