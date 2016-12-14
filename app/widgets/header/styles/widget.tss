@@ -1,6 +1,6 @@
 "#widget":{
 	top:"2%",
-	height:"40dp",
+	height:"8%",
 //	layout:"horizontal",
 	backgroundColor:"#d61314",
 	zIndex: 1000
@@ -8,7 +8,16 @@
 "#BACK":{
 	color:"#FFFFFF",
 	top:"30%",,
-	left:"40px",
+	left:"10dp",
+},
+"#BACK[platform=ios formFactor=tablet]":{
+	color:"#FFFFFF",
+	top:"30%",,
+	left:"10dp",
+	font: {		
+		fontSize: "30dp",
+		//fontWeight:"none",
+	},
 }
 "#page_name":{
 	color:"#FFFFFF",
@@ -18,6 +27,18 @@
 	font: {
 		fontWeight:'bold',
 	},
+	
+},
+"#page_name[platform=ios formFactor=tablet]":{
+	color:"#FFFFFF",
+	top:"30%",
+	left:"40%",
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	font: {
+		fontSize: "30dp",
+		fontWeight:'bold',
+	},
+	
 },
 "#search":{
 	//right:0,

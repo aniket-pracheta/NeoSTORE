@@ -24,6 +24,9 @@ $.product_list_header.page_name.text = title;
 $.product_list_header.BACK.addEventListener('click', function(e) {
 	Titanium.API.info("You clicked the button");
 	$.product_list_window.close();
+   var win=Alloy.createController('home_screen').getView();
+   win.open();
+	
 });
 
 
@@ -60,8 +63,10 @@ function make_list_sucess(jsondata) {
 		 	stars1:{},			
 			template : "first",
 			properties : {
-				height : "97dp"
+				
+				height :(Titanium.Platform.osname == 'ipad')? "200dp":"97dp",
 			},
+			
 		});
 	});
 	$.sect.setItems(data);

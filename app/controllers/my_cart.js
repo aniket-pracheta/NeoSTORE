@@ -44,11 +44,14 @@ function mycart_sucess(jsondata) {
 			},
 			image : {
 				image : products.product.product_images
+			},
+			todelete : {
+				visible:false,
 			},	
 		
 			template : "first",
 			properties : {
-				height : "100dp",
+				height : (Titanium.Platform.osname == 'ipad')? "200dp":"97dp",
 				left:"0dp",
 			},
 		});
@@ -122,14 +125,16 @@ function update_failure(data_recieved) {
 var past;
 var latest;
 $.listview2.addEventListener('itemclick', function(e) {
-	 Ti.API.info(JSON.stringify(e));
+	 Ti.API.info('delete'+JSON.stringify(e));
 	 var latest=e.section.items[e.itemIndex];
 	 latest.properties.left="-70dp";
+	 latest.todelete.visible=true;
 	//update the list
 	 e.section.updateItemAt(e.itemIndex, latest);
 	 if ( typeof past != "undefined") {
 	 var change_past=past.section.items[past.itemIndex];
 	 change_past.properties.left="0";
+	 change_past.todelete.visible=false;
 	//update the list
 	 past.section.updateItemAt(past.itemIndex,change_past);
 	 }

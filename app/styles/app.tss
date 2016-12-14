@@ -55,6 +55,13 @@ overrode the settings with other TSS, XML, or JS settings:
    },
 },
 
+".gautum[platform=ios formFactor=tablet]":{
+	font : {
+      fontFamily :"GothamBook",
+       fontSize : "40dp",
+   },
+},
+
 ".product_icon[platform=ios]":{
 	color:"white",
 	font : {

@@ -7,6 +7,8 @@ $.change_password_header.BACK.addEventListener('click', function(e) {
 	$.change_password_window.close();
 });
 
+
+//#################### function to reset password ##########################
 var access_token=Alloy.Globals.user_data_fetch.data.access_token;
 function reset(){
 		
@@ -22,14 +24,11 @@ function reset(){
 			 Ti.API.info(data_recieved.message);
 			  alert(data_recieved.message);
 			  Ti.API.info(data_recieved.user_msg);
-			 
-	}
+			}
 
 	function failure(data_recieved){
-		
-			  alert(data_recieved.message);
-			
-	}		
+					  alert(data_recieved.message);
+			}		
 
 	var option={
 				method:"POST",
@@ -38,6 +37,7 @@ function reset(){
 				data:formdata
 				};
 	Alloy.Globals.someGlobalFunction(option,sucesss,failure);
+	$.change_password_window.close();
 	var w=Alloy.createController('my_account').getView();
     w.open(); 
 }

@@ -23,7 +23,7 @@
 			<View class="lower_view">
 				<View class="sub_low_view">
 					<Label class="sub_labels gautum" id="zipcode">ZIP CODE</Label>
-					<TextArea class="sub_text" id="zipcode"></TextArea>
+					<TextArea class="sub_text" id="zipcode" keyboardType="Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD" ></TextArea>
 				</View>
 				<View class="sub_low_view">
 					<Label class="sub_labels gautum">COUNTRY</Label>

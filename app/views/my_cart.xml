@@ -40,10 +40,10 @@
 					</View>	
 					
                 <Label bindId="cost"  id="cost" class="gautum" text="Rs.600000"/>
-                <!-- <Label text="\uf1f8" class="delete_font font-icon"></Label> -->
+               
 				</View>	
-				<!-- <delete left to impemented> -->
-				<View class="delete" onClick="todelete">	
+				
+				<View class="delete" onClick="todelete" bindId="todelete" >	
 					<Label text="\uf1f8" class="delete_font font-icon"></Label>
 					</View>								
 				</View>				

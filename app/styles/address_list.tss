@@ -21,11 +21,12 @@
 },
 ".right_view":{
 	top:"5%",
-	width:"302dp",
+	width:"280dp",
 	height:"86dp",
-	left: "20dp",
+	left: "10dp",
 	touchEnabled:true,
 	borderColor:"#333333",
+	borderRadius:"10dp",
 	//layout:"vertical"
 	//color:"#333333",
 },
@@ -44,7 +45,7 @@
     borderRadius:10,
 },
 ".select":{
-	left:"30dp",
+	left:"10dp",
 	color:"#333333",
 },
 "#listview2":{

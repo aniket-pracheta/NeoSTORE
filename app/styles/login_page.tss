@@ -18,23 +18,40 @@
 		fontWeight:'bold',
 	}
 },
+"#neolabel[platform=ios formFactor=tablet]": {
+	color: '#ffffff',
+	//text:"neosoft",
+	font: {
+		fontSize: "80dp",
+		fontWeight:'bold',
+	}
+},
 ".label_container":{
 	//borderColor:'blue',
 	width:Titanium.UI.FILL,
-	height:"50dp",
-	left:"100px",
-	right:"100px",
-	top:"20%",
+	height:"10%",
+	left:"20dp",
+	right:"20dp",
+	top:"10%",
 },
 ".small_container-1":{
 	borderColor:'#ffffff',
 	borderWidth:"2dp",
-	width:"880px",
-	height:"120px",
+	width:"80%",
+	height:"7%",
 	//left:"20%",
 	//right:"20%",
-	top:"148px",
+	top:"49dp",
 },
+".small_container-1[Titanium.Platform.osname == 'ipad']":{
+	borderColor:'#ffffff',
+	borderWidth:"2dp",
+	width:"55%",
+	height:"7%",
+	//left:"20%",
+	//right:"20%",
+	top:"49dp",
+}
 
 ".icon_custom":{
    color:"white",
@@ -42,6 +59,16 @@
 	//top:"31%",
 	font: {
 		fontSize: "20dpi",
+		fontWeight:'bold',
+	},
+},
+
+".icon_custom[platform=ios formFactor=tablet]":{
+   color:"white",
+	left:"5%",
+	//top:"31%",
+	font: {
+		fontSize: "30dp",
 		fontWeight:'bold',
 	},
 },
@@ -62,7 +89,8 @@
 
 "#login":{
 	color:"#E91C1A",
-	width:"100%",
+	height:"90%",
+	width:"90%",
     //left:"16%",
     textAlign:"center",
     title:"LOGIN",
@@ -78,10 +106,10 @@
 	//borderColor:'#ffffff',
 	//borderWidth:"2dp",
 	width:Titanium.UI.FILL,
-	height:"20dp",
+	height:"10%",
 	left:"20%",
 	right:"20%",
-	top:"65px",	
+	top:"21dp",	
 },
 ".foget_label":{
 	color:"#ffffff",
@@ -92,15 +120,15 @@
 },
 ".container_Account":{
 	//borderColor:"white",
-	width:Titanium.UI.FILL,
+	width:"90%",
 	height:"46dp",
-	left:"10%",
-	right:"10%",
-	top:"20%"
+	//left:"10%",
+	//right:"10%",
+	top:"18%"
 },
 ".account":{
 	color:"#ffffff",
-	left:0,
+	left:"2%",
 	font: {
 		fontSize: "18dp",
 		fontWeight:'medium',
@@ -116,6 +144,18 @@
 	textAlign:"center",
 	font: {
 		fontSize: "24dp",
+		//fontWeight:'medium',
+	},
+},
+".plus[Titanium.Platform.osname == 'ipad']":{
+	color:"#ffffff",
+	right:0,
+	//borderColor:'#ffffff',
+	height:"46dp",
+	width:"46dp",
+	textAlign:"center",
+	font: {
+		fontSize: "30dp",
 		//fontWeight:'medium',
 	},
 }

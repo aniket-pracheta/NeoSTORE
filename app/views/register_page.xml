@@ -1,6 +1,7 @@
 <!-- registration page -->
 <Alloy>
 	<Window class="container" id="window2" >
+		<Widget src="header" id="register_header"></Widget>
 		<View class="to_center_child">
 	<ScrollView class="scroll_view">
 		
@@ -8,7 +9,7 @@
 					<Label id="neolabel" class="gautum">NeoSTORE</Label>
 				</View>
 					
-		       <View class="small_container-1" id="first" top="2%">
+		       <View class="small_container-1" id="first" top="5%">
 		       	    <Label text="\uf007" class="icon_in_text font-icon"></Label>
 		       	    <TextField class="input gautum" hintText="First Name" id="first_name"></TextField>
 		       </View>	
@@ -48,13 +49,13 @@
 		         	 	<Label text="\uf1db" class="font-icon icon_in_text" id="female" onClick="toggle"></Label>
 		         	 	<Label class="labels gautum">Female</Label>
 		         	 </View>
-		         	 </View>
+		         	</View>
 		         </View>		         
 		         
 		         
 		         <View class="small_container-1" id="sixth" top="0">
 		         	<Label text="\uf098 " class="icon_in_text font-icon"></Label>
-		       	    <TextField class="input gautum" hintText="Phone Number" id="phone_number"></TextField>
+		       	    <TextField class="input gautum" hintText="Phone Number" id="phone_number" keyboardType="Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD"></TextField>
 		         </View>
 		         
 		        	
@@ -62,7 +63,7 @@
 		         <View class="radio_container" id="eight">
 		         	 <View class="terms_condition" onClick="termselect" >
 		         	 	<Label text="\uf096" class="font-icon icon_in_text" id="terms"></Label>
-		         	 	<Label color="white" left="8%" class="gautum">I agree the Terms & Conditions</Label>
+		         	 	<Label color="white" left="3%" class="gautum"><AttributedString>I agree the Terms & Conditions</AttributedString></Label>
 		         	 </View>		         	
 		         </View>
 		         

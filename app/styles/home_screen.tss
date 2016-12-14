@@ -13,7 +13,7 @@
 ".slide_images":{
 	top:"45dp",
 	//borderColor:"green",
-	height:'229dp',
+	height:'35%',
 	width:"100%",
 	showPagingControl:"true",
 	overlayEnabled:"true",	
@@ -21,62 +21,68 @@
 },
 ".big_product":{
 	width:"100%",
-	height:"30%",
+	height:"27%",
 	//borderColor:"red",
 	layout:"horizontal"
 },
 ".small_products":{
-	left:"40px",
-	top:"45px",
-	bottom:"45px",
+	left:"5%",
+	top:"15dp",
+	//bottom:"15dp",
 	width:"44%",
-	//borderWidth:"2",
+	height:"75%",
 	//borderColor:"blue",
 	backgroundColor:'#d61314',
 	id:"none",
 },
 ".table":{
-	top:"16dp",
-	right:"16dp",
+	top:"10dp",
+	right:"10dp",
 	font: {		
-		fontSize: "23dp",
+		fontSize: "20dp",
 		fontWeight:'bold',
 	},
 	color:"#FFFFFF"
 },
 ".sofa":{
-	bottom:"16dp",
-	left:"16dp",
+	bottom:"10dp",
+	left:"10dp",
 	font: {
 		
-		fontSize: "23dp",
+		fontSize: "20dp",
 		fontWeight:'bold',
 	},
 	color:"#FFFFFF"
 },
 ".chair":{
-	top:"16dp",
-	left:"16dp",
+	top:"10dp",
+	left:"10dp",
 	font: {
 		
-		fontSize: "23dp",
+		fontSize: "20dp",
 		fontWeight:'bold',
 	},
 	color:"#FFFFFF"
 },
 ".cupboard":{
-	bottom:"16dp",
-	right:"16dp",
+	bottom:"5dp",
+	right:"10dp",
 	font: {
 		
-		fontSize: "23dp",
+		fontSize: "20dp",
 		fontWeight:'bold',
 	},
 	color:"#FFFFFF"
 },
 ".product_size":{
 	font: {		
-		fontSize: "80dp",
+		fontSize: "70dp",
+		fontWeight:"none",
+	},
+},
+".product_size[platform=ios formFactor=tablet]":{
+	font: {		
+		fontSize: "140dp",
 		fontWeight:"none",
 	},
 },
@@ -96,7 +102,7 @@
 },
 
 ".menu":{
-	width:"300",
+	width:"260dp",
 	backgroundColor:"#1E1E1E",
 	left:"0",
 	height:Titanium.UI.FILL,
@@ -134,7 +140,7 @@
 },
 ".menu_container":{
 	//top:"1dp",
-	borderColor:"black",
+	//borderColor:"black",
 	//borderWidth:"2dp",
 	height:"45dp",
 	width:Titanium.UI.FILL,
@@ -159,4 +165,24 @@
 		fontWeight:"bold",
 	},
 }
+///
+".delete":{
+	top:"10%",
+	left:"30%",
+	touchEnabled:true,
+	right:0,
+	width:"38dp",
+	height:"38dp",
+		backgroundColor:"red",
+		borderRadius:"19dp",
+},
 
+".delete_font":{
+	//right:"0dp",
+	//bottom:"10%",
+	color:"white",
+	font: {
+		fontSize: "20dp",
+		
+	},
+}

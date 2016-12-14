@@ -17,7 +17,7 @@
 		       	    <TextField class="input gautum" hintText="Password" id="password" passwordMask="true" value="12345678"></TextField>
 		    </View>
 		   
-		    <View class="small_container-1" top="100px" borderColor="transparent">
+		    <View class="small_container-1" top="20dp" borderColor="transparent">
 		    	   <Button id="login" class="gautum" onClick="goto_homepage"></Button> 
 		    </View>		    
 		    
@@ -26,7 +26,7 @@
 		    </View>
 		    
 		     <View class="container_Account">
-		       	    <Label class="gautum account">DONT HAVE ACCOUNT?</Label>
+		       	    <Label class="gautum account" >DONT HAVE ACCOUNT?</Label>
 		       	    <Label text="\uf067" class="font-icon plus" onClick="register"></Label>		       	    
 		    </View>
 		    

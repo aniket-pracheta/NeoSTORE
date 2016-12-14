@@ -7,12 +7,21 @@
 	backgroundImage:'images/neobackgound.jpg',
 },
 ".small_container-1":{
-	top:"40px",
-	height:"120px",
-	width:"880px",
+	top:"13dp",
+	height:"40dp",
+	width:"80%",
 	borderColor:"white",
 	borderWidth:"2dp",
 },
+".small_container-1[Titanium.Platform.osname == 'ipad']":{
+	borderColor:'#ffffff',
+	borderWidth:"2dp",
+	width:"55%",
+	height:"7%",
+	//left:"20%",
+	//right:"20%",
+	top:"49dp",
+}
 ".icon_in_text":{
 
     color:"white",
@@ -56,7 +65,16 @@
     top:"20dp"
 
 },
+"#register[Titanium.Platform.osname == 'ipad']":{
+	color:"#E31C1A",
+	width:"55%",
+    left:"23%",
+    title:"EDIT PROFILE",
+    backgroundColor:"white",
+    borderRadius:5,
+    top:"30dp"
 
+},
 ".big_view":{
 	height:Titanium.UI.FILL,
 	width:Titanium.UI.FILL

@@ -41,7 +41,7 @@ function fetch_sucess(data_recieved){
   
 	$.home_screen.open();
 	Ti.API.info(data_recieved.data.product_categories.length);
-	alert("sucess");
+	//alert("sucess");
 }
 function fetch_failure(data_recieved){
 		Ti.API.info(data_recieved);
@@ -52,22 +52,13 @@ var option={
 				access_token:access_token,			
 				};	
 Alloy.Globals.someGlobalFunction(option,fetch_sucess,fetch_failure);
-///////
-// var ar = $.scrolling_images.getViews();
-// var t = 0;
-// setInterval(function(e) {
-    // if(t >= ar.length) {
-        // t = 0;
-    // }
-   // $.scrolling_images.scrollToView(t);
-    // t++;
-// 
-// }, 1000);
-///////
+
 $.home_screen_header.page_name.text="NeoSTORE";
 $.home_screen_header.BACK.text="\uf0c9";
 
 $.home_screen_header.BACK.addEventListener('click', move);
+
+
 //######################3 SLIDING MENU FOR HOME SCREEN ##############################
 function move() 
 {	
@@ -79,14 +70,14 @@ function move()
     });
     
     var viewtrans=Ti.UI.create2DMatrix();
-    viewtrans=viewtrans.scale(0.8);
+    viewtrans=viewtrans.scale(0.9);
     
     var animateheight = Ti.UI.createAnimation({
  	transform:viewtrans,
  	height:"100%",
  	width:"100%",
-	left:"300",
-	right: '-300',
+	left:"250dp",
+	right: '-250dp',
 	curve : Titanium.UI.ANIMATION_CURVE_EASE_IN_OUT,
 	duration : 200
     });   
@@ -116,9 +107,8 @@ $.view_main.addEventListener('swipe',function(e)
     }); 
     $.menu.animate(animateRight);
     $.view_main.animate(animateheight);
-	//alert("swipe");
+	});
 	
-});
 //######################3 GOING TO PRODUCT LIST ##############################
 function createProductList(e) {
 	Ti.API.info(JSON.stringify("send"+e.source.productid));
@@ -139,8 +129,38 @@ function gotocart(){
 	//var win=Alloy.createController('my_cart',access_token).getView();
 	win.open();
 }
+
+
 //#################3 go to my order ##########################
 function my_order(){
 	var win=Alloy.createController('my_order').getView();
 		win.open();
 }
+
+//#################3 go to store location ##########################
+function store(){
+	var win=Alloy.createController('store_locator').getView();
+		win.open();
+}
+
+
+//########################## Getting count in my cart ##################################
+var access_token=Alloy.Globals.user_data_fetch.data.access_token;
+function mycart_sucess(jsondata) {
+	Ti.API.info("cart is here"+JSON.stringify(jsondata));
+	$.mycar_no.text=jsondata.count;
+	if(jsondata.data == null){
+		$.mycar_no.text=0;
+	}
+ }
+
+function mycart_failure(data_recieved) {
+	Ti.API.info("error" + data_recieved);
+}
+
+var option = {
+	method : "GET",
+	send_url :"http://staging.php-dev.in:8844/trainingapp/api/cart",
+	access_token:access_token
+};
+Alloy.Globals.someGlobalFunction(option, mycart_sucess, mycart_failure);

@@ -12,6 +12,12 @@
 	//borderColor:"cyan",
 	layout:"horizontal"	
 },
+".list_view[platform=ios formFactor=tablet]":{
+	height:"200dp",
+	backgroundColor:"white",
+	touchEnabled:"true",
+	layout:"horizontal"	
+},
 
 "#image":{
 	//height:"240px",
@@ -23,6 +29,13 @@
 	top:"30px",
 	touchEnabled:false,
 	
+},
+"#image[Titanium.Platform.osname == 'ipad']":{
+	height:"80%",
+	width:"28%",
+	//borderColor:"red",
+	//left:"5%",
+	//top:"30px"
 },
 ".firstlabel":{
 	// font:{
@@ -45,13 +58,14 @@
 	left:"0",
 	touchEnabled:false,
 },
-".secondlabel":{
-	top:"1%",
-	height:"70px",	
-	borderColor:"yellow",
-	width:"70%",
-	left:"2%",
-	
+"#label1[Titanium.Platform.osname == 'ipad']":{	
+	//borderColor:"yellow",
+	color:"#4F4F4F",
+	font: {
+		fontSize: "40dp",
+		//fontWeight:'bold',
+	},
+	left:"0",
 },
 "#label2":{
 	//top:"24px",
@@ -66,14 +80,33 @@
 	left:"0",
 	touchEnabled:false,
 },
+"#label2[Titanium.Platform.osname == 'ipad']":{
+	//top:"24px",
+	top:"0",
+	textAlign:"left",
+	//borderColor:"yellow",
+	color:"#4F4F4F",
+	font: {
+		fontSize: "25dp",
+		//fontWeight:'bold',
+	},
+	left:"0",
+	touchEnabled:false,
+},
 ".right_view":{
 	//top:"40px",
-	width:"320dp",
-	height:"80%",
-	left: "24dp",
+	width:"250dp",
+	height:"100%",
+	//left: "24dp",
 	touchEnabled:true,
 	//borderColor:"yellow",
 	//layout:"vertical"
+},
+".right_view[Titanium.Platform.osname == 'ipad']":{
+	width:"70%",
+	height:"100%",
+	borderColor:"yellow",
+	layout:"vertical"
 	
 },
 ".cost_star":{
@@ -151,12 +184,13 @@
 },
 ".just_a_view":{
 	touchEnabled:true,
-	height:"90%",
+	height:"100%",
 	width:Titanium.UI.FILL,
-	//borderColor:"cyan",
+	borderColor:"cyan",
 	left:0,
 	layout:"horizontal"
 },
+
 ".order_button":{
 	bottom:"2%",
 	color:"#FFFFFF",
@@ -177,14 +211,14 @@
 },
 ".total_view":{
 	backgroundColor:"cyan",
-	height:"70dp",
+	height:"60dp",
 	width:Titanium.UI.FILL,
 	layout:"horizontal",
-	bottom:"10%"
+	bottom:"12%"
 },
 "#grand_total":{
 	top:"43%",
-	left:"58%",
+	left:"50%",
 	//left:"90%",
 	color:"#333333",
 	font: {
@@ -257,7 +291,8 @@ zIndex:"1000"
     borderWidth : '1dp',
     borderColor: "#000",
     backgroundColor:"#2F2F2F",
-    color:"black"
+    color:"black",
+    
 }
 ".delete_font":{
 	//right:"0dp",

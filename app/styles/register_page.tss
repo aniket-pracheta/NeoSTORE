@@ -21,8 +21,8 @@
 	//borderColor:'blue',
 	width:Titanium.UI.FILL,
 	height:"50dp",
-	left:"10%",
-	right:"10%",
+	//left:"10%",
+	//right:"10%",
 	top:"10%",
 },
 ".scroll_view":{
@@ -33,11 +33,11 @@
 }
 
 ".small_container-1":{
-	top:"40px",
-//	left:"10%",
-//	right:"10%",
-	height:"120px",
-	width:"880px",
+	top:"13dp",
+	left:"33dp",
+	right:"33dp",
+	//width:"300dp",
+	height:"40dp",
 	borderColor:"white",
 	borderWidth:"2dp",
 	//center:"true",
@@ -46,10 +46,11 @@
 },
 ".radio_container":{
 	top:0,
-//	left:"10%",
-//	right:"10%",
-	height:"186px",
-	width:"880px",
+	left:"30dp",
+	right:"30dp",
+	height:"62dp",
+	//width:"880px",
+	//width:"300dp",
 	//borderColor:"white",
 	layout: "horizontal"
 },
@@ -104,7 +105,7 @@
 ".gender":{
 font : {
   
-   fontSize : "18dpi",    
+   fontSize : "18dp",    
     },
     textAlign:"center",
     top:"0",
@@ -132,7 +133,7 @@ font : {
 },
 
 "#terms":{
-	left:"10%",
+	left:"1%",
 	font : {
      fontSize : "13dp",    
     },
@@ -150,5 +151,19 @@ font : {
    fontSize : "24dp",    
     },   	
 	},
-
+///
+"AttributedString" : {
+  attributes: [
+    // {
+      // type: Ti.UI.ATTRIBUTE_FOREGROUND_COLOR,
+      // value: 'red',
+      // range: [0, 5]
+    // },
+    {
+      type: Ti.UI.ATTRIBUTE_UNDERLINES_STYLE,
+      value: Ti.UI.ATTRIBUTE_UNDERLINE_STYLE_SINGLE,
+      range: [12, 18]
+    }
+  ]
+}
 

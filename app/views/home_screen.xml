@@ -12,6 +12,9 @@
 					<View class="menu_container" top="14dp" onClick="gotocart">
 						<Label text="\uf217" class="font-icon icon_menu_size"></Label>
 						<Label class="icon_menu_text">My Cart</Label>
+						<View class="delete">	
+					<Label text="0" class="delete_font font-icon" id="mycar_no"></Label>
+					</View>	
 					</View>
 					<View class="menu_container" onClick="createProductList" productid="1">
 						<Label text="\ue902" class="product_icon icon_menu_size" productid="1"></Label>
@@ -33,7 +36,7 @@
 						<Label text="\uf007" class="font-icon icon_menu_size"></Label>
 						<Label class="icon_menu_text">My Account</Label>
 					</View>
-					<View class="menu_container">
+					<View class="menu_container" onClick="store">
 						<Label text="\uf041" class="font-icon icon_menu_size"></Label>
 						<Label class="icon_menu_text">Store Locator</Label>
 					</View>
@@ -66,13 +69,13 @@
 			</View>
 			</View>
 		<View class="big_product" >	
-			<View class="small_products" top="10px" onClick="createProductList" productid="2">
+			<View class="small_products" top="0" onClick="createProductList" productid="2">
 				<Label class="gautum chair" productid="2">Chairs</Label>
 				<Label text="\ue900" class="product_icon cupboard product_size" productid="2"></Label>
 			</View>
-			<View class="small_products" top="10px" onClick="createProductList" productid="5">
-				<Label class="gautum cupboard " productid="5">Cupboards</Label>
-				<Label text="\ue903" class="product_icon chair product_size" productid="5"></Label>
+			<View class="small_products" top="0"  onClick="createProductList" productid="5">
+				<Label class="gautum cupboard " productid="5">Bed</Label>
+				<Label text="\uf236" class="font-icon chair product_size" productid="5"></Label>
 			</View>
 			</View>	
 		</ScrollView>

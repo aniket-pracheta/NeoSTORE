@@ -61,7 +61,7 @@
 			 <Label class="label_buy_1" id="label_buy_1">hiiii</Label>
 			<ImageView class="image_buy" id="image_buy"></ImageView>
 			<Label class="label_buy_2">Enter Qty</Label>
-			<TextField class="enter_qty" id="quantity"></TextField>
+			<TextField class="enter_qty" id="quantity" keyboardType="Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD"></TextField>
 			<Button class="buy_button_in_view" onClick="addtocart">SUBMIT</Button> 
 			</ScrollView>	
 			</View>

@@ -2,6 +2,13 @@
 //#################### register controller ###############################
 var args = $.args;
 
+$.register_header.page_name.text ="Register";
+$.register_header.BACK.addEventListener('click', function(e) {
+
+	Titanium.API.info("You clicked the button");
+	$.window2.close();
+});
+
 function toggle(e) {
 	//Ti.API.info(JSON.stringify(e));
 	$.gender_value.text="";

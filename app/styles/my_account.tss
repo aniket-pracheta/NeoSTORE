@@ -8,11 +8,20 @@
 },
 ".small_container-1":{
 	top:"40px",
-	height:"120px",
-	width:"880px",
+	height:"40dp",
+	width:"80%",
 	borderColor:"white",
 	borderWidth:"2dp",
 },
+".small_container-1[Titanium.Platform.osname == 'ipad']":{
+	borderColor:'#ffffff',
+	borderWidth:"2dp",
+	width:"55%",
+	height:"7%",
+	//left:"20%",
+	//right:"20%",
+	top:"49dp",
+}
 ".icon_in_text":{
 
     color:"white",
@@ -20,6 +29,17 @@
 	
 	font: {
 		fontSize: "20dpi",
+		fontWeight:'bold',
+	},
+	
+},
+".icon_in_text[Titanium.Platform.osname == 'ipad']":{
+
+    color:"white",
+	left:"5%",
+	
+	font: {
+		fontSize: "28dp",
 		fontWeight:'bold',
 	},
 	
@@ -56,10 +76,20 @@
     top:"20dp"
 
 },
-".rest_pass":{
-	top:"20%",
+"#register[Titanium.Platform.osname == 'ipad']":{
+	color:"#E31C1A",
+	width:"55%",
+    left:"23%",
+    title:"EDIT PROFILE",
     backgroundColor:"white",
-	height:"120px",
+    borderRadius:5,
+    top:"30dp"
+
+},
+".rest_pass":{
+	top:"10%",
+    backgroundColor:"white",
+	height:"40dp",
 	width:Titanium.UI.FILL,
 	borderColor:"white",
 	borderWidth:"2dp",
