@@ -15,6 +15,12 @@
 	height:"200dp",
 	layout:"vertical"
 },
+".uper_view[platform=ios formFactor=tablet]":{
+	//borderColor:"black",
+	width:Titanium.UI.FILL,
+	height:"350dp",
+	layout:"vertical"
+},
 ".lower_view":{
 	//borderColor:"blue",
 	width:Titanium.UI.FILL,
@@ -22,10 +28,26 @@
 	layout:"horizontal",
 	
 },
+".lower_view[platform=ios formFactor=tablet]":{
+	//borderColor:"blue",
+	top:0,
+	width:Titanium.UI.FILL,
+	height:"200dp",
+	layout:"horizontal",
+	
+},
 ".sub_low_view":{
 	left:"8%",
 	top:"5%",
 	height:"80dp",
+	width:"38%",
+	//borderColor:"red",
+	layout:"vertical"
+},
+".sub_low_view[platform=ios formFactor=tablet]":{
+	left:"8%",
+	top:"0",
+	height:"150dp",
 	width:"38%",
 	//borderColor:"red",
 	layout:"vertical"
@@ -38,6 +60,18 @@
 	color:"#333333",
 	font: {
 		fontSize: "17dp",
+		
+	//	fontWeight:'bold',
+	}
+},
+".txtarea[platform=ios formFactor=tablet]":{
+	height:"30%",
+	width:"85%",
+	backgroundColor:"white",
+	top:"5%",
+	color:"#333333",
+	font: {
+		fontSize: "25dp",
 		
 	//	fontWeight:'bold',
 	}
@@ -58,6 +92,18 @@
 	//	fontWeight:'bold',
 	}
 },
+".samll_text[platform=ios formFactor=tablet]":{
+	height:"10%",
+	width:"85%",
+	backgroundColor:"white",
+	top:"5%",
+	color:"#333333",
+	font: {
+		fontSize: "25dp",
+		color:"#333333"
+	//	fontWeight:'bold',
+	}
+},
 ".sub_text":{
 	height:"35dp",
 	width:Titanium.UI.FILL,
@@ -66,6 +112,18 @@
 	top:"5%",
 	font: {
 		fontSize: "13dp",
+		
+	//	fontWeight:'bold',
+	}
+},
+".sub_text[platform=ios formFactor=tablet]":{
+	height:"30%",
+	width:Titanium.UI.FILL,
+	backgroundColor:"white",
+	color:"#333333",
+	top:"5%",
+	font: {
+		fontSize: "25dp",
 		
 	//	fontWeight:'bold',
 	}

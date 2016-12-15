@@ -43,7 +43,7 @@ var load_list = function() {
 			},
 			template : "first",
 			properties : {
-				height : "100dp"
+				height : (Titanium.Platform.osname == 'ipad')? "230dp":"100dp"
 			},
 		});
 		rows.next();

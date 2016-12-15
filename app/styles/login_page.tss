@@ -43,7 +43,7 @@
 	//right:"20%",
 	top:"49dp",
 },
-".small_container-1[Titanium.Platform.osname == 'ipad']":{
+".small_container-1[platform=ios formFactor=tablet]":{
 	borderColor:'#ffffff',
 	borderWidth:"2dp",
 	width:"55%",
@@ -147,7 +147,7 @@
 		//fontWeight:'medium',
 	},
 },
-".plus[Titanium.Platform.osname == 'ipad']":{
+".plus[platform=ios formFactor=tablet]":{
 	color:"#ffffff",
 	right:0,
 	//borderColor:'#ffffff',

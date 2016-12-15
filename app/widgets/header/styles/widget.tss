@@ -1,5 +1,12 @@
 "#widget":{
 	top:"2%",
+	height:"30dp",
+//	layout:"horizontal",
+	backgroundColor:"#d61314",
+	zIndex: 1000
+},
+"#widget[platform=ios formFactor=tablet]":{
+	top:"2%",
 	height:"8%",
 //	layout:"horizontal",
 	backgroundColor:"#d61314",

@@ -14,6 +14,7 @@
 },
 ".list_view[platform=ios formFactor=tablet]":{
 	height:"200dp",
+	width:Titanium.UI.FILL,
 	backgroundColor:"white",
 	touchEnabled:"true",
 	layout:"horizontal"	
@@ -30,7 +31,7 @@
 	touchEnabled:false,
 	
 },
-"#image[Titanium.Platform.osname == 'ipad']":{
+"#image[platform=ios formFactor=tablet]":{
 	height:"80%",
 	width:"28%",
 	//borderColor:"red",
@@ -58,7 +59,7 @@
 	left:"0",
 	touchEnabled:false,
 },
-"#label1[Titanium.Platform.osname == 'ipad']":{	
+"#label1[platform=ios formFactor=tablet]":{	
 	//borderColor:"yellow",
 	color:"#4F4F4F",
 	font: {
@@ -80,9 +81,9 @@
 	left:"0",
 	touchEnabled:false,
 },
-"#label2[Titanium.Platform.osname == 'ipad']":{
+"#label2[platform=ios formFactor=tablet]":{
 	//top:"24px",
-	top:"0",
+	top:"30%",
 	textAlign:"left",
 	//borderColor:"yellow",
 	color:"#4F4F4F",
@@ -95,18 +96,19 @@
 },
 ".right_view":{
 	//top:"40px",
-	width:"250dp",
+	//width:"250dp",
+	width:"56%",
 	height:"100%",
 	//left: "24dp",
 	touchEnabled:true,
 	//borderColor:"yellow",
 	//layout:"vertical"
 },
-".right_view[Titanium.Platform.osname == 'ipad']":{
+".right_view[platform=ios formFactor=tablet]":{
 	width:"70%",
 	height:"100%",
-	borderColor:"yellow",
-	layout:"vertical"
+	//borderColor:"yellow",
+	//layout:"vertical"
 	
 },
 ".cost_star":{
@@ -119,11 +121,23 @@
 },
 "#cost":{
 	touchEnabled:false,
-	right:"10%",
+	right:"5%",
 	bottom:"10%",
 	color:"#FE4040",
 	font: {
 		fontSize: "15dp",
+		//fontWeight:'bold',
+	},
+	
+},
+"#cost[platform=ios formFactor=tablet]":{
+	touchEnabled:false,
+	right:"10%",
+	//bottom:"10%",
+	top:"40%",
+	color:"#FE4040",
+	font: {
+		fontSize: "28dp",
 		//fontWeight:'bold',
 	},
 	
@@ -164,7 +178,7 @@
 
 ".dropdown":{
 	backgroundColor:"#EDEDED",
-	bottom:"5%",
+	bottom:"10%",
 	layout:"horizontal",
 	//borderColor:"red",
 	left:"5%",
@@ -174,21 +188,58 @@
 	touchEnabled:true,
 	
 },
+".dropdown[platform=ios formFactor=tablet]":{
+	backgroundColor:"#EDEDED",
+	bottom:"5%",
+	layout:"horizontal",
+	//borderColor:"red",
+	left:"2%",
+	top:"55%",
+	height:"40dp",
+	width:"60dp",
+	touchEnabled:true,
+	
+},
 "#quntity":{
 	color:"#333333",
 	left:"10%"
+},
+"#quntity[platform=ios formFactor=tablet]":{
+	color:"#333333",
+	left:"10%",
+	font: {
+		fontSize: "26dp",
+		fontWeight:'medium',
+	},
 },
 ".drop":{
 	color:"#333333",
 	left:"15%"
 },
+".drop[platform=ios formFactor=tablet]":{
+	color:"#333333",
+	left:"15%",
+	font: {
+		fontSize: "26dp",
+		fontWeight:'medium',
+	},
+},
 ".just_a_view":{
 	touchEnabled:true,
 	height:"100%",
 	width:Titanium.UI.FILL,
-	borderColor:"cyan",
+	//borderColor:"cyan",
 	left:0,
 	layout:"horizontal"
+},
+".just_a_view[platform=ios formFactor=tablet]":{
+	touchEnabled:true,
+	height:"100%",
+	width:"700dp",
+	//borderColor:"cyan",
+	left:0,
+	layout:"horizontal",
+	//backgroundColor:"cyan"
 },
 
 ".order_button":{
@@ -226,17 +277,38 @@
 		
 	},
 },
+"#grand_total[platform=ios formFactor=tablet]":{
+	top:"43%",
+	left:"50%",
+	//left:"90%",
+	color:"#333333",
+	font: {
+		fontSize: "25dp",
+		
+	},
+},
 ".text_total":{
 	color:"#333333",
 	top:"40%",
 	left:"10%"
 },
-// ".pop_qty":{
-	// backgroundColor:
-// },
-//////////////
+".text_total[platform=ios formFactor=tablet]":{
+	color:"#333333",
+	top:"40%",
+	left:"10%",
+	font: {
+		fontSize: "25dp",
+		
+	},
+},
+"#label_buy_1[platform=ios formFactor=tablet]":{
+	font: {
+		fontSize: "25dp",
+		
+	},
+},
 ".transperent_view":{
-	top:"7%",
+	top:"8%",
 height:Titanium.UI.FILL,
 width:Titanium.UI.FILL,
 //backgroundColor:"black",
@@ -263,6 +335,18 @@ zIndex:"1000"
 		textAlign:"center",
 		borderRadius:10,
 		top:"30%",
+},
+".buy_button_in_view[platform=ios formFactor=tablet]":{
+	color:"white",
+		width:"100dp",
+		backgroundColor:"red",
+		textAlign:"center",
+		borderRadius:10,
+		top:"22%",
+		font: {
+		fontSize: "25dp",
+		
+	},
 },
 ".delete":{
 	top:"15dp",
@@ -292,6 +376,26 @@ zIndex:"1000"
     borderColor: "#000",
     backgroundColor:"#2F2F2F",
     color:"black",
+    
+},
+"#picker[platform=ios formFactor=tablet]":{
+	left : '42%',
+   // right : '14dp',
+    width :"100dp",
+    height:"60dp",
+    font: {
+        fontFamily:'Arial',
+        fontSize: '30dp',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontcolor:'white'
+  },
+    paddingLeft : '10dp',
+   // top:"15dp",
+    borderWidth : '1dp',
+    borderColor: "#000",
+    backgroundColor:"white",
+    color:"white",
     
 }
 ".delete_font":{

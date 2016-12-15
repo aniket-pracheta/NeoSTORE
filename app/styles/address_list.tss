@@ -11,6 +11,17 @@
 	//borderColor:"cyan",
 	layout:"horizontal"	
 },
+".list_view[platform=ios formFactor=tablet]":{
+	height:"200dp",
+	width:Titanium.UI.FILL,
+	left:"0",
+	top:"5%",
+	backgroundColor:"white",
+	//backgroundColor:"cyan",
+	touchEnabled:true,
+	//borderColor:"cyan",
+	layout:"horizontal"	
+},
 ".just_a_view":{
 	touchEnabled:true,
 	height:"100%",
@@ -23,6 +34,17 @@
 	top:"5%",
 	width:"280dp",
 	height:"86dp",
+	left: "10dp",
+	touchEnabled:true,
+	borderColor:"#333333",
+	borderRadius:"10dp",
+	//layout:"vertical"
+	//color:"#333333",
+},
+".right_view[platform=ios formFactor=tablet]":{
+	top:"5%",
+	width:"90%",
+	height:"90%",
 	left: "10dp",
 	touchEnabled:true,
 	borderColor:"#333333",
@@ -48,10 +70,24 @@
 	left:"10dp",
 	color:"#333333",
 },
+".select[platform=ios formFactor=tablet]":{
+	left:"10dp",
+	color:"#333333",
+	font: {
+		fontSize: "26dp",
+		fontWeight:'medium',
+	},
+},
 "#listview2":{
 	top:"15dp",
 	touchEnabled:true,
 	height:"70%",
+},
+"#listview2[platform=ios formFactor=tablet]":{
+	top:"15dp",
+	touchEnabled:true,
+	height:"70%",
+	//backgroundColor:"cyan"
 },
 ".big_list_view":{
 	//height:"65%"
@@ -67,6 +103,15 @@
 		fontWeight:'medium',
 	},
 },
+".ship[platform=ios formFactor=tablet]":{
+	color:"#333333",
+	top:"11dp",
+	left:"10dp",
+	font: {
+		fontSize: "28dp",
+		fontWeight:'medium',
+	},
+},
 ".del":{
 	right:"10dp",
 	top:"0",
@@ -74,6 +119,16 @@
 	//color:"red",
 	font: {
 		fontSize: "15dp",
+		fontWeight:'medium',
+	},
+},
+".del[platform=ios formFactor=tablet]":{
+	right:"10dp",
+	top:"0",
+	color:"#333333",
+	//color:"red",
+	font: {
+		fontSize: "30dp",
 		fontWeight:'medium',
 	},
 },
@@ -85,4 +140,14 @@
 		fontSize: "15dp",
 		fontWeight:'medium',
 	},
+},
+"#label2[platform=ios formFactor=tablet]":{
+	top:"15dp",
+	left:"10dp",
+	color:"#333333",
+	font: {
+		fontSize: "28dp",
+		fontWeight:'medium',
+	},
 }
+

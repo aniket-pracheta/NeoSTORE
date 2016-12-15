@@ -24,7 +24,7 @@
 	left:"2%",
 	//top:"30px"
 },
-"#image[Titanium.Platform.osname == 'ipad']":{
+"#image[platform=ios formFactor=tablet]":{
 	height:"100%",
 	width:"28%",
 	//borderColor:"red",
@@ -48,7 +48,7 @@
 	},
 	left:"0",
 },
-"#label1[Titanium.Platform.osname == 'ipad']":{	
+"#label1[platform=ios formFactor=tablet]":{	
 	//borderColor:"yellow",
 	color:"#4F4F4F",
 	font: {
@@ -76,7 +76,7 @@
 	},
 	left:"0",
 },
-"#label2[Titanium.Platform.osname == 'ipad']":{
+"#label2[platform=ios formFactor=tablet]":{
 	//top:"24px",
 	textAlign:"left",
 	//borderColor:"yellow",
@@ -98,7 +98,7 @@
 	layout:"vertical"
 	
 },
-".right_view[Titanium.Platform.osname == 'ipad']":{
+".right_view[platform=ios formFactor=tablet]":{
 	//top:"40px",
 	//width:"240dp",
 	width:"70%",
@@ -116,7 +116,7 @@
 	left:"0",
 	layout:"horizontal"
 },
-".cost_star[Titanium.Platform.osname == 'ipad']":{
+".cost_star[platform=ios formFactor=tablet]":{
 	top:"4%",
 	height:"35dp",	
 	//borderColor:"blue",
@@ -134,7 +134,7 @@
 	
 },
 
-"#cost[Titanium.Platform.osname == 'ipad']":{
+"#cost[platform=ios formFactor=tablet]":{
 	left:"0",
 	color:"#FE4040",
 	font: {
@@ -150,7 +150,7 @@
 	//borderColor:"cyan",
 	left:"0",
 }
-".view_cost[(Titanium.Platform.osname == 'ipad')]":{
+".view_cost[(platform=ios formFactor=tablet)]":{
 	height:Titanium.UI.FILL,
 	width:"200dp",
 	//borderColor:"cyan",
@@ -164,7 +164,7 @@
 	layout:"horizontal",
 	left:"21%"
 },
-".star_box[Titanium.Platform.osname == 'ipad']":{
+".star_box[platform=ios formFactor=tablet]":{
 	//borderColor:"red",
 	width:"150dp",
 	height:Titanium.UI.FILL,
@@ -180,7 +180,7 @@
 		//fontWeight:'bold',
 	},
 },
-".star_color[Titanium.Platform.osname == 'ipad']":{
+".star_color[platform=ios formFactor=tablet]":{
 	//top:"5dp",
 	color:"#4F4F4F",
 	font: {
