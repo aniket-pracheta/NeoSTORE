@@ -2,10 +2,18 @@
 	<Window id="store_location_window">
 		<Widget src="header" id="store_location_header"></Widget>
 		<ScrollView class="for_scroll">
-	<View class="container" id="map"></View>
-	<View class="store_address_view"></View>
-	<View class="store_address_view"></View>
-	<View class="store_address_view"></View>
+	<View class="container" id="map">
+		 
+	</View>
+	<View class="store_address_view" >
+		<Label>ruby</Label>
+	</View>
+	<View class="store_address_view">
+		<Label>dadar</Label>
+	</View>
+	<View class="store_address_view">
+		<Label>Agar BAZAR</Label>
+	</View>
 	</ScrollView>
 	</Window>
 </Alloy>

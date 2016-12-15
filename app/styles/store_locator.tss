@@ -1,16 +1,8 @@
 
 ".container" : {
-	top:"9%",
-  height:"40%",
-  mapType: Alloy.Globals.Map.STANDARD_TYPE,
-  region: {
-        latitude: 37.38,
-        latitudeDelta: 0.2,
-        longitude: -122.05,
-        longitudeDelta: 0.2
-    },
-  width:Titanium.UI.FILL,
-  backgroundColor:"cyan"
+	width:Titanium.UI.FILL,
+	height:"40%",
+	top:"5%",
 }
 "#store_location_window":{
 	backgroundColor:"white"
@@ -19,9 +11,9 @@
 	layout:"vertical"
 },
 ".store_address_view":{
-	height:"20%",
+	height:"10%",
   width:Titanium.UI.FILL,
   backgroundColor:"red",
   borderColor:"white",
   touchEnabled:true,
-}
+},

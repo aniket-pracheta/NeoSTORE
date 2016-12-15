@@ -1,5 +1,5 @@
 _ = require("alloy/underscore")._;
-
+Alloy.Globals.Map = require('ti.map');
 //############### GLOBAL FUNCTION FOR SENDING AND RECIVING DATA TO API###########
 Alloy.Globals.someGlobalFunction = function(options, sucesscall,failurecall) {
 	var xhr;
