@@ -60,6 +60,17 @@ var ruby = Map.createAnnotation({
     pincolor:Map.ANNOTATION_RED,
     myid:3 // Custom property to uniquely identify this annotation.
 });
+
+var parel = Map.createAnnotation({	
+    latitude:19.000046,
+    longitude:72.830043,
+    latitudeDelta:0.01,
+     longitudeDelta:0.01,
+    title:"LOWER PAREL",
+    subtitle:'CAFE,PAREL',
+    pincolor:Map.ANNOTATION_RED,
+    myid:10 // Custom property to uniquely identify this annotation.
+});
 var mapview = Map.createView({
 	
     mapType: Map.NORMAL_TYPE,
@@ -69,7 +80,7 @@ var mapview = Map.createView({
     regionFit:true,
     userLocation:true,
    });
-var anno=[station,ruby,pallavi,HARIDAS];
+var anno=[station,ruby,pallavi,HARIDAS,parel];
 //mapview.annotations=[station];
 mapview.annotations=anno;
 $.map.add(mapview);
@@ -79,7 +90,23 @@ $.store_location_window.add($.map);
  //   Ti.API.info("Clicked " + evt.clicksource + " on " + evt.latitude + "," + evt.longitude);
 ///});
 function ruby(){
-//mapview.latitudeDelta=0.01;
-//mapview.longitudeDelta=0.01;
+	//alert("ruby");
+	mapview.region = {latitude:19.024168,longitude:72.844988,
+            latitudeDelta:0.01, longitudeDelta:0.01};
+}
+function station(){
+	//alert("ruby");
+	mapview.region = {latitude:19.018044,longitude:72.843617,
+            latitudeDelta:0.01, longitudeDelta:0.01};
+}
+function agar(){
+	//alert("ruby");
+	mapview.region = {latitude:19.018569,longitude:72.827715,
+            latitudeDelta:0.01, longitudeDelta:0.01};
+}
+function parel(){
+	//alert("ruby");
+	mapview.region = {latitude:19.000046,longitude:72.830043,
+            latitudeDelta:0.01, longitudeDelta:0.01};
 }
 $.store_location_window.open();

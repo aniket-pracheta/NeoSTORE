@@ -13,7 +13,35 @@
 ".store_address_view":{
 	height:"10%",
   width:Titanium.UI.FILL,
-  backgroundColor:"red",
-  borderColor:"white",
+ // backgroundColor:"red",
+  borderColor:"#333333",
   touchEnabled:true,
 },
+".head":{
+	top:"5%",
+	left:"12%",
+	color:"#333333",
+	font: {
+		fontSize: "20dp",
+		//fontWeight:'bold',
+	},
+	
+}
+".addres_text":{
+	top:"30%",
+	left:"12%",
+	color:"#4f4f4f",
+	font: {
+		fontSize: "15dp",
+		//fontWeight:'bold',
+	},
+},
+".icon_menu_size":{
+	color:"#4f4f4f",
+	left:"5%",
+	top:"20%",
+	font: {
+		fontSize: "25dp",
+		//fontWeight:'bold',
+	},
+}

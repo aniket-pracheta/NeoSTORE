@@ -5,14 +5,27 @@
 	<View class="container" id="map">
 		 
 	</View>
-	<View class="store_address_view" >
-		<Label>ruby</Label>
+	<View class="store_address_view" onClick="ruby" >
+		<Label text="\uf041" class="font-icon icon_menu_size"></Label>
+		<Label class="head">RUBY</Label>
+		<Label class="addres_text">29, Senapati Bapat Marg, (Tulsi Pipe Road), Dadar (West)
+Dadar West, Dadar</Label>
 	</View>
-	<View class="store_address_view">
-		<Label>dadar</Label>
+	<View class="store_address_view" onClick="station" >
+		<Label text="\uf041" class="font-icon icon_menu_size"></Label>
+		<Label class="head">DADAR STATION</Label>
+		<Label class="addres_text">Nagusayaki Wadi, Near Dainik Samana Press
+New Prabhadevi Road, Century Bazaar, Prabhadevi</Label>
 	</View>
-	<View class="store_address_view">
-		<Label>Agar BAZAR</Label>
+	<View class="store_address_view" onClick="agar" >
+		<Label text="\uf041" class="font-icon icon_menu_size"></Label>
+		<Label class="head">AGAR BAZAR</Label>
+		<Label class="addres_text">Kashinath Dhuru Marg, Dadar West Prabhadevi Mumbai</Label>
+	</View>
+	<View class="store_address_view" onClick="parel" >
+		<Label text="\uf041" class="font-icon icon_menu_size"></Label>
+		<Label class="head">LOWER PAREL</Label>
+		<Label class="addres_text">Cafe Zoe Mathurdas Mills Compound, N.M Joshi Marg, Lower Parel Lower Parel</Label>
 	</View>
 	</ScrollView>
 	</Window>

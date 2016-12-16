@@ -38,16 +38,7 @@
 	//left:"5%",
 	//top:"30px"
 },
-".firstlabel":{
-	// font:{
-		// fontsize:"45px",
-	// },
-	top:"1%",
-	height:"80px",	
-	borderColor:"blue",
-	width:"70%",
-	left:"2%"
-},
+
 "#label1":{	
 	top:0,
 	//borderColor:"yellow",
