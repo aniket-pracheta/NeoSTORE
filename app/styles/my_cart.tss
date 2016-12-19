@@ -299,7 +299,7 @@
 	},
 },
 ".transperent_view":{
-	top:"8%",
+	//top:"8%",
 height:Titanium.UI.FILL,
 width:Titanium.UI.FILL,
 //backgroundColor:"black",
@@ -309,8 +309,8 @@ zIndex:"1000"
 },
 ".pop_buy":{
 	top:"8%",
-		height:"50%",
-		width:"80%",
+		height:"30%",
+		width:"40%",
 		backgroundColor:"white",
 		borderRadius:"10",
 		layout:"vertical",
@@ -325,7 +325,7 @@ zIndex:"1000"
 		backgroundColor:"red",
 		textAlign:"center",
 		borderRadius:10,
-		top:"30%",
+		top:"13%",
 },
 ".buy_button_in_view[platform=ios formFactor=tablet]":{
 	color:"white",
@@ -350,7 +350,7 @@ zIndex:"1000"
 		borderRadius:"25dp",
 },
 "#picker":{
-	left : '40%',
+	left : '35%',
    // right : '14dp',
     width :"80dp",
     height:"40dp",

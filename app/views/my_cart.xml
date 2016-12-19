@@ -1,6 +1,6 @@
 <Alloy>
 	<Window id="mycart_window">
-		<View class="transperent_view" id="transperent_view_buy">
+		<View class="transperent_view" id="transperent_view_buy2">
 		 <View class="pop_buy">
 		 	<ScrollView class="just_to-scrool">
 			 <Label id="label_buy_1" color="black">Quntity</Label>

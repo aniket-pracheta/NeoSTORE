@@ -8,7 +8,7 @@
     <description>undefined</description>
     <copyright>2016 by webwerks</copyright>
     <icon>appicon.png</icon>
-    <fullscreen>true</fullscreen>
+    <fullscreen>false</fullscreen>
     <navbar-hidden>true</navbar-hidden>
     <analytics>true</analytics>
     <guid>fcfea40c-6f76-4787-9333-9130b86a50c8</guid>
@@ -47,7 +47,7 @@
             <application>
                 <!-- Replace "PASTE YOUR GOOGLE MAPS API KEY HERE" with the Google API key you obtained -->
                 <meta-data android:name="com.google.android.maps.v2.API_KEY"
-                    android:value="AIzaSyBbSrhs7poHM85mVeZK-PmQtHvf9H-PLgU"/>
+                    android:value="AIzaSyBbSrhs7poHM85mVeZK-PmQtHvf9H-PLgU" />
             </application>
         </manifest>
     </android>

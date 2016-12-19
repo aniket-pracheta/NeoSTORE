@@ -11,7 +11,7 @@
 	layout:"vertical",
 },
 ".slide_images":{
-	top:"45dp",
+	//top:"45dp",
 	//borderColor:"green",
 	height:'35%',
 	width:"100%",
@@ -26,7 +26,7 @@
 	layout:"horizontal"
 },
 ".small_products":{
-	left:"5%",
+	left:"4%",
 	top:"15dp",
 	//bottom:"15dp",
 	width:"44%",
@@ -76,7 +76,7 @@
 },
 ".product_size":{
 	font: {		
-		fontSize: "70dp",
+		fontSize: "100dp",
 		fontWeight:"none",
 	},
 },
@@ -92,8 +92,9 @@
 
 ".view_main":{
 	backgroundColor:"white",
-	height:"100%",
+	height:Titanium.UI.FILL,
 	width:Titanium.UI.FILL,
+	//backgroundColor:"transparent",
 	touchEnabled:"true",
 },
 
@@ -185,4 +186,9 @@
 		fontSize: "20dp",
 		
 	},
+},
+".transparent":{
+	height:Titanium.UI.FILL,
+	width:Titanium.UI.FILL,
+	backgroundColor:"green"
 }

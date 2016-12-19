@@ -101,19 +101,27 @@ $.pro_image3.addEventListener('click', chnage_image);
 function buy_pop(){
 	$.label_buy_1.text=args.name;
 	$.image_buy.image=args.product_images;
-	$.transperent_view_buy.visible=true;
+	$.transperent_view_buy2.visible=true;
  }
 
 function popup_rate(){
 	$.label_pop.text=args.name;
 	$.image_of_product.image=args.product_images;
- $.transperent_view.visible=true;
+ $.transperent_view1.visible=true;
  }
 
 
 //################################# Rating products  ###################################
 var rating_send={product_id:args.id
 	,rating:args.rating};
+	
+$.transperent_view1.addEventListener('click',function(e){
+	Ti.API.info(JSON.stringify(e));
+	if(e.source.backgroundColor=="rgba(142,142,142,0.5)"){
+		$.transperent_view1.visible=false;
+	}
+	
+});	
 $.star_raing_view.addEventListener('click',function(e)
 {   
 		Ti.API.info(e.source.id);
@@ -170,7 +178,7 @@ $.star_raing_view.addEventListener('click',function(e)
 	data:rating_send
 					};
     	Alloy.Globals.someGlobalFunction(option,rate_sucess,rate_fail);
-    	$.transperent_view.visible=false;
+    	$.transperent_view1.visible=false;
     }
     
     function rate_sucess(data_recieved){
@@ -183,6 +191,15 @@ $.star_raing_view.addEventListener('click',function(e)
     
 //################################# Adding products to cart ###################################
    var access_token=Alloy.Globals.user_data_fetch.data.access_token;  
+   
+   $.transperent_view_buy2.addEventListener('click',function(e){
+	Ti.API.info(JSON.stringify(e));
+	if(e.source.backgroundColor=="rgba(142,142,142,0.5)"){
+		$.transperent_view_buy2.visible=false;
+	}
+	
+});
+   
     function addtocart(){
     	Ti.API.info($.quantity.value);
     	Ti.API.info(pro_id);
@@ -194,7 +211,7 @@ $.star_raing_view.addEventListener('click',function(e)
 	data:parameters
 					};
     	Alloy.Globals.someGlobalFunction(option,cart_sucess,cart_fail);
-    	$.transperent_view_buy.visible=false;
+    	$.transperent_view_buy2.visible=false;
     	
     }
     

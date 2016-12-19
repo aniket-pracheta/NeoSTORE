@@ -37,7 +37,7 @@
 	
 	
 	<!-- for rating -->
-	<View class="transperent_view" id="transperent_view">
+	<View class="transperent_view" id="transperent_view1">
 	<View id="pop_rating">
 		<ScrollView class="just_to-scrool">
 		<Label class="name_of_product" id="label_pop"></Label>
@@ -55,7 +55,7 @@
 	</View>
 	
 	<!-- for buying -->
-	<View class="transperent_view" id="transperent_view_buy">
+	<View class="transperent_view" id="transperent_view_buy2">
 		 <View class="pop_buy">
 		 	<ScrollView class="just_to-scrool">
 			 <Label class="label_buy_1" id="label_buy_1">hiiii</Label>

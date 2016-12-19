@@ -76,6 +76,14 @@ Alloy.Globals.someGlobalFunction(option, mycart_sucess, mycart_failure);
 //######################### Editing the quntity ###############################3
 var get_qty_view;
 var pro_id;
+
+ $.transperent_view_buy2.addEventListener('click',function(e){
+	Ti.API.info(JSON.stringify(e));
+	if(e.source.backgroundColor=="rgba(142,142,142,0.5)"){
+		$.transperent_view_buy2.visible=false;
+	}
+	
+});
 function change_qty(e){
 	Ti.API.info(JSON.stringify(e));
 	 //Ti.API.info((e.source.text));
@@ -84,7 +92,7 @@ function change_qty(e){
 	 	 {pro_id=e.section.items[itemindex].qty.product_id;}
 	 	 else
 	 	 {pro_id=e.source.product_id;}
-	 $.transperent_view_buy.visible=true;
+	 $.transperent_view_buy2.visible=true;
 
 }
 $.picker.addEventListener('change', function(e) {
@@ -107,7 +115,7 @@ function edit_qty_update(){
 	data:formdata
 				};
 		Alloy.Globals.someGlobalFunction(option1, update_sucess, update_failure);
-		$.transperent_view_buy.visible=false;	
+		$.transperent_view_buy2.visible=false;	
 		$.mycart_window.close();	
 	var win=Alloy.createController('my_cart').getView();
 	win.open();

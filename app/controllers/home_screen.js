@@ -19,6 +19,7 @@ if (typeof Alloy.Globals.user_data_fetch=="undefined") {
  Ti.API.info(access_token);
 //######################## FETCHING USERS DATA ON LODE OF HOME SCREEN #########################################
 function fetch_sucess(data_recieved){
+	require('loder').removeloder($.home_screen);
 	for (var i=0; i < data_recieved.data.product_categories.length; i++) {
 	  						
 	 var  view=Ti.UI.createImageView({image:data_recieved.data.product_categories[i].icon_image,
@@ -38,7 +39,7 @@ function fetch_sucess(data_recieved){
 						////
 									$.scrolling_images.addView(view);	
 	};
-  
+   
 	$.home_screen.open();
 	Ti.API.info(data_recieved.data.product_categories.length);
 	//alert("sucess");
@@ -49,19 +50,22 @@ function fetch_failure(data_recieved){
 var option={
 				method:"GET",
 				send_url:"http://staging.php-dev.in:8844/trainingapp/api/users/getUserData",
-				access_token:access_token,			
-				};	
+				access_token:access_token,				
+			};	
+			{
+		//require('loder').addloder($.home_screen);		
 Alloy.Globals.someGlobalFunction(option,fetch_sucess,fetch_failure);
-
+}
 $.home_screen_header.page_name.text="NeoSTORE";
 $.home_screen_header.BACK.text="\uf0c9";
 
-$.home_screen_header.BACK.addEventListener('click', move);
+$.home_screen_header.BACK.addEventListener('touchstart', move);
 
 
-//######################3 SLIDING MENU FOR HOME SCREEN ##############################
+//###################### SLIDING MENU FOR HOME SCREEN ##############################
 function move() 
-{	
+{
+	 
   Titanium.API.info("You clicked the button");
   var animateRight = Ti.UI.createAnimation({
 	left : 0,
@@ -78,9 +82,16 @@ function move()
  	width:"100%",
 	left:"250dp",
 	right: '-250dp',
+	backgroundColor:"rgba(142,142,142,0.5)",
+	zIndex:200000,
 	curve : Titanium.UI.ANIMATION_CURVE_EASE_IN_OUT,
 	duration : 200
-    });   
+    });  
+     var animatecover = Ti.UI.createAnimation({
+     	//backgroundColor:"transparent",
+     	zIndex:10000,
+     });
+   // $.transparent.animate(animatecover);
     $.view_main.animate(animateheight);
     $.menu.animate(animateRight);
   
@@ -88,7 +99,8 @@ function move()
 
 $.view_main.addEventListener('swipe',function(e)
 {   
-	
+	Ti.API.info(JSON.stringify(e.direction));
+	Ti.API.info("direction"+(e.direction));
 	var viewtrans=Ti.UI.create2DMatrix();
     viewtrans=viewtrans.scale(1);
 	 var animateheight = Ti.UI.createAnimation({
@@ -105,8 +117,14 @@ $.view_main.addEventListener('swipe',function(e)
 	curve : Ti.UI.ANIMATION_CURVE_EASE_IN,
 	duration : 200
     }); 
-    $.menu.animate(animateRight);
-    $.view_main.animate(animateheight);
+    if (e.direction=="left") {
+    	$.menu.animate(animateRight);
+    $.view_main.animate(animateheight); 
+    }
+    if (e.direction=="right") {
+    	move();
+    }
+    
 	});
 	
 //######################3 GOING TO PRODUCT LIST ##############################

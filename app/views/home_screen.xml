@@ -54,7 +54,9 @@
 		</View>	
 		
 		<View class="view_main" id="view_main">
+			
 		<Widget src="header" id="home_screen_header"></Widget>
+		<!-- <View id="transparent" class="transparent"> -->
 		  <ScrollView class="big_view">
 		  		<ScrollableView class="slide_images" id="scrolling_images">  	
 		  </ScrollableView>
@@ -78,7 +80,9 @@
 				<Label text="\uf236" class="font-icon chair product_size" productid="5"></Label>
 			</View>
 			</View>	
+			<!-- </View> -->
 		</ScrollView>
+		
 	</View>
 	
 	</Window>

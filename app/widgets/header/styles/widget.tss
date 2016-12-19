@@ -1,12 +1,12 @@
 "#widget":{
-	top:"2%",
-	height:"30dp",
+	top:"0",
+	height:"40dp",
 //	layout:"horizontal",
 	backgroundColor:"#d61314",
 	zIndex: 1000
 },
 "#widget[platform=ios formFactor=tablet]":{
-	top:"2%",
+	top:"0",
 	height:"8%",
 //	layout:"horizontal",
 	backgroundColor:"#d61314",
@@ -16,6 +16,10 @@
 	color:"#FFFFFF",
 	top:"30%",,
 	left:"10dp",
+	font: {
+		fontSize: "20dp",
+		fontWeight:'bold',
+	},
 },
 "#BACK[platform=ios formFactor=tablet]":{
 	color:"#FFFFFF",

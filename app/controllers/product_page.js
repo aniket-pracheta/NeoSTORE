@@ -34,15 +34,13 @@ $.product_list_header.BACK.addEventListener('click', function(e) {
 var data = [];
 var product_list;
 function make_list_sucess(jsondata) {
+	require('loder').removeloder($.home_screen);
 	//Ti.API.info(jsondata.data);
 	 product_list = jsondata.data;
 	_.each(jsondata.data, function(products, index, products_list) {
-		Ti.API.info(products);
-		 if (products.rating=="1") {
-				 stars1:{
-				 color:"cyan";
-			 }}
-		
+		Ti.API.info(products.rating);
+		 	
+		 			
 			data.push({
 			label2 : {
 				text : products.name
@@ -56,11 +54,21 @@ function make_list_sucess(jsondata) {
 			image : {
 				image : products.product_images
 			},	
-			// if (products.rating=="1") {
-				// stars1:{
-				// color:"cyan"
+			//switch (color) {
+			// 
+				// case 1:stars1 : {
+				// color: "#ffba00"
 			// },
-		 	stars1:{},			
+			// break;
+				// case 2:stars1 : {
+				// color: "#ffba00"
+			// },
+			// stars2 : {
+				// color: "#ffba00"
+			// },
+			// break;
+			// },
+						
 			template : "first",
 			properties : {
 				
@@ -83,7 +91,10 @@ var option = {
 	method : "GET",
 	send_url :"http://staging.php-dev.in:8844/trainingapp/api/products/getList?product_category_id="+product_category_id+"&limit=4"
 };
+{
+require('loder').addloder($.product_list_window);
 Alloy.Globals.someGlobalFunction(option, make_list_sucess, make_list_failure);
+}
 //"http://staging.php-dev.in:8844/trainingapp/api/products/getList?product_category_id=" + product_category_id+"&limit=4"
 function go_to_detail(e){
 	//alert(e.itemIndex);
