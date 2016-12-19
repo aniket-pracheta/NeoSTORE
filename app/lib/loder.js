@@ -18,7 +18,7 @@ exports.addloder=function(parentview){
 		 loaderview=Ti.UI.createView({
 			height:Ti.UI.FILL,
 			width:Ti.UI.FILL,
-			backgroundColor:"yellow",
+			backgroundColor:"transparent",
 		});
 		
 		var viewsmall=Ti.UI.createView({
