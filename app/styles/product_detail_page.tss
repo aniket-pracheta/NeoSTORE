@@ -2,22 +2,22 @@
 ".container" : {
 	// left:"14dp",
 	// right:"14dp",
-	backgroundColor:"white",
+	backgroundColor:"#edeced",
 	// layout:"vertical" 
 	height:Titanium.UI.FILL,
 	width:Titanium.UI.FILL
 },
 ".bigview":{
 	top:"8%",
-	backgroundColor:"white",
+	backgroundColor:"#edeced",
 	left:"14dp",
 	right:"14dp",
-	backgroundColor:"white",
+	
 	layout:"vertical" 
 },
 ".biglabel":{
 	color:"#262626",
-	left:0,
+	left:"2%",
 	top:"2%",	
 	font: {
 		fontSize: "20dp",
@@ -40,7 +40,7 @@ color:"#4f4f4f",
 		fontSize: "16dp",
 		
 	},
-	left:0,
+	left:"2%",
 },
 ".category[platform=ios formFactor=tablet]":{
 color:"#4f4f4f",
@@ -55,7 +55,7 @@ color:"#4f4f4f",
 	font: {
 		fontSize: "12dp",		
 	},
-	left:0,
+	left:"2%",
 },
 ".producer[platform=ios formFactor=tablet]":{
 	color:"#4f4f4f",
@@ -109,13 +109,13 @@ color:"#4f4f4f",
 	//borderColor:"cyan"
 },
 ".cost":{
-	top:"20dp",
+	top:"5dp",
 	//borderColor:"red",
 	height:"25dp",
 	width:Titanium.UI.FILL,
 },
 ".rupee":{
-	left:"0",
+	left:"5%",
 	font: {
 		fontSize: "16dp",		
 	},
@@ -170,6 +170,7 @@ color:"#4f4f4f",
 	height:"79dp",
 	width:"70dp",
 	//borderColor:"cyan",
+	borderWidth:"2dp",
 	left:"5%",	
 },
 ".small_image[platform=ios formFactor=tablet]":{
@@ -202,6 +203,7 @@ color:"#4f4f4f",
 	},
 	//height:"80dp",
 	width:Titanium.UI.FILL,
+	//height:"auto",
 	color:"#333333",
 	left:"2%",
 },
@@ -408,5 +410,21 @@ touchEnabled:true,
 			fontSize:"25dp"
 		}
 		
+},
+".forround_border":{
+	top:"20dp",
+	layout:"vertical",
+	height:Titanium.UI.SIZE,
+	backgroundColor:"white",
+	borderColor:"balck",
+	borderRadius:"10",
+},
+".roundview1":{
+	top:0,
+	layout:"vertical",
+	height:Titanium.UI.SIZE,
+	backgroundColor:"white",
+	borderColor:"balck",
+	borderRadius:"10",
 }
 

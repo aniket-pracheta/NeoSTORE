@@ -9,6 +9,7 @@ Ti.API.info("recive"+JSON.stringify(args));
 Ti.API.info((args.product_images));
 var pro_id=args.id;
 $.product_detail_header.page_name.text = args.name;
+$.product_detail_header.search.text = null;
 $.product_detail_header.BACK.addEventListener('click', function(e) {
 	pro_id="null";
 	Titanium.API.info("You clicked the button");
@@ -98,9 +99,24 @@ function chnage_image(e)
 	//id.borderColor="red";
 	$.pro_image_big.image=e.source.image;
 	}
-$.pro_image1.addEventListener('click', chnage_image);
-$.pro_image2.addEventListener('click', chnage_image);
-$.pro_image3.addEventListener('click', chnage_image);
+$.pro_image1.addEventListener('click',function(e){
+	$.pro_image1.borderColor="red";
+	$.pro_image2.borderColor="null";
+	$.pro_image3.borderColor="null";
+	$.pro_image_big.image=e.source.image;
+});
+$.pro_image2.addEventListener('click', function(e){
+	$.pro_image2.borderColor="red";
+	$.pro_image1.borderColor="null";
+	$.pro_image3.borderColor="null";
+	$.pro_image_big.image=e.source.image;
+});
+$.pro_image3.addEventListener('click', function(e){
+	$.pro_image3.borderColor="red";
+	$.pro_image1.borderColor="null";
+	$.pro_image2.borderColor="null";
+	$.pro_image_big.image=e.source.image;
+});
 
 function buy_pop(){
 	$.label_buy_1.text=args.name;
