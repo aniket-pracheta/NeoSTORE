@@ -15,7 +15,8 @@
 	left:"0",
 	backgroundColor:"white",
 	touchEnabled:true,
-	//borderColor:"cyan",
+	borderColor:"#7f7f7f",
+	borderWidth:"1dp"
 	//layout:"horizontal"	
 },
 ".orderid":{

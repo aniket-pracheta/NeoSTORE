@@ -38,7 +38,7 @@ var access_token=Alloy.Globals.user_data_fetch.data.access_token;
 			},
 			template : "first",
 			properties : {
-				height : "97dp"
+				height : "80dp"
 			},
 		 });
 	});
