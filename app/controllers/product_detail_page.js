@@ -230,7 +230,13 @@ $.star_raing_view.addEventListener('click',function(e)
 	access_token:access_token,
 	data:parameters
 					};
+		if(!($.quantity.value.match(/^\d{1}$/)))			
+					{
+						alert("Only Single Digit Number Allowed");
+					}
+		else{			
     	Alloy.Globals.someGlobalFunction(option,cart_sucess,cart_fail);
+    }
     	$.transperent_view_buy2.visible=false;
     	
     }
