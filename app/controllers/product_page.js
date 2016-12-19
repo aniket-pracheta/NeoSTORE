@@ -39,21 +39,174 @@ function make_list_sucess(jsondata) {
 	 product_list = jsondata.data;
 	_.each(jsondata.data, function(products, index, products_list) {
 		Ti.API.info(products.rating);
-		 	
-		 			
+		var rating=products.rating;
+		switch (rating) {
+			case 1:
 			data.push({
-			label2 : {
-				text : products.name
+				stars1 : {
+				color : "#ffb003"
 			},
-			label : {
-				text : products.producer
+				
+				label2 : {
+					text : products.name
+				},
+				label : {
+					text : products.producer
+				},
+				cost : {
+					text : "Rs." + products.cost
+				},
+				image : {
+					image : products.product_images
+				},	
+				template : "first",
+					properties : {
+				
+					height :(Titanium.Platform.osname == 'ipad')? "200dp":"97dp",
+			       	},
+			
+		    		});
+		break;
+		
+		case 2:
+			data.push({
+				stars1 : {
+				color : "#ffb003"
 			},
-			cost : {
-				text : "Rs." + products.cost
+			stars2 : {
+				color : "#ffb003"
 			},
-			image : {
-				image : products.product_images
-			},	
+				
+				label2 : {
+					text : products.name
+				},
+				label : {
+					text : products.producer
+				},
+				cost : {
+					text : "Rs." + products.cost
+				},
+				image : {
+					image : products.product_images
+				},	
+				template : "first",
+					properties : {
+				
+					height :(Titanium.Platform.osname == 'ipad')? "200dp":"97dp",
+			       	},
+			
+		    		});
+		break;
+		
+		case 3:
+			data.push({
+				stars1 : {
+				color : "#ffb003"
+			},
+			stars2 : {
+				color : "#ffb003"
+			},
+			stars3 : {
+				color : "#ffb003"
+			},
+				
+				label2 : {
+					text : products.name
+				},
+				label : {
+					text : products.producer
+				},
+				cost : {
+					text : "Rs." + products.cost
+				},
+				image : {
+					image : products.product_images
+				},	
+				template : "first",
+					properties : {
+				
+					height :(Titanium.Platform.osname == 'ipad')? "200dp":"97dp",
+			       	},
+			
+		    		});
+		break;
+		
+		case 4:
+			data.push({
+				stars1 : {
+				color : "#ffb003"
+			},
+			stars2 : {
+				color : "#ffb003"
+			},
+			stars3 : {
+				color : "#ffb003"
+			},
+			stars4 : {
+				color : "#ffb003"
+			},
+				
+				label2 : {
+					text : products.name
+				},
+				label : {
+					text : products.producer
+				},
+				cost : {
+					text : "Rs." + products.cost
+				},
+				image : {
+					image : products.product_images
+				},	
+				template : "first",
+					properties : {
+				
+					height :(Titanium.Platform.osname == 'ipad')? "200dp":"97dp",
+			       	},
+			
+		    		});
+		break;
+		
+		case 5:
+			data.push({
+				stars1 : {
+				color : "#ffb003"
+			},
+			stars2 : {
+				color : "#ffb003"
+			},
+			stars3 : {
+				color : "#ffb003"
+			},
+			stars4 : {
+				color : "#ffb003"
+			},
+			stars5 : {
+				color : "#ffb003"
+			},
+				
+				label2 : {
+					text : products.name
+				},
+				label : {
+					text : products.producer
+				},
+				cost : {
+					text : "Rs." + products.cost
+				},
+				image : {
+					image : products.product_images
+				},	
+				template : "first",
+					properties : {
+				
+					height :(Titanium.Platform.osname == 'ipad')? "200dp":"97dp",
+			       	},
+			
+		    		});
+		break;
+		
+		}
 			//switch (color) {
 			// 
 				// case 1:stars1 : {
@@ -69,13 +222,13 @@ function make_list_sucess(jsondata) {
 			// break;
 			// },
 						
-			template : "first",
-			properties : {
-				
-				height :(Titanium.Platform.osname == 'ipad')? "200dp":"97dp",
-			},
-			
-		});
+			// template : "first",
+			// properties : {
+// 				
+				// height :(Titanium.Platform.osname == 'ipad')? "200dp":"97dp",
+			// },
+// 			
+		// });
 	});
 	$.sect.setItems(data);
 	$.listview2.sections = [$.sect];

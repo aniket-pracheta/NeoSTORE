@@ -19,7 +19,7 @@ if (typeof Alloy.Globals.user_data_fetch=="undefined") {
  Ti.API.info(access_token);
 //######################## FETCHING USERS DATA ON LODE OF HOME SCREEN #########################################
 function fetch_sucess(data_recieved){
-	//require('loder').removeloder($.home_screen);
+	require('loder').removeloder();
 	for (var i=0; i < data_recieved.data.product_categories.length; i++) {
 	  						require('loder').removeloder();
 	 var  view=Ti.UI.createImageView({image:data_recieved.data.product_categories[i].icon_image,
@@ -165,6 +165,7 @@ function store(){
 //########################## Getting count in my cart ##################################
 var access_token=Alloy.Globals.user_data_fetch.data.access_token;
 function mycart_sucess(jsondata) {
+	require('loder').removeloder();
 	Ti.API.info("cart is here"+JSON.stringify(jsondata));
 	$.mycar_no.text=jsondata.count;
 	if(jsondata.data == null){
@@ -181,4 +182,7 @@ var option = {
 	send_url :"http://staging.php-dev.in:8844/trainingapp/api/cart",
 	access_token:access_token
 };
+{
+	require('loder').addloder($.home_screen);
 Alloy.Globals.someGlobalFunction(option, mycart_sucess, mycart_failure);
+}
