@@ -18,6 +18,7 @@ $.product_detail_header.BACK.addEventListener('click', function(e) {
 function detail_sucess(jsondata){
 	//Ti.API.info("jsondata.data got data");
 	//Ti.API.info("len"+JSON.stringify(jsondata.data));
+	require('loder').removeloder();
 	{
 	  //jsondata.data.name
 	  $.pro_label1.text=jsondata.data.name;
@@ -85,7 +86,10 @@ var option = {
 	method : "GET",
 	send_url :"http://staging.php-dev.in:8844/trainingapp/api/products/getDetail?product_id="+pro_id
 };
+{
+require('loder').addloder($.product_detail);
 Alloy.Globals.someGlobalFunction(option,detail_sucess, detail_failure);
+}
 ///////////////
 function chnage_image(e)
 {

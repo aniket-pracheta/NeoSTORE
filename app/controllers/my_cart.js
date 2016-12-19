@@ -22,6 +22,7 @@ var access_token=Alloy.Globals.user_data_fetch.data.access_token;
  var data = [];
  var product_list;
 function mycart_sucess(jsondata) {
+	require('loder').removeloder();
 	Ti.API.info("cart is here"+JSON.stringify(jsondata));
 	$.grand_total.text="Rs."+jsondata.total;
 	_.each(jsondata.data, function(products, index, products_list) {
@@ -71,8 +72,11 @@ var option = {
 	send_url :"http://staging.php-dev.in:8844/trainingapp/api/cart",
 	access_token:access_token
 };
-Alloy.Globals.someGlobalFunction(option, mycart_sucess, mycart_failure);
 
+{
+require('loder').addloder($.mycart_window);
+Alloy.Globals.someGlobalFunction(option, mycart_sucess, mycart_failure);
+}
 //######################### Editing the quntity ###############################3
 var get_qty_view;
 var pro_id;

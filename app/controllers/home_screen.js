@@ -19,9 +19,9 @@ if (typeof Alloy.Globals.user_data_fetch=="undefined") {
  Ti.API.info(access_token);
 //######################## FETCHING USERS DATA ON LODE OF HOME SCREEN #########################################
 function fetch_sucess(data_recieved){
-	require('loder').removeloder($.home_screen);
+	//require('loder').removeloder($.home_screen);
 	for (var i=0; i < data_recieved.data.product_categories.length; i++) {
-	  						
+	  						require('loder').removeloder();
 	 var  view=Ti.UI.createImageView({image:data_recieved.data.product_categories[i].icon_image,
 	 								width:Titanium.UI.FILL,
 	 								height:Titanium.UI.FILL});
@@ -53,7 +53,7 @@ var option={
 				access_token:access_token,				
 			};	
 			{
-		//require('loder').addloder($.home_screen);		
+		require('loder').addloder($.home_screen);		
 Alloy.Globals.someGlobalFunction(option,fetch_sucess,fetch_failure);
 }
 $.home_screen_header.page_name.text="NeoSTORE";

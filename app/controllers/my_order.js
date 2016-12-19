@@ -18,6 +18,7 @@ $.myorder_header.BACK.addEventListener('click', function(e) {
 var access_token=Alloy.Globals.user_data_fetch.data.access_token;
  var data = [];
  function orderlist_sucess(jsondata) {
+ 	require('loder').removeloder();
 	Ti.API.info("cart is here"+JSON.stringify(jsondata));
 	Ti.API.info("cart"+(jsondata.data.id));
 	_.each(jsondata.data, function(products, index, products_list) {
@@ -56,7 +57,11 @@ var option = {
 	send_url :"http://staging.php-dev.in:8844/trainingapp/api/orderList",
 	access_token:access_token,
 };
+
+{
+	require('loder').addloder($.my_order_window);
 Alloy.Globals.someGlobalFunction(option, orderlist_sucess, orderlist_failure);
+}
 //######################
 $.listview2.addEventListener('click', function(e) {
 

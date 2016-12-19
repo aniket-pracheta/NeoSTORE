@@ -34,8 +34,8 @@ $.product_list_header.BACK.addEventListener('click', function(e) {
 var data = [];
 var product_list;
 function make_list_sucess(jsondata) {
-	require('loder').removeloder($.home_screen);
 	//Ti.API.info(jsondata.data);
+	require('loder').removeloder();
 	 product_list = jsondata.data;
 	_.each(jsondata.data, function(products, index, products_list) {
 		Ti.API.info(products.rating);
