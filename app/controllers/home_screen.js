@@ -94,24 +94,26 @@ function move()
 	curve : Titanium.UI.ANIMATION_CURVE_EASE_IN_OUT,
 	duration : 200
     });  
-     var animatecover = Ti.UI.createAnimation({
-     	//backgroundColor:"transparent",
-     	zIndex:10000,
-     });
-   // $.transparent.animate(animatecover);
+
    Ti.API.info("what is left="+$.view_main.left);
+   if ($.view_main.left=="250dp") {
+   	//Ti.App.fireEvent('swipe',"click");
+   	
+   	$.menu.animate(animateRight2);
+    $.view_main.animate(animateheight2); 
+    transview.parent.remove(transview);//removing transparent view
+   }
+   else{
     $.view_main.animate(animateheight);
     $.menu.animate(animateRight);
-    $.view_main.add(transview);
+    $.view_main.add(transview);//adding transparent view above main view
+   }
 }
+//enemating back
 
-$.view_main.addEventListener('swipe',function(e)
-{   
-	Ti.API.info(JSON.stringify(e.direction));
-	Ti.API.info("direction"+(e.direction));
-	var viewtrans=Ti.UI.create2DMatrix();
+var viewtrans=Ti.UI.create2DMatrix();
     viewtrans=viewtrans.scale(1);
-	 var animateheight = Ti.UI.createAnimation({
+	 var animateheight2 = Ti.UI.createAnimation({
 	height:"100%",
 	transform:viewtrans,
 	left:"0",
@@ -120,16 +122,21 @@ $.view_main.addEventListener('swipe',function(e)
 	duration : 200
     });  
         
-    var animateRight = Ti.UI.createAnimation({
+    var animateRight2 = Ti.UI.createAnimation({
 	left : "-300",
 	curve : Ti.UI.ANIMATION_CURVE_EASE_IN,
 	duration : 200
     }); 
+
+$.view_main.addEventListener('swipe',function(e)
+{   
+	Ti.API.info(JSON.stringify(e.direction));
+	Ti.API.info("direction"+(e.direction));
+	
     if (e.direction=="left") {
-    	$.menu.animate(animateRight);
-    $.view_main.animate(animateheight); 
-    
-    transview.parent.remove(transview);
+    	$.menu.animate(animateRight2);
+    $.view_main.animate(animateheight2); 
+    transview.parent.remove(transview);//removing transparent view
     }
     if (e.direction=="right") {
     	move();
