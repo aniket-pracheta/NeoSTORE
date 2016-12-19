@@ -63,10 +63,17 @@ $.home_screen_header.BACK.addEventListener('touchstart', move);
 
 
 //###################### SLIDING MENU FOR HOME SCREEN ##############################
+var transview=Ti.UI.createView({
+  	height:Titanium.UI.FILL,
+	width:Titanium.UI.FILL,
+	backgroundColor:"transparent",
+  });
 function move() 
 {
 	 
   Titanium.API.info("You clicked the button");
+  
+  
   var animateRight = Ti.UI.createAnimation({
 	left : 0,
 	curve :Titanium.UI.ANIMATION_CURVE_EASE_IN_OUT,
@@ -82,7 +89,7 @@ function move()
  	width:"100%",
 	left:"250dp",
 	right: '-250dp',
-	backgroundColor:"rgba(142,142,142,0.5)",
+	//backgroundColor:"rgba(142,142,142,0.5)",
 	zIndex:200000,
 	curve : Titanium.UI.ANIMATION_CURVE_EASE_IN_OUT,
 	duration : 200
@@ -92,9 +99,10 @@ function move()
      	zIndex:10000,
      });
    // $.transparent.animate(animatecover);
+   Ti.API.info("what is left="+$.view_main.left);
     $.view_main.animate(animateheight);
     $.menu.animate(animateRight);
-  
+    $.view_main.add(transview);
 }
 
 $.view_main.addEventListener('swipe',function(e)
@@ -120,6 +128,8 @@ $.view_main.addEventListener('swipe',function(e)
     if (e.direction=="left") {
     	$.menu.animate(animateRight);
     $.view_main.animate(animateheight); 
+    
+    transview.parent.remove(transview);
     }
     if (e.direction=="right") {
     	move();

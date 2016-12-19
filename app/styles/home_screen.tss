@@ -13,7 +13,7 @@
 ".slide_images":{
 	//top:"45dp",
 	//borderColor:"green",
-	height:'35%',
+	height:'45%',
 	width:"100%",
 	showPagingControl:"true",
 	overlayEnabled:"true",	
@@ -187,8 +187,4 @@
 		
 	},
 },
-".transparent":{
-	height:Titanium.UI.FILL,
-	width:Titanium.UI.FILL,
-	backgroundColor:"green"
-}
+
