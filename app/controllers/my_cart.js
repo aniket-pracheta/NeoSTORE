@@ -15,6 +15,8 @@ $.mycart_header.BACK.addEventListener('click', function(e) {
 
 	Titanium.API.info("You clicked the button");
 	$.mycart_window.close();
+	var win=Alloy.createController('home_screen').getView();
+		win.open();
 });
 
 //########################## Getting list in my cart ##################################

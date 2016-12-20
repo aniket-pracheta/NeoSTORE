@@ -145,7 +145,7 @@ $.view_main.addEventListener('swipe',function(e)
     
 	});
 	
-//######################3 GOING TO PRODUCT LIST ##############################
+//###################### GOING TO PRODUCT LIST ##############################
 function createProductList(e) {
 	Ti.API.info(JSON.stringify("send"+e.source.productid));
 	var product_clicked=e.source.productid;
@@ -153,7 +153,7 @@ function createProductList(e) {
 	win.open();
 }
 
-//######################3 GOING TO MY ACCOUNT ##############################
+//###################### GOING TO MY ACCOUNT ##############################
 function goto_myaccount(){
 	var win=Alloy.createController('my_account').getView();
 	win.open();
@@ -163,6 +163,7 @@ function goto_myaccount(){
 function gotocart(){
 	var win=Alloy.createController('my_cart').getView();
 	//var win=Alloy.createController('my_cart',access_token).getView();
+	//$.home_screen.close();
 	win.open();
 }
 
