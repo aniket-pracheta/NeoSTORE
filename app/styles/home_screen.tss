@@ -5,7 +5,7 @@
 ".big_view":{
 	top:0,
 	//backgroundColor:"black",
-	borderColor:"cyan",
+	//borderColor:"cyan",
 	height:"100%",
 	width:"100%",
 	layout:"vertical",
