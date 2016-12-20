@@ -33,7 +33,7 @@
 		         
 		         <Button id="register" class="gautum" onClick="editprofile"></Button>
 		         <View class="rest_pass" onClick="resetpassword"  >
-		         	<Label class="reset_label gautum" onClick="resetpassword">RESET PASSWORD</Label>
+		         	<Label class="reset_label gautum" >RESET PASSWORD</Label>
 		         </View>
 		</ScrollView>         
 	</View>

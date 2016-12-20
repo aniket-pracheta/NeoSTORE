@@ -1,6 +1,6 @@
 
 ".container" : {	
-	backgroundImage:'images/neobackgound.jpg',
+	backgroundImage:'images/neobackgound.jpg', 
  
 },
 ".to_center_child":{
@@ -27,6 +27,7 @@
 },
 ".scroll_view":{
 	layout:"vertical",
+	//backgroundColor:"red"
 	//height:"50dp",
 	//left:"10%",
 	//right:"10%",		
