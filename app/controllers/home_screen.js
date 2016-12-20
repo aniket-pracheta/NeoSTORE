@@ -24,7 +24,8 @@ function fetch_sucess(data_recieved){
 	  						require('loder').removeloder();
 	 var  view=Ti.UI.createImageView({image:data_recieved.data.product_categories[i].icon_image,
 	 								width:Titanium.UI.FILL,
-	 								height:Titanium.UI.FILL});
+	 								height:Titanium.UI.FILL,
+	 								proid:data_recieved.data.product_categories[i].id});
 						//##### auto scrolling of image view ###########3	 								
 									var ar = $.scrolling_images.getViews();
 									var t = 0;
@@ -203,3 +204,13 @@ var option = {
 	require('loder').addloder($.home_screen);
 Alloy.Globals.someGlobalFunction(option, mycart_sucess, mycart_failure);
 }
+//########################
+
+$.scrolling_images.addEventListener('click',function(e)
+{
+	Ti.API.info("imageclick=" +JSON.stringify(e));
+	
+	var product_clicked=e.source.proid;
+	var win=Alloy.createController('product_page',product_clicked).getView();
+	win.open();
+});
