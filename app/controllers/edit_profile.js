@@ -97,26 +97,67 @@ function submit(){
 }
 //######################### camera event ########################################
 var videoURL = null;
-$.user_image.addEventListener('click', function() {
+//$.user_image.addEventListener('click', function() {
     // Start an activity with an intent to capture video
     // http://developer.android.com/reference/android/provider/MediaStore.html#ACTION_VIDEO_CAPTURE
     var intent = Titanium.Android.createIntent({ action: 'android.media.action.IMAGE_CAPTURE' });
-    $.edit_profile_window.activity.startActivityForResult(intent, function(e) {
-        if (e.resultCode == Ti.Android.RESULT_OK) {
-            if (e.intent.data != null) {
-                // If everything went OK, save a reference to the video URI
-                videoURL = e.intent.data;
-               // playButton.visible = true;
-    	    }
-            else {
-                Ti.API.error('Could not retrieve media URL!');
-            }
-        }
-        else if (e.resultCode == Ti.Android.RESULT_CANCELED) {
-            Ti.API.trace('User cancelled video capture session.');
-        }
-        else {
-            Ti.API.error('Could not record video!');
-        }
-    });
+    // $.edit_profile_window.activity.startActivityForResult(intent, function(e) {
+    	 // Ti.API.error("camera_wala"+JSON.stringify(e));
+        // if (e.resultCode == Ti.Android.RESULT_OK) {
+            // if (e.intent.data != null) {
+                // // If everything went OK, save a reference to the video URI
+                // videoURL = e.intent.data;
+                // $.user_image.image=e.intent.data;
+               // // playButton.visible = true;
+    	    // }
+            // else {
+                // Ti.API.error('Could not retrieve media URL!');
+            // }
+        // }
+        // else if (e.resultCode == Ti.Android.RESULT_CANCELED) {
+            // Ti.API.trace('User cancelled video capture session.');
+        // }
+        // else {
+            // Ti.API.error('Could not record video!');
+        // }
+    // });
+// });
+
+//
+$.user_image.addEventListener('click', function() {
+	
+    var hasCameraPermissions = Ti.Media.hasCameraPermissions();
+    if (hasCameraPermissions) {
+    	Ti.Media.showCamera({
+		mediaTypes:Titanium.Media.MEDIA_TYPE_PHOTO,
+				success:function(e){
+					Ti.API.error("datahere"+JSON.stringify(e));
+			if(e.mediaTypes === Titanium.Media.MEDIA_TYPE_PHOTO){
+				Ti.API.error("inside datahere"+JSON.stringify(e));
+				$.user_image.image=e.media;
+			}
+		},
+
+	});
+    }
+	
 });
+		// success:function(e){
+			// if(e.mediaTypes === Titanium.Media.MEDIA_TYPE_PHOTO){
+				// // $.user_image.image=e.media;
+			// }
+		// },
+		// error:function(e){
+			// alert("There was Some Error");
+		// },
+		// cancel:function(e){
+			// alert("camera cancelled");
+		// },
+		// allowEditing:true,
+		// saveToPhotoGallery:true,
+		// mediaTypes:Titanium.Media.MEDIA_TYPE_PHOTO,
+	// });
+// });
+
+
+$.edit_profile_window.open;
