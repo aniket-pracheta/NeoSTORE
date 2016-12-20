@@ -38,7 +38,7 @@
 	borderColor:'#ffffff',
 	borderWidth:"2dp",
 	width:"80%",
-	height:"7%",
+	height:"40dp",
 	//left:"20%",
 	//right:"20%",
 	top:"49dp",
