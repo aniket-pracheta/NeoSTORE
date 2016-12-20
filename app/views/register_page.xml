@@ -39,9 +39,9 @@
  					<!-- <view class="tocenetr"> -->
  					<Label id="gender_value" visible="false"></Label>
  					<View class="tocenetr">
-		         	<Label class="gender gautum" left="2%">Gender</Label>
-		         	 <View onClick="toggle" class="gender-radio" left="15">
-		         	 	<Label text="\uf1db" class="font-icon icon_in_text" id="male" onClick="toggle" left="20%"></Label>
+		         	<Label class="gender gautum" left="5dp">Gender</Label>
+		         	 <View onClick="toggle" class="gender-radio" left="30dp">
+		         	 	<Label text="\uf1db" class="font-icon icon_in_text" id="male" onClick="toggle" left="5dp"></Label>
 		         	 	<Label class="labels gautum">Male</Label>
 		         	 </View>
 		         	 

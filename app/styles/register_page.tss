@@ -82,7 +82,7 @@
 
 
 ".gender-radio": {
-	width: "33%",
+	width: "85dp",
 	height:"100%",
 	layout: "horizontal",
 	
@@ -110,7 +110,7 @@ font : {
     },
     textAlign:"center",
     top:"0",
-   left:"5" ,
+   left:"5dp" ,
    width:"25%",	
    color:"white"
 },
@@ -134,7 +134,7 @@ font : {
 },
 
 "#terms":{
-	left:"1%",
+	left:"8dp",
 	font : {
      fontSize : "13dp",    
     },

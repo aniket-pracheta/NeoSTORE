@@ -92,21 +92,21 @@ $.store_location_window.add($.map);
 function ruby(){
 	//alert("ruby");
 	mapview.region = {latitude:19.024168,longitude:72.844988,
-            latitudeDelta:0.06, longitudeDelta:0.06};
+            latitudeDelta:0.04, longitudeDelta:0.04};
 }
 function station(){
 	//alert("ruby");
 	mapview.region = {latitude:19.018044,longitude:72.843617,
-            latitudeDelta:0.06, longitudeDelta:0.06};
+            latitudeDelta:0.04, longitudeDelta:0.04};
 }
 function agar(){
 	//alert("ruby");
 	mapview.region = {latitude:19.018569,longitude:72.827715,
-            latitudeDelta:0.06, longitudeDelta:0.06};
+            latitudeDelta:0.04, longitudeDelta:0.04};
 }
 function parel(){
 	//alert("ruby");
 	mapview.region = {latitude:19.000046,longitude:72.830043,
-            latitudeDelta:0.06, longitudeDelta:0.06};
+            latitudeDelta:0.04, longitudeDelta:0.04};
 }
 $.store_location_window.open();

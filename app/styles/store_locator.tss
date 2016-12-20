@@ -22,17 +22,17 @@
 	left:"12%",
 	color:"#333333",
 	font: {
-		fontSize: "20dp",
+		fontSize: "15dp",
 		//fontWeight:'bold',
 	},
 	
 }
 ".addres_text":{
-	top:"30%",
+	top:"35%",
 	left:"12%",
 	color:"#4f4f4f",
 	font: {
-		fontSize: "15dp",
+		fontSize: "11dp",
 		//fontWeight:'bold',
 	},
 },
