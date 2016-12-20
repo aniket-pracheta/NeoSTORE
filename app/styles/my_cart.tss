@@ -308,8 +308,8 @@ visible:"false",
 zIndex:"1000"
 },
 ".pop_buy":{
-	top:"8%",
-		height:"30%",
+	top:"15%",
+		height:"40%",
 		width:"40%",
 		backgroundColor:"white",
 		borderRadius:"10",
@@ -352,7 +352,7 @@ zIndex:"1000"
 "#picker":{
 	left : '35%',
    // right : '14dp',
-    width :"60dp",
+    width :"50dp",
     height:"40dp",
     font: {
         fontFamily:'Arial',

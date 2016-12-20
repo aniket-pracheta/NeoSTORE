@@ -147,10 +147,14 @@ $.listview2.addEventListener('itemclick', function(e) {
 	 var change_past=past.section.items[past.itemIndex];
 	 change_past.properties.left="0";
 	 change_past.todelete.visible=false;
+	 
 	//update the list
 	 past.section.updateItemAt(past.itemIndex,change_past);
+	 past=undefined;
 	 }
+	 else{
 	  past=e;
+	 }
 });
 
 function delete_sucess(data_recieved){

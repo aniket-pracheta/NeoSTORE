@@ -34,9 +34,9 @@
 				<View class="right_view">
 		  			<Label bindId="label" id="label1"  class="gautum" text="aniketsdfjgdsjkfgdksgffkdghkdfghkdf"  />
 					<Label bindId="label2" id="label2" class="gautum" text="samll text"/>	
-					<View class="dropdown">
+					<View class="dropdown" onClick="change_qty">
 						<Label bindId="qty" id="quntity" onClick="change_qty" product_id="giveit">5</Label>
-						<Label text="\uf107" class="drop font-icon"></Label>
+						<Label text="\uf107" class="drop font-icon" onClick="change_qty"></Label>
 					</View>	
 					
                 <Label bindId="cost"  id="cost" class="gautum" text="Rs.600000"/>
