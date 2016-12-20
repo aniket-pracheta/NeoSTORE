@@ -76,7 +76,7 @@
 },
 ".product_size":{
 	font: {		
-		fontSize: "100dp",
+		fontSize: "85dp",
 		fontWeight:"none",
 	},
 },
