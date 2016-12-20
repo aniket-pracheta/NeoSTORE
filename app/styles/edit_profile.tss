@@ -12,6 +12,7 @@
 	width:"80%",
 	borderColor:"white",
 	borderWidth:"2dp",
+	touchEnabled:true
 },
 ".small_container-1[platform=ios formFactor=tablet]":{
 	borderColor:'#ffffff',
@@ -80,5 +81,6 @@
 	width:Titanium.UI.FILL
 },
 "#dob":{
+	left:"40dp",
 	editable:false,
 }

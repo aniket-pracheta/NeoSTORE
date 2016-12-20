@@ -28,7 +28,8 @@
 		         
 		         <View class="small_container-1" id="fourth">
 		         	<Label text="\uf1fd" class="icon_in_text font-icon"></Label>
-		       	    <TextField class="input gautum" hintText="DOB" id="dob" onClick="getpicker"></TextField>
+		       	    <!-- <TextField class="input gautum" hintText="DOB" id="dob" ></TextField> -->
+		  					<Label class="gautum" id="dob">DOB</Label>
 		         </View>
 		         
 		         <Button id="register" class="gautum" onClick="submit"></Button>
