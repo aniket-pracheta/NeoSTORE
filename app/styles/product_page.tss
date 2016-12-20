@@ -159,11 +159,11 @@
 }
 ".star_box":{
 	//borderColor:"red",
-	width:"80dp",
+	width:"26%",
 	height:Titanium.UI.FILL,
-	right:"0",
+	//right:"5%",
 	layout:"horizontal",
-	//left:"5%"
+	//left:"0",
 },
 ".star_box[platform=ios formFactor=tablet]":{
 	//borderColor:"red",
@@ -177,7 +177,7 @@
 	top:"5dp",
 	color:"#4F4F4F",
 	font: {
-		fontSize: "16dp",
+		fontSize: "15dp",
 		//fontWeight:'bold',
 	},
 },
