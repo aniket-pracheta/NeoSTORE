@@ -127,6 +127,7 @@ var videoURL = null;
 $.user_image.addEventListener('click', function() {
 	
     var hasCameraPermissions = Ti.Media.hasCameraPermissions();
+  
     if (hasCameraPermissions) {
     	Ti.Media.showCamera({
 		mediaTypes:Titanium.Media.MEDIA_TYPE_PHOTO,
