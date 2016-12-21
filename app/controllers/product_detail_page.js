@@ -249,3 +249,5 @@ $.star_raing_view.addEventListener('click',function(e)
     	alert(data_recieved.user_msg);
     }
     
+    
+    

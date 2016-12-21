@@ -4,7 +4,8 @@
   top:"8%"
 },
 ".myaccount_window":{
-	backgroundImage:'images/neobackgound.jpg',
+	//backgroundImage:'images/neobackgound.jpg',
+	backgroundColor:"red"
 },
 ".small_container-1":{
 	top:"13dp",

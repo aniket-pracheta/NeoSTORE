@@ -11,7 +11,7 @@ var viewpicker = Titanium.UI.createView({
 	borderRadius : 10,
 	backgroundColor : '#283747',
 	width : "80%",
-	height :"80%",
+	height :Ti.UI.SIZE,
 });
 
 var picker = Ti.UI.createPicker({
@@ -58,23 +58,24 @@ set.addEventListener('click', function(e) {
 	
 var access_token=Alloy.Globals.user_data_fetch.data.access_token;
 function submit(){
-		Ti.API.log(videoURL);
+		Ti.API.log("imagecodeo64==="+image_pro);
 		var formdata={
 			first_name:$.first_name.value,
 			last_name:$.last_name.value,
 			email:$.email.value,
 			dob:$.dob.text,
-			profile_pic:"noimage",
+			profile_pic:image_pro.text,
 			phone_no:$.phone_number.value,
 		};
-		Ti.API.log(formdata);
+		Ti.API.log(JSON.stringify(formdata));
 		
-	function sucesss(data_recieved){
-		try
-		{
-			 Ti.API.info(data_recieved);
-			 }
-			 catch(e){alert(e.message);}
+	function sucesss(){
+		alert("updated");
+		// try
+		// {
+			 // Ti.API.info(data_recieved);
+			 // }
+			 // catch(e){alert(e.message);}
 			 // alert(data_recieved.message);
 			  //Ti.API.info(data_recieved.user_msg);
 			  
@@ -84,7 +85,7 @@ function submit(){
 		Ti.API.info(data_recieved.message);
 			  alert(data_recieved.message);
 			  Ti.API.info(data_recieved.user_msg);
-			  alert("error");
+			//  alert("error");
 	}		
 
 	var option_edit={
@@ -93,50 +94,38 @@ function submit(){
 				access_token:access_token,
 				data:formdata
 				};
-	Alloy.Globals.someGlobalFunction(option_edit,sucesss,failure);
+	specialforedit(option_edit,sucesss,failure);
 }
 //######################### camera event ########################################
-var videoURL = null;
-//$.user_image.addEventListener('click', function() {
-    // Start an activity with an intent to capture video
-    // http://developer.android.com/reference/android/provider/MediaStore.html#ACTION_VIDEO_CAPTURE
-    var intent = Titanium.Android.createIntent({ action: 'android.media.action.IMAGE_CAPTURE' });
-    // $.edit_profile_window.activity.startActivityForResult(intent, function(e) {
-    	 // Ti.API.error("camera_wala"+JSON.stringify(e));
-        // if (e.resultCode == Ti.Android.RESULT_OK) {
-            // if (e.intent.data != null) {
-                // // If everything went OK, save a reference to the video URI
-                // videoURL = e.intent.data;
-                // $.user_image.image=e.intent.data;
-               // // playButton.visible = true;
-    	    // }
-            // else {
-                // Ti.API.error('Could not retrieve media URL!');
-            // }
-        // }
-        // else if (e.resultCode == Ti.Android.RESULT_CANCELED) {
-            // Ti.API.trace('User cancelled video capture session.');
-        // }
-        // else {
-            // Ti.API.error('Could not record video!');
-        // }
-    // });
-// });
+var image_pro;
 
-//
+
 $.user_image.addEventListener('click', function() {
 	
     var hasCameraPermissions = Ti.Media.hasCameraPermissions();
-  
+     Ti.API.info("haspermi"+hasCameraPermissions);
     if (hasCameraPermissions) {
     	Ti.Media.showCamera({
-		mediaTypes:Titanium.Media.MEDIA_TYPE_PHOTO,
+		mediaTypes:[Titanium.Media.MEDIA_TYPE_PHOTO],
+		// allowEditing:true,
+		saveToPhotoGallery:true,
 				success:function(e){
-					Ti.API.error("datahere"+JSON.stringify(e));
-			if(e.mediaTypes === Titanium.Media.MEDIA_TYPE_PHOTO){
-				Ti.API.error("inside datahere"+JSON.stringify(e));
-				$.user_image.image=e.media;
-			}
+				
+					Ti.API.info("datahere"+JSON.stringify(e));
+
+				Ti.API.info("inside datahere"+JSON.stringify(e));
+				Ti.API.info("picher"+e.media.file.nativePath);
+				//$.user_image.image=e.media.file.nativePath;
+				image_pro=Ti.Utils.base64encode(e.media.file.nativePath.toString());
+				
+				Ti.API.info("encodeimage="+image_pro);
+				$.user_image.setImage( e.media.file.nativePath);
+		},
+		error:function(e){
+			alert("There was Some Error");
+		},
+		cancel:function(e){
+			alert("camera cancelled");
 		},
 
 	});
@@ -160,5 +149,27 @@ $.user_image.addEventListener('click', function() {
 	// });
 // });
 
+function specialforedit(options, sucesscall,failurecall) {
+	Ti.API.info("in specila function");
+	var xhr;
+	xhr = Ti.Network.createHTTPClient({
+		onload : function(e) {
+			Ti.API.info(JSON.stringify(this.responseText));
+			sucesscall();
+				},
+				
+		onerror:function(e){
+			Ti.API.info(JSON.stringify(e));
+			failurecall(JSON.parse(this.responseText));
+		},
+	});
+	xhr.open(options.method,options.send_url);
+	if (options.access_token) {
+		//Ti.API.info("header present");
+		xhr.setRequestHeader('access_token',options.access_token);
+	};
+	Ti.API.info("here"+JSON.stringify(options.send_url));
+	xhr.send(options.data);
+};
 
 $.edit_profile_window.open;
