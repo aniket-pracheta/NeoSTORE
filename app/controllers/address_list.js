@@ -81,7 +81,6 @@ var address;
 
 $.listview2.addEventListener('itemclick', function(e) {
 	var user = e.section.getItemAt(e.itemIndex);
-	Ti.API.info(JSON.stringify(e));
 	Ti.API.info('A' + e.section.items[e.itemIndex].icon.text);
 	var latest=e.section.items[e.itemIndex];
 	latest.icon.text="\uf192";
@@ -91,12 +90,16 @@ $.listview2.addEventListener('itemclick', function(e) {
 	if ( typeof past != "undefined") {
 	var change_past=past.section.items[past.itemIndex];
 	change_past.icon.text="\uf10c";
+	
 	//update the list
 	past.section.updateItemAt(past.itemIndex,change_past);
+	past=undefined;
 		Ti.API.info("pastdfhfghjson" + typeof past);
 		Ti.API.info("pastdfhfghjson123456" +JSON.stringify(past));
 	}
+	else{
 	 past=e;
+	}
 });
 
 //######################## sending final address for order#######################
