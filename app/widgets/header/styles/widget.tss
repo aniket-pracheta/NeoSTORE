@@ -12,10 +12,10 @@
 	backgroundColor:"#d61314",
 	zIndex: 1000
 },
-"#BACK":{
+".buttons":{
 	color:"#FFFFFF",
-	top:"30%",,
-	left:"10dp",
+	//top:"30%",,
+	//left:"10dp",
 	font: {
 		fontSize: "20dp",
 		fontWeight:'bold',
@@ -32,7 +32,7 @@
 }
 "#page_name":{
 	color:"#FFFFFF",
-	top:"30%",
+	//top:"30%",
 	//left:"40%",
 	textAlign:Titanium.UI.TEXT_ALIGNMENT_CENTER,
 	font: {
@@ -52,13 +52,25 @@
 	},
 	
 },
-"#search":{
-	right:"10dp",
+".button_search":{
+	right:"20dp",
 	color:"#FFFFFF",
-	top:"30%",,
+	//top:"30%",,
 	//left:"10dp",
 	font: {
 		fontSize: "20dp",
 		fontWeight:'bold',
 	},
+},
+".samll_view":{
+	left:0,
+	height:Titanium.UI.FILL,
+	width:"50dp",
+	//backgroundColor:"green"
+},
+".right_samll_view":{
+	right:0,
+	height:Titanium.UI.FILL,
+	width:"50dp",
+	//backgroundColor:"green"
 }

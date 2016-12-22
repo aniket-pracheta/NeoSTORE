@@ -3,10 +3,7 @@
 // from here go to my_order controller also add argument of address selected
 var args = $.args;
 
-//var win=Alloy.createController('my_order').getView();
-//win.open();
-
-$.address_list_header.search.text = "\uf067";
+$.address_list_header.change_search.text = "\uf067";
 $.address_list_header.page_name.text = "Address List";
 
 $.address_list_header.BACK.addEventListener('click', function(e) {

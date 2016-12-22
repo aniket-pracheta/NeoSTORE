@@ -432,7 +432,9 @@ function validate() {
 			 Ti.API.info(data_recieved.message);
 			  alert(data_recieved.message);
 			  Ti.API.info(data_recieved.user_msg);
-			  alert("sucess");
+			 // alert("sucess");
+			 var win = Alloy.createController('login_page').getView();
+	win.open();
 	}
 
 	function failure(data_recieved){

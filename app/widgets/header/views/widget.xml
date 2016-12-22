@@ -1,9 +1,11 @@
 <Alloy>
 	<View id="widget">
-		
-		<Label  id="BACK" text="\uf053" class="font-icon"></Label>
+		<View class="samll_view" id="BACK">
+		<Label text="\uf053" class="font-icon buttons"></Label>
+		</View>
 		<Label id="page_name" class="gautum">PAGE NAME</Label>
-		<Label id="search" text="\uf002" class="font-icon"></Label>
-		
+		<View class="right_samll_view" id="search">
+		<Label  text="\uf002" class="font-icon button_search" id="change_search"></Label>
+		</View>
 	</View>
 </Alloy>
