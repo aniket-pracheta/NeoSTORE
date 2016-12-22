@@ -17,12 +17,13 @@ function sendmail(){
 			 Ti.API.info(data_recieved.message);
 			  //alert(data_recieved.message);
 			  Ti.API.info(data_recieved.user_msg);
-			alert(data_recieved.user_msg);
+			//alert(data_recieved.user_msg);
 			  
-			  	$.forgot_window.close();
+			  
+			  	alert(data_recieved.user_msg);
 			  	var win=Alloy.createController('login_page').getView();
 						win.open();
-			  
+			 	//$.forgot_window.close(); 
 	}
 
 	function failure(data_recieved){
@@ -38,7 +39,7 @@ function sendmail(){
 				data:formdata
 				};
 				
-		if(!($.email.value.match(/\w*\.?\w+@[a-zA-Z]+\.[a-z]{2,4}/))){		
+		if($.email.value!=""){		
 	Alloy.Globals.someGlobalFunction(option,sucesss,failure);
 	
 	}
