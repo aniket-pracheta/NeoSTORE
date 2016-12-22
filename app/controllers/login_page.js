@@ -16,9 +16,9 @@ function goto_homepage(){
 		$.first.backgroundColor= "orange";		
 		alert("First name required");
 	}
-	else if (!($.password.value.match(/^\w{8,12}$/))) {
+	else if ($.password.value=="") {
 		flag[i++] = 1;
-		alert("Enter 8-12 digit password");
+		alert("Can not be empty");
 		$.second.backgroundColor = "orange";
 		$.password.focus();
 	}
@@ -62,4 +62,9 @@ function register () {
 	var win=Alloy.createController('register_page').getView();
 	win.open();
   
+}
+
+function forgot_pass(){
+	var win=Alloy.createController('forgot_password').getView();
+	win.open();
 }

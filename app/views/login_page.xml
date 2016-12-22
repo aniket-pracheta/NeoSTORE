@@ -22,7 +22,7 @@
 		    </View>		    
 		    
 		    <View class="container_forget">
-		       	    <Label class="gautum foget_label">Forgot Password?</Label>		       	    
+		       	    <Label class="gautum foget_label" onClick="forgot_pass">Forgot Password?</Label>		       	    
 		    </View>
 		    
 		     <View class="container_Account">

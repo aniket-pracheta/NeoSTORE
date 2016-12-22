@@ -384,9 +384,9 @@ function validate() {
 		alert("Last name required");
 		$.second.backgroundColor = "orange";
 		$.last_name.focus();
-	} else if (!($.password.value.match(/^\w{8,12}$/))) {
+	} else if ($.password.value=="") {
 		flag[i++] = 1;
-		alert("Enter 8-12 digit password");
+		alert("Password can not be empty");
 		$.third.backgroundColor = "orange";
 		$.password.focus();
 	} else if (!($.re_password.value == $.password.value)) {
