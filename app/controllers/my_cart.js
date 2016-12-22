@@ -11,6 +11,7 @@ var args = $.args;
 
 
 $.mycart_header.page_name.text ="My Cart";
+$.mycart_header.search.text ="";
 $.mycart_header.BACK.addEventListener('click', function(e) {
 
 	Titanium.API.info("You clicked the button");
@@ -63,6 +64,12 @@ function mycart_sucess(jsondata) {
 	 $.listview2.sections = [$.sect];
 	 $.mycart_window.add($.listview2);
 	 $.mycart_window.open();
+	 
+	 if(jsondata.data==null)
+	 {
+	 	$.orderbutton.visible =false;
+	 	alert(jsondata.user_msg);
+	 }
 }
 
 function mycart_failure(data_recieved) {

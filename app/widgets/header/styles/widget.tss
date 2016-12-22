@@ -33,9 +33,10 @@
 "#page_name":{
 	color:"#FFFFFF",
 	top:"30%",
-	left:"40%",
+	//left:"40%",
 	textAlign:Titanium.UI.TEXT_ALIGNMENT_CENTER,
 	font: {
+		fontSize: "20dp",
 		fontWeight:'bold',
 	},
 	
@@ -52,11 +53,12 @@
 	
 },
 "#search":{
-	//right:0,
+	right:"10dp",
 	color:"#FFFFFF",
-	top:"30%",
-	right:"5%",
+	top:"30%",,
+	//left:"10dp",
 	font: {
+		fontSize: "20dp",
 		fontWeight:'bold',
 	},
 }

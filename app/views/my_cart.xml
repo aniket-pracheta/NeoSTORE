@@ -59,9 +59,9 @@
 	</View>
 	<View class="total_view"> 
 		<Label class="text_total">TOTAL</Label>
-		<Label id="grand_total" class="gautum">5000</Label>
+		<Label id="grand_total" class="gautum">0</Label>
 		</View>
-	<Button class="order_button" onClick="placeorder">ORDER NOW</Button>
+	<Button class="order_button" onClick="placeorder" id="orderbutton">ORDER NOW</Button>
 	</View>
 	
 	

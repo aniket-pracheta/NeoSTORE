@@ -9,7 +9,16 @@ Ti.API.info("recive"+JSON.stringify(args));
 Ti.API.info((args.product_images));
 var pro_id=args.id;
 $.product_detail_header.page_name.text = args.name;
-$.product_detail_header.search.text = null;
+$.product_detail_header.search.text ="\uf07a";
+
+$.product_detail_header.search.addEventListener('click', function(e) {
+	pro_id="null";
+	$.product_detail.close();
+	var win=Alloy.createController('my_cart').getView();
+		win.open();
+
+});
+
 $.product_detail_header.BACK.addEventListener('click', function(e) {
 	pro_id="null";
 	Titanium.API.info("You clicked the button");
