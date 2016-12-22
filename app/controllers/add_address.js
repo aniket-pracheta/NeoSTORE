@@ -14,6 +14,10 @@ $.add_address_header.BACK.addEventListener('click', function(e) {
 });
 
 function push(){
+	if($.address.value==""||$.city.value==""||$.landmark.value==""||+$.state.value==""||$.zipcode.value==""||$.country.value=="")
+	{ alert("Please Fill All Empty Fields");}
+	else
+	{
 	var input_address=$.address.value+","+$.city.value+","+$.landmark.value+","+$.state.value+","+$.zipcode.value+","+$.country.value;
 	db.execute('INSERT INTO ADDRESS (fulladdress) VALUES (?)',input_address);
 	Ti.API.info(input_address);
@@ -29,6 +33,7 @@ function push(){
  $.add_address.close();
  var w=Alloy.createController('address_list').getView();
  w.open();
+ }
  
 }
 // var rows=db.execute('SELECT * FROM ADDRESS');
