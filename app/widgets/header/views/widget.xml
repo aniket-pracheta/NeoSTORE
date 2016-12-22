@@ -1,7 +1,7 @@
 <Alloy>
 	<View id="widget">
 		<View class="samll_view" id="BACK">
-		<Label text="\uf053" class="font-icon buttons"></Label>
+		<Label text="\uf053" class="font-icon buttons" id="change_back"></Label>
 		</View>
 		<Label id="page_name" class="gautum">PAGE NAME</Label>
 		<View class="right_samll_view" id="search">

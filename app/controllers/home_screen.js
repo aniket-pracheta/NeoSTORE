@@ -26,7 +26,7 @@ function fetch_sucess(data_recieved){
 	 								width:Titanium.UI.FILL,
 	 								height:Titanium.UI.FILL,
 	 								proid:data_recieved.data.product_categories[i].id});
-						//##### auto scrolling of image view ###########3	 								
+						//##### auto scrolling of image view ###########	 								
 									var ar = $.scrolling_images.getViews();
 									var t = 0;
 									setInterval(function(e) {
@@ -58,7 +58,7 @@ var option={
 Alloy.Globals.someGlobalFunction(option,fetch_sucess,fetch_failure);
 }
 $.home_screen_header.page_name.text="NeoSTORE";
-$.home_screen_header.BACK.text="\uf0c9";
+$.home_screen_header.change_back.text="\uf0c9";
 
 $.home_screen_header.BACK.addEventListener('touchstart', move);
 
