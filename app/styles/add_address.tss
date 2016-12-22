@@ -54,7 +54,7 @@
 },
 ".txtarea":{
 	height:"80dp",
-	width:"350dp",
+	width:"300dp",
 	backgroundColor:"white",
 	top:"5%",
 	color:"#333333",
@@ -82,12 +82,12 @@
 },
 ".samll_text":{
 	height:"35dp",
-	width:"350dp",
+	width:"300dp",
 	backgroundColor:"white",
 	top:"5%",
 	color:"#333333",
 	font: {
-		fontSize: "17dp",
+		fontSize: "13dp",
 		color:"#333333"
 	//	fontWeight:'bold',
 	}
