@@ -205,7 +205,7 @@ var option = {
 	require('loder').addloder($.home_screen);
 Alloy.Globals.someGlobalFunction(option, mycart_sucess, mycart_failure);
 }
-//########################
+//######################## go to category on scroll image click####################
 
 $.scrolling_images.addEventListener('click',function(e)
 {
