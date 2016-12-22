@@ -3,6 +3,7 @@
 
 	<View class="container">
 		<Widget src="header" id="product_detail_header"></Widget>
+		<Widget src="footer" id="footer_detail_header"></Widget>
 		<ScrollView class="bigview">
 		<View class="roundview1">
 	    <Label class="biglabel" id="pro_label1">hi this is a table</Label>
@@ -21,7 +22,7 @@
 		<View class="forround_border">
 		<View class="cost">
 		<Label class="rupee" id="pro_cost">rs.900000</Label>
-		<Label class="font-icon share" text="\uf1e0 "></Label>
+		<Label class="font-icon share" text="\uf1e0 " onClick="shareit"></Label>
 		</View>
 		<ImageView class="image_big" id="pro_image_big"></ImageView>
 		<View class="detail_images">
@@ -33,8 +34,8 @@
 		<Label class="detail" id="pro_detail">Mild Steel Base In Poder Coated White Finish.8 mm Tempered Glass Table Top.Bottom Shelf In Paimted Brown Glas</Label>
 		</View>
 		<View class="buttons_view">
-			<Button class="custom_button" left="8%" onClick="buy_pop">BUY</Button>
-			<Button class="custom_button" left="5%" onClick="popup_rate">RATE</Button>
+			<!-- <Button class="custom_button" left="8%" onClick="buy_pop">BUY</Button>
+			<Button class="custom_button" left="5%" onClick="popup_rate">RATE</Button> -->
 		</View>
 		</ScrollView>
 	</View>

@@ -1,0 +1,11 @@
+<Alloy>
+	<View id="widget">
+		<View class="samll_view" id="BACK">
+		<Label text="\uf053" class="font-icon buttons" id="change_back">BUY NOW</Label>
+		</View>
+		
+		<View class="right_samll_view" id="search">
+		<Label  text="\uf002" class="font-icon buttons" id="change_search">RATE</Label>
+		</View>
+	</View>
+</Alloy>

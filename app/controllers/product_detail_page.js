@@ -127,17 +127,32 @@ $.pro_image3.addEventListener('click', function(e){
 	$.pro_image_big.image=e.source.image;
 });
 
-function buy_pop(){
+
+$.footer_detail_header.BACK.addEventListener('click', function(e) {
 	$.label_buy_1.text=args.name;
 	$.image_buy.image=args.product_images;
 	$.transperent_view_buy2.visible=true;
- }
 
-function popup_rate(){
+});
+
+// function buy_pop(){
+	// $.label_buy_1.text=args.name;
+	// $.image_buy.image=args.product_images;
+	// $.transperent_view_buy2.visible=true;
+ // }
+ 
+ $.footer_detail_header.search.addEventListener('click', function(e) {
 	$.label_pop.text=args.name;
 	$.image_of_product.image=args.product_images;
  $.transperent_view1.visible=true;
- }
+
+});
+
+// function popup_rate(){
+	// $.label_pop.text=args.name;
+	// $.image_of_product.image=args.product_images;
+ // $.transperent_view1.visible=true;
+ // }
 
 
 //################################# Rating products  ###################################
@@ -257,6 +272,24 @@ $.star_raing_view.addEventListener('click',function(e)
      function cart_fail(data_recieved){
     	alert(data_recieved.user_msg);
     }
-    
+//###############################
+function shareit(){
+	
+	//alert("shareit");
+var photo=args.product_images;	
+ 
+    // Create a blank activity to send data back
+   var shareIntent = Ti.Android.createIntent({
+    action: Ti.Android.ACTION_SEND,
+    type: "image/jpeg"
+});
+alert(photo);
+ 
+   shareIntent.putExtra(Ti.Android.EXTRA_TITLE, "Photo via fb.com/InstaCheckInHD");
+shareIntent.putExtra(Ti.Android.EXTRA_TEXT, "Add comment over here");
+shareIntent.putExtraUri(Ti.Android.EXTRA_STREAM, photo);//edited
+Ti.Android.currentActivity.startActivity(Ti.Android.createIntentChooser(shareIntent, "Share image"));
+
+}    
     
     

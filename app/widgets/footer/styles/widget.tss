@@ -1,0 +1,84 @@
+"#widget":{
+	bottom:"0",
+	height:"50dp",
+	layout:"horizontal",
+	backgroundColor:"white",
+	zIndex: 1000
+},
+"#widget[platform=ios formFactor=tablet]":{
+	top:"0",
+	height:"8%",
+//	layout:"horizontal",
+	backgroundColor:"#d61314",
+	zIndex: 1000
+},
+".buttons":{
+	color:"white",
+	//top:"30%",,
+	//left:"10dp",
+	font: {
+		fontSize: "20dp",
+		fontWeight:'bold',
+	},
+},
+"#BACK[platform=ios formFactor=tablet]":{
+	color:"#FFFFFF",
+	top:"30%",,
+	left:"10dp",
+	font: {		
+		fontSize: "30dp",
+		//fontWeight:"none",
+	},
+}
+"#page_name":{
+	color:"#FFFFFF",
+	//top:"30%",
+	//left:"40%",
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	font: {
+		fontSize: "20dp",
+		fontWeight:'bold',
+	},
+	
+},
+"#page_name[platform=ios formFactor=tablet]":{
+	color:"#FFFFFF",
+	top:"30%",
+	left:"40%",
+	textAlign:Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	font: {
+		fontSize: "30dp",
+		fontWeight:'bold',
+	},
+	
+},
+".button_search":{
+	//right:"20dp",
+	color:"#605758",
+	//top:"30%",,
+	//left:"10dp",
+	font: {
+		fontSize: "20dp",
+		fontWeight:'bold',
+	},
+},
+".samll_view":{
+	top:"10%",
+	left:"10dp",
+	right:"10dp",
+	width:"45%",
+	height:"80%",
+	borderRadius:"10dp",
+	backgroundColor:"#d61314",
+	touchEnabled:true
+},
+".right_samll_view":{
+	top:"10%",
+	right:"10dp",
+	width:"45%",
+	height:"80%",
+	//width:"50dp",
+	backgroundColor:"#d61314",
+	borderRadius:"10dp",
+	touchEnabled:true
+}

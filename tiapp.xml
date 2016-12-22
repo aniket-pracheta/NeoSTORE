@@ -48,6 +48,22 @@
                 <!-- Replace "PASTE YOUR GOOGLE MAPS API KEY HERE" with the Google API key you obtained -->
                 <meta-data android:name="com.google.android.maps.v2.API_KEY"
                     android:value="AIzaSyBbSrhs7poHM85mVeZK-PmQtHvf9H-PLgU" />
+                    <!--for sharing information on twitter-->
+                    <activity android:name=".IntentFilterTestActivity"
+                      android:label="Intent Filter Test" android:theme="@style/Theme.Titanium"
+                      android:configChanges="keyboardHidden|orientation">
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+                <intent-filter>
+                    <data android:scheme="http" android:host="www.appcelerator.com"/>
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <category android:name="android.intent.category.BROWSABLE" />
+                    <action android:name="android.intent.action.VIEW" />
+                </intent-filter>
+            </activity>
+            
             </application>
         </manifest>
     </android>
