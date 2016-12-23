@@ -68,6 +68,7 @@ function mycart_sucess(jsondata) {
 	 if(jsondata.data==null)
 	 {
 	 	$.orderbutton.visible =false;
+	 	$.total_rupee_view.visible =false;
 	 	alert(jsondata.user_msg);
 	 }
 }

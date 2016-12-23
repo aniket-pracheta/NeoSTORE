@@ -1,10 +1,22 @@
 // Arguments passed into this controller can be accessed via the `$.args` object directly or:
-var args = $.args;
+//var args = $.args;
+var args = arguments[0] || {};
+Ti.API.info("edit_data="+JSON.stringify(args));
 
+{
+	$.first_name.value=args.data.user_data.first_name;
+	$.last_name.value=args.data.user_data.last_name;
+	$.email.value=args.data.user_data.email;
+	$.dob.text=args.data.user_data.dob;
+			//profile_pic:image_pro.text,
+	$.phone_number.value=args.data.user_data.phone_no;
+}
 $.edit_profile_header.page_name.text = "Edit Profile";
 $.edit_profile_header.BACK.addEventListener('click', function(e) {
 	Titanium.API.info("You clicked the button");
 	$.edit_profile_window.close();
+	var win=Alloy.createController('my_account').getView();
+	win.open();
 });
 
 var viewpicker = Titanium.UI.createView({

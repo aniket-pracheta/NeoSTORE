@@ -57,7 +57,7 @@
 		</ListView>
 		
 	</View>
-	<View class="total_view"> 
+	<View class="total_view" id="total_rupee_view"> 
 		<Label class="text_total">TOTAL</Label>
 		<Label id="grand_total" class="gautum">0</Label>
 		</View>

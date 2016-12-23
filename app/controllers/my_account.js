@@ -21,8 +21,9 @@ var user_data=Alloy.Globals.user_data_fetch;
  //	};
 $.user_image.setImage( user_data.data.profile_pic);
 
+var pass_data;
 function editprofile(){
-	var w=Alloy.createController('edit_profile').getView();
+	var w=Alloy.createController('edit_profile',pass_data).getView();
     w.open(); 
 }
 
@@ -32,8 +33,10 @@ function resetpassword(){
 }
 //////
 var access_token=Alloy.Globals.user_data_fetch.data.access_token;
+
 function fetch_sucess(data_recieved){
 	//require('loder').removeloder();
+	pass_data=data_recieved;
 	Ti.API.info("firstnameaccount="+JSON.stringify(data_recieved));
 	Ti.API.info("firstnameaccount="+data_recieved.data.first_name);
 $.first_name.hintText=data_recieved.data.user_data.first_name;
