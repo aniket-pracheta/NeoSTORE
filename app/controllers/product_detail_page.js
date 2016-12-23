@@ -53,7 +53,9 @@ function detail_sucess(jsondata){
 	//  Ti.API.info(jsondata.data.description);
 	  $.pro_image_big.image=jsondata.data.product_images[0].image;
 	  $.pro_image1.image=jsondata.data.product_images[0].image;
+	  if (jsondata.data.product_images.length>1) {
 	  $.pro_image2.image=jsondata.data.product_images[1].image;
+	  }
 	  if (jsondata.data.product_images.length>2) {
 	  	$.pro_image3.visible="true";
 	  	$.pro_image3.image=jsondata.data.product_images[2].image;
@@ -283,10 +285,10 @@ var photo=args.product_images;
     action: Ti.Android.ACTION_SEND,
     type: "image/jpeg"
 });
-alert(photo);
+//alert(photo);
  
    shareIntent.putExtra(Ti.Android.EXTRA_TITLE, "Photo via fb.com/InstaCheckInHD");
-shareIntent.putExtra(Ti.Android.EXTRA_TEXT, "Add comment over here");
+shareIntent.putExtra(Ti.Android.EXTRA_TEXT, "One Of Best Product From NeoStore "+args.name);
 shareIntent.putExtraUri(Ti.Android.EXTRA_STREAM, photo);//edited
 Ti.Android.currentActivity.startActivity(Ti.Android.createIntentChooser(shareIntent, "Share image"));
 

@@ -21,6 +21,7 @@ if (product_category_id == 2) {
 }
 //elseif()
 $.product_list_header.page_name.text = title;
+$.product_list_header.change_search.text="";
 $.product_list_header.BACK.addEventListener('click', function(e) {
 	Titanium.API.info("You clicked the button");
 	$.product_list_window.close();
@@ -242,7 +243,7 @@ function make_list_failure(data_recieved) {
 
 var option = {
 	method : "GET",
-	send_url :"http://staging.php-dev.in:8844/trainingapp/api/products/getList?product_category_id="+product_category_id+"&limit=4"
+	send_url :"http://staging.php-dev.in:8844/trainingapp/api/products/getList?product_category_id="+product_category_id+"&limit=10"
 };
 {
 require('loder').addloder($.product_list_window);

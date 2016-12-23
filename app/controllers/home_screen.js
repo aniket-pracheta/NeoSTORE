@@ -62,7 +62,7 @@ Alloy.Globals.someGlobalFunction(option,fetch_sucess,fetch_failure);
 }
 $.home_screen_header.page_name.text="NeoSTORE";
 $.home_screen_header.change_back.text="\uf0c9";
-
+$.home_screen_header.change_search.text="";
 $.home_screen_header.BACK.addEventListener('touchstart', move);
 
 
