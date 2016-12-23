@@ -118,10 +118,57 @@ function submit(){
 //######################### camera event ########################################
 var image_pro;
 
+function option() {
+    Ti.API.info("inside option");
+    $.Cameradialog.setOptions([
+        "Open Camera", "Open Gallary", "Cancel"
+    ]);
+    $.Cameradialog.show();
+    $.Cameradialog.addEventListener('click', function(e) {
+        if (e.index == 0) {
+            Camera_Open();
+        } else if (e.index == 1) {
+            Gallary_Open();
+        } else {
+            alert("plese Select image");
+        }
+    });
+}
 
-$.user_image.addEventListener('click', function() {
-	
-    var hasCameraPermissions = Ti.Media.hasCameraPermissions();
+function Gallary_Open() {
+
+    Titanium.Media.openPhotoGallery({
+        success: function(event) {
+            if (event.mediaType == Ti.Media.MEDIA_TYPE_PHOTO) {
+
+                var image = event.media;
+
+                 image_pro = Ti.Utils.base64encode(image);
+               // $.MyDP.image = image;
+                $.user_image.setImage( image);
+            }
+        },
+
+        error: function(error) {
+            var a = Titanium.UI.createAlertDialog({
+                title: 'Camera'
+            });
+            if (error.code == Titanium.Media.NO_CAMERA) {
+                a.setMessage('Device does not have camera');
+            } else {
+                a.setMessage('Unexpected error: ' + error.code);
+            }
+            a.show();
+            a = null;
+        },
+        saveToPhotoGallery: true,
+        allowEditing: true,
+        mediaTypes: [Ti.Media.MEDIA_TYPE_PHOTO],
+    });
+}
+
+function Camera_Open() {
+	var hasCameraPermissions = Ti.Media.hasCameraPermissions();
      Ti.API.info("haspermi"+hasCameraPermissions);
     if (hasCameraPermissions) {
     	Ti.Media.showCamera({
@@ -149,6 +196,12 @@ $.user_image.addEventListener('click', function() {
 
 	});
     }
+}
+
+$.user_image.addEventListener('click', function() {
+	
+	option();
+    
 	
 });
 		// success:function(e){

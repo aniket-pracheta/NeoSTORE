@@ -5,6 +5,13 @@
 		<ScrollView class="container">
 		<ImageView class="user_image" id="user_image"></ImageView>
 		
+		<OptionDialog id="Cameradialog" title="Select Image">
+                <Options id="Cameraopts">
+                    <Option ></Option>
+
+                </Options>
+            </OptionDialog>
+		
 		<View class="small_container-1" id="first" top="20dp">
 		       	    <Label text="\uf007" class="icon_in_text font-icon"></Label>
 		       	    <TextField class="input gautum" hintText="First Name" id="first_name"></TextField>

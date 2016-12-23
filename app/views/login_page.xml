@@ -9,12 +9,12 @@
 			
 			<View class="small_container-1" id="first">
 		       	    <Label text="\uf007" class="icon_custom font-icon"></Label>
-		       	    <TextField class="input gautum" hintText="Username" id="first_name" value="q@w.com"></TextField>
+		       	    <TextField class="input gautum" hintText="Username" id="first_name"></TextField>
 		    </View>
 		    
 		    <View class="small_container-1" top="40px" id="second">
 		         	<Label text="\uf023" class="icon_custom font-icon"></Label>
-		       	    <TextField class="input gautum" hintText="Password" id="password" passwordMask="true" value="12345678"></TextField>
+		       	    <TextField class="input gautum" hintText="Password" id="password" passwordMask="true" ></TextField>
 		    </View>
 		   
 		    <View class="small_container-1" top="20dp" borderColor="transparent">
