@@ -5,6 +5,8 @@ $.myaccount_header.page_name.text = "My Account";
 $.myaccount_header.BACK.addEventListener('click', function(e) {
 	Titanium.API.info("You clicked the button");
 	$.myaccount_window.close();
+	var win=Alloy.createController('home_screen').getView();
+	win.open();
 });
 
 var user_data=Alloy.Globals.user_data_fetch;

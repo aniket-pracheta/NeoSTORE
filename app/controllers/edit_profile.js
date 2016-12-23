@@ -33,7 +33,7 @@ var set = Ti.UI.createButton({
 		borderRadius : 10
 	});
 
-//date-picker
+//######################## date-picker #######################
 $.fourth.addEventListener('click', function() {
 	//alert("picker");
 	viewpicker.removeAllChildren();
@@ -58,6 +58,11 @@ set.addEventListener('click', function(e) {
 	
 var access_token=Alloy.Globals.user_data_fetch.data.access_token;
 function submit(){
+	if (typeof image_pro=="undefined") {
+		alert("Upload Image");
+	}
+	else
+	{
 		Ti.API.log("imagecodeo64==="+image_pro);
 		var formdata={
 			first_name:$.first_name.value,
@@ -70,7 +75,8 @@ function submit(){
 		Ti.API.log(JSON.stringify(formdata));
 		
 	function sucesss(){
-		alert("updated");
+		alert("Account details updated successfully");
+		$.edit_profile_window.close();
 		// try
 		// {
 			 // Ti.API.info(data_recieved);
@@ -95,6 +101,7 @@ function submit(){
 				data:formdata
 				};
 	specialforedit(option_edit,sucesss,failure);
+	}
 }
 //######################### camera event ########################################
 var image_pro;

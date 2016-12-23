@@ -12,16 +12,19 @@ if (typeof Alloy.Globals.user_data_fetch=="undefined") {
  Ti.API.info(Alloy.Globals.user_data_fetch);
   var access_token=Alloy.Globals.user_data_fetch.data.access_token;
  {
- 	$.user_name.text=Alloy.Globals.user_data_fetch.data.first_name+" "+Alloy.Globals.user_data_fetch.data.last_name;
- 	$.user_email.text=Alloy.Globals.user_data_fetch.data.email;
- 	$.user_image.image=Alloy.Globals.user_data_fetch.data.profile_pic;
+ 	//$.user_name.text=Alloy.Globals.user_data_fetch.data.first_name+" "+Alloy.Globals.user_data_fetch.data.last_name;
+ 	//$.user_email.text=Alloy.Globals.user_data_fetch.data.email;
+ 	//$.user_image.image=Alloy.Globals.user_data_fetch.data.profile_pic;
  }
  Ti.API.info(access_token);
 //######################## FETCHING USERS DATA ON LODE OF HOME SCREEN #########################################
 function fetch_sucess(data_recieved){
 	require('loder').removeloder();
+	$.user_name.text=data_recieved.data.user_data.first_name+" "+data_recieved.data.user_data.last_name;
+ 	$.user_email.text=data_recieved.data.user_data.email;
+ 	$.user_image.image=data_recieved.data.user_data.profile_pic;
 	for (var i=0; i < data_recieved.data.product_categories.length; i++) {
-	  						require('loder').removeloder();
+			  						//require('loder').removeloder();
 	 var  view=Ti.UI.createImageView({image:data_recieved.data.product_categories[i].icon_image,
 	 								width:Titanium.UI.FILL,
 	 								height:Titanium.UI.FILL,
