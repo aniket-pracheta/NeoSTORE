@@ -43,7 +43,7 @@ Alloy.Globals.someGlobalFunction = function(options, sucesscall,failurecall) {
 //######################### DATA BASE FOR ADDRESS########################
 var db = Ti.Database.open('useraddress');
 db.execute('CREATE TABLE IF NOT EXISTS ADDRESS(id INTEGER PRIMARY KEY AUTOINCREMENT,fulladdress TEXT)');
-
+db.execute('CREATE TABLE IF NOT EXISTS logindeatils(id INTEGER PRIMARY KEY AUTOINCREMENT,logobject TEXT)');
 //db.execute('INSERT INTO ADDRESS (fulladdress) VALUES ("thane")');
 //db.execute('DELETE FROM ADDRESS');
 //db.execute('DROP TABLE ADDRESS;');

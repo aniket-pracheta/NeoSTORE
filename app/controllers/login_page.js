@@ -37,7 +37,8 @@ function goto_homepage(){
 	function sucesss(data_recieved){
 			 Ti.API.info(data_recieved.message);
 			  //alert(data_recieved.message);
-			  Ti.API.info(data_recieved.user_msg);
+			  Ti.API.info("aceesinto"+data_recieved.data.access_token);
+			  db.execute('INSERT INTO logindeatils (logobject) VALUES (?)',data_recieved);
 			 // alert("sucess");
 			  if(data_recieved.user_msg=="Logged In successfully")
 			  { 

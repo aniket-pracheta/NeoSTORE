@@ -178,6 +178,9 @@ function my_order(){
 }
 //#################33 log out ############################3
 function log_out(){
+	db.execute('DELETE FROM logindeatils');
+	var rows = db.execute('SELECT * FROM logindeatils');
+Ti.API.info("happy"+rows.rowCount);
 	var w=Alloy.createController('login_page').getView();
     w.open();
 }

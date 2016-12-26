@@ -38,7 +38,10 @@ var product_list;
 function make_list_sucess(jsondata) {
 	//Ti.API.info(jsondata.data);
 	require('loder').removeloder();
-	require('list_loder').removeloder();
+	if (page>1) {
+		require('list_loder').removeloder();
+	}
+	//require('list_loder').removeloder();
 	 product_list = jsondata.data;
 	_.each(jsondata.data, function(products, index, products_list) {
 		Ti.API.info(products.rating);
@@ -220,7 +223,10 @@ function make_list_sucess(jsondata) {
 
 function make_list_failure(data_recieved) {
 	require('loder').removeloder();
-	require('list_loder').removeloder();
+	if(page>1){
+		require('list_loder').removeloder();
+	}
+	//require('list_loder').removeloder();
 	Ti.API.info("error" + data_recieved);
 	page=-1;
 }

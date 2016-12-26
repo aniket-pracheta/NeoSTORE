@@ -16,19 +16,19 @@ function doClick(e) {
 //var w=Alloy.createController('order_detail').getView();
    // w.open();    
 //$.index.open();
-// if(Titanium.Network.networkType == Titanium.Network.NETWORK_NONE){
-//       
-//       
-     // var alertDialog = Titanium.UI.createAlertDialog({
-              // title: 'WARNING!',
-              // message: 'Your device is not online.',
-              // buttonNames: ['OK']
-            // });
-//             
-            // alertDialog.show();
-//             
-// }
- // else{
+var rows = db.execute('SELECT * FROM logindeatils');
+Ti.API.info("happy"+rows.rowCount);
+
+if(rows.rowCount>0){
+	var add = rows.fieldByName('logobject');
+	 Ti.API.info("happy1"+rows.rowCount);
+	 Ti.API.info("happy2"+add);
+	 var w=Alloy.createController('home_screen',add).getView();
+	 w.open();
+	   
+          
+}
+ else{
 	 var w=Alloy.createController('login_page').getView();
 	 w.open(); 
-// }
+}
