@@ -33,10 +33,12 @@ $.product_list_header.BACK.addEventListener('click', function(e) {
 
 //////////////////////
 var data = [];
+var page=1;
 var product_list;
 function make_list_sucess(jsondata) {
 	//Ti.API.info(jsondata.data);
 	require('loder').removeloder();
+	require('list_loder').removeloder();
 	 product_list = jsondata.data;
 	_.each(jsondata.data, function(products, index, products_list) {
 		Ti.API.info(products.rating);
@@ -208,29 +210,8 @@ function make_list_sucess(jsondata) {
 		break;
 		
 		}
-			//switch (color) {
-			// 
-				// case 1:stars1 : {
-				// color: "#ffba00"
-			// },
-			// break;
-				// case 2:stars1 : {
-				// color: "#ffba00"
-			// },
-			// stars2 : {
-				// color: "#ffba00"
-			// },
-			// break;
-			// },
-						
-			// template : "first",
-			// properties : {
-// 				
-				// height :(Titanium.Platform.osname == 'ipad')? "200dp":"97dp",
-			// },
-// 			
-		// });
 	});
+	page++;
 	$.sect.setItems(data);
 	$.listview2.sections = [$.sect];
 	$.product_list_window.add($.listview2);
@@ -238,17 +219,38 @@ function make_list_sucess(jsondata) {
 }
 
 function make_list_failure(data_recieved) {
+	require('loder').removeloder();
+	require('list_loder').removeloder();
 	Ti.API.info("error" + data_recieved);
+	page=-1;
 }
 
 var option = {
 	method : "GET",
-	send_url :"http://staging.php-dev.in:8844/trainingapp/api/products/getList?product_category_id="+product_category_id+"&limit=10"
+	send_url :"http://staging.php-dev.in:8844/trainingapp/api/products/getList?product_category_id="+product_category_id+"&limit=7"+"&page="+page
 };
 {
 require('loder').addloder($.product_list_window);
 Alloy.Globals.someGlobalFunction(option, make_list_sucess, make_list_failure);
 }
+
+//############ on scroll events ##########################
+$.listview2.addEventListener('scrollend',function(e)
+{
+	Ti.API.info("imageclick=" +JSON.stringify(e));
+	//alert("its end of the list");
+	
+	if(page>1){
+	var option = {
+	method : "GET",
+	send_url :"http://staging.php-dev.in:8844/trainingapp/api/products/getList?product_category_id="+product_category_id+"&limit=6"+"&page="+page
+};
+	
+	require('list_loder').addloder($.product_list_window);
+Alloy.Globals.someGlobalFunction(option, make_list_sucess, make_list_failure);
+	}
+});
+
 //"http://staging.php-dev.in:8844/trainingapp/api/products/getList?product_category_id=" + product_category_id+"&limit=4"
 function go_to_detail(e){
 	//alert(e.itemIndex);
