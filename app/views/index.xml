@@ -1,5 +1,5 @@
 <Alloy>
-	<Window class="container">
+	<Window class="container" id="index">
 		<View class="big_view">
 		<Label id="neolabel" onClick="doClick">NeoSTORE</Label>
 		</View>

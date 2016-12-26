@@ -234,7 +234,7 @@ require('loder').addloder($.product_list_window);
 Alloy.Globals.someGlobalFunction(option, make_list_sucess, make_list_failure);
 }
 
-//############ on scroll events ##########################
+//############ on scroll events for lazy loding##########################
 $.listview2.addEventListener('scrollend',function(e)
 {
 	Ti.API.info("imageclick=" +JSON.stringify(e));

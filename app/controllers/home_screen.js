@@ -176,6 +176,11 @@ function my_order(){
 	var win=Alloy.createController('my_order').getView();
 		win.open();
 }
+//#################33 log out ############################3
+function log_out(){
+	var w=Alloy.createController('login_page').getView();
+    w.open();
+}
 
 //#################3 go to store location ##########################
 function store(){

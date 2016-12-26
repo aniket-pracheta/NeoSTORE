@@ -44,7 +44,7 @@
 						<Label text="\uf022" class="font-icon icon_menu_size"></Label>
 						<Label class="icon_menu_text">My Order</Label>
 					</View>
-					<View class="menu_container">
+					<View class="menu_container" onClick="log_out">
 						<Label text="\uf08b" class="font-icon icon_menu_size"></Label>
 						<Label class="icon_menu_text">Logout</Label>
 					</View>

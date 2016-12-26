@@ -4,6 +4,10 @@
 
 var args = $.args;
 
+if (Titanium.Network.networkType == Titanium.Network.NETWORK_NONE) {
+	alert("on kar le bhai..!");
+};
+
 function goto_homepage(){
 	var flag = [];
 	var i = 0;
@@ -68,3 +72,4 @@ function forgot_pass(){
 	var win=Alloy.createController('forgot_password').getView();
 	win.open();
 }
+
