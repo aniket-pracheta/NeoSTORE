@@ -21,9 +21,10 @@ Ti.API.info("happy"+rows.rowCount);
 
 if(rows.rowCount>0){
 	var add = rows.fieldByName('logobject');
+	var send=JSON.parse(add);
 	 Ti.API.info("happy1"+rows.rowCount);
-	 Ti.API.info("happy2"+add);
-	 var w=Alloy.createController('home_screen',add).getView();
+	 Ti.API.info("happy2"+send);
+	 var w=Alloy.createController('home_screen',send).getView();
 	 w.open();
 	   
           

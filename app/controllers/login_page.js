@@ -38,7 +38,16 @@ function goto_homepage(){
 			 Ti.API.info(data_recieved.message);
 			  //alert(data_recieved.message);
 			  Ti.API.info("aceesinto"+data_recieved.data.access_token);
-			  db.execute('INSERT INTO logindeatils (logobject) VALUES (?)',data_recieved);
+			  var datastore=JSON.stringify(data_recieved);
+			  db.execute('INSERT INTO logindeatils (logobject) VALUES (?)',datastore);
+			  var rows = db.execute('SELECT * FROM logindeatils');
+			  var add = rows.fieldByName('logobject');
+			  Ti.API.info("happy"+rows.rowCount);
+			 // Ti.API.info("happy2="+add);
+			  
+			  var send=JSON.parse(add);
+				// Ti.API.info("happy1"+rows.rowCount);
+	 			Ti.API.info("happy2"+send);
 			 // alert("sucess");
 			  if(data_recieved.user_msg=="Logged In successfully")
 			  { 
