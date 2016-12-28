@@ -26,7 +26,8 @@ var load_list = function() {
 	while (rows.isValidRow()) {
 		var id = rows.fieldByName('id');
 		var add = rows.fieldByName('fulladdress');
-		Ti.API.info(id + ' ' + add);
+		var land = rows.fieldByName('landmark');
+		Ti.API.info(id + ' ' + land);
 		data.push({
 			label1 : {
 				address_id : id
@@ -37,6 +38,9 @@ var load_list = function() {
 			},
 			label2 : {
 				text : add,
+			},
+			landmark : {
+				text : land,
 			},
 			template : "first",
 			properties : {
@@ -77,22 +81,27 @@ var past;
 var address;
 
 $.listview2.addEventListener('itemclick', function(e) {
+	var latest;
+	
 	var user = e.section.getItemAt(e.itemIndex);
 	Ti.API.info('A' + e.section.items[e.itemIndex].icon.text);
-	var latest=e.section.items[e.itemIndex];
+	 latest=e.section.items[e.itemIndex];
 	latest.icon.text="\uf192";
 	address=latest.icon.address_full;
 	//update the list
 	e.section.updateItemAt(e.itemIndex, latest);
+	//past=undefined;
+	//latest=undefined;
+
 	if ( typeof past != "undefined") {
 	var change_past=past.section.items[past.itemIndex];
 	change_past.icon.text="\uf10c";
 	
 	//update the list
 	past.section.updateItemAt(past.itemIndex,change_past);
-	past=undefined;
-		Ti.API.info("pastdfhfghjson" + typeof past);
-		Ti.API.info("pastdfhfghjson123456" +JSON.stringify(past));
+	//past=undefined;
+		//Ti.API.info("pastdfhfghjson" + typeof past);
+		
 	}
 	else{
 	 past=e;

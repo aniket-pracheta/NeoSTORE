@@ -12,6 +12,7 @@
 									<Label bindId="icon" id="icon" class="select font-icon"  text="\uf10c" address_full="1"></Label><!-- address="1" -->
 									<View class="right_view">
 										<Label bindId="label1"  class="del font-icon" text="\uf00d" onClick="deleterow" address_id="text" ></Label>
+										<Label bindId="landmark" id="landmark_text" class="gautum"></Label>
 										<Label bindId="label2" id="label2" class="gautum" address_id="text" text="After setting Content-Type, server side script would send an Event: tag followed by event name. Following example w"/>
 									</View>
 								</View>

@@ -9,12 +9,12 @@
 	height:"100dp",
 	backgroundColor:"white",
 	touchEnabled:"true",
-	//layout:"horizontal"	
+	layout:"horizontal"	
 },
 
 "#image":{
-	height:"220px",
-	width:"220px",
+	height:"100%",
+	width:"25%",
 	//borderColor:"red",
 	left:"2%",
 	top:"30px"
@@ -58,10 +58,10 @@
 	left:"0",
 },
 ".right_view":{
-	top:"40px",
-	width:"80%",
+	//top:"40px",
+	width:"70%",
 	height:"80%",
-	left: "23%",
+	left: "3%",
 	//borderColor:"yellow",
 	layout:"vertical"
 	
@@ -122,17 +122,19 @@
 	borderColor:"black",
 	height:"70dp",
 	width:Titanium.UI.FILL,
-	layout:"horizontal",
+	//layout:"horizontal",
 	bottom:"2%"
 },
 ".text_total":{
 	color:"#1c1c1c",
 	top:"40%",
 	left:"10%"
+	
 },
 "#grand_total":{
 	top:"43%",
-	left:"58%",
+	//left:"58%",
+	right:"10%",
 	//left:"90%",
 	color:"#1c1c1c",
 	font: {

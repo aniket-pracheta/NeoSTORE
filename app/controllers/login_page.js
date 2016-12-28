@@ -35,20 +35,22 @@ function goto_homepage(){
 		Ti.API.log(formdata);
 		
 	function sucesss(data_recieved){
+		//require('loder').removeloder();
 			 Ti.API.info(data_recieved.message);
 			  //alert(data_recieved.message);
 			  Ti.API.info("aceesinto"+data_recieved.data.access_token);
 			  var datastore=JSON.stringify(data_recieved);
 			  db.execute('INSERT INTO logindeatils (logobject) VALUES (?)',datastore);
 			  var rows = db.execute('SELECT * FROM logindeatils');
-			  var add = rows.fieldByName('logobject');
-			  Ti.API.info("happy"+rows.rowCount);
+			 // var add = rows.fieldByName('logobject');
+			  //Ti.API.info("happy"+rows.rowCount);
 			 // Ti.API.info("happy2="+add);
 			  
-			  var send=JSON.parse(add);
+			//  var send=JSON.parse(add);
 				// Ti.API.info("happy1"+rows.rowCount);
-	 			Ti.API.info("happy2"+send);
+	 			//Ti.API.info("happy2"+send);
 			 // alert("sucess");
+			 require('loder').removeloder();
 			  if(data_recieved.user_msg=="Logged In successfully")
 			  { 
 			  	var win=Alloy.createController('home_screen',data_recieved).getView();
@@ -57,10 +59,11 @@ function goto_homepage(){
 	}
 
 	function failure(data_recieved){
-		Ti.API.info(data_recieved.message);
+		require('loder').removeloder();
+		//Ti.API.info(data_recieved.message);
 			  alert(data_recieved.message);
-			  Ti.API.info(data_recieved.user_msg);
-			  alert("error");
+			//  Ti.API.info(data_recieved.user_msg);
+			 // alert("error");
 	}		
 
 	var option={
@@ -68,6 +71,7 @@ function goto_homepage(){
 				send_url:"http://staging.php-dev.in:8844/trainingapp/api/users/login",
 				data:formdata
 				};
+	require('loder').addloder($.login_window);
 	Alloy.Globals.someGlobalFunction(option,sucesss,failure);
 	} 	
 }

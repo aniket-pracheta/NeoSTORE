@@ -12,13 +12,6 @@ exports.addloder = function(parentview) {
 			style : Ti.UI.ActivityIndicatorStyle.DARK,
 		});
 
-		loaderview = Ti.UI.createView({
-			height : Ti.UI.FILL,
-			width : Ti.UI.FILL,
-			backgroundColor:"transparent",
-			//backgroundColor : "yellow"
-		});
-
 		 viewsmall = Ti.UI.createView({
 			bottom:"0",
 			height : "70dp",

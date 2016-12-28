@@ -41,7 +41,7 @@
 	height:"40dp",
 	//left:"20%",
 	//right:"20%",
-	top:"49dp",
+	top:"58dp",
 },
 ".small_container-1[platform=ios formFactor=tablet]":{
 	borderColor:'#ffffff',

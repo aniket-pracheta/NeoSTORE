@@ -17,7 +17,8 @@ exports.addloder = function(parentview) {
 		loaderview = Ti.UI.createView({
 			height : Ti.UI.FILL,
 			width : Ti.UI.FILL,
-			backgroundColor:"transparent",
+			//backgroundColor:"transparent",
+			backgroundColor:"rgba(142,142,142,0.5)",
 			//backgroundColor : "yellow"
 		});
 

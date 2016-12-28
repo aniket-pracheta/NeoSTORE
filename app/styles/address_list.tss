@@ -32,7 +32,7 @@
 },
 ".right_view":{
 	top:"5%",
-	width:"280dp",
+	width:"80%",
 	height:"86dp",
 	left: "10dp",
 	touchEnabled:true,
@@ -133,7 +133,7 @@
 	},
 },
 "#label2":{
-	top:"15dp",
+	top:"30%",
 	left:"10dp",
 	color:"#333333",
 	font: {
@@ -142,7 +142,7 @@
 	},
 },
 "#label2[platform=ios formFactor=tablet]":{
-	top:"15dp",
+	top:"30dp",
 	left:"10dp",
 	color:"#333333",
 	font: {
@@ -151,3 +151,12 @@
 	},
 }
 
+"#landmark_text":{
+	top:"5%",
+	left:"10dp",
+	color:"#333333",
+	font: {
+		fontSize: "20dp",
+		fontWeight:'medium',
+	},
+}

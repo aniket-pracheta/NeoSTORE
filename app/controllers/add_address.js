@@ -19,7 +19,7 @@ function push(){
 	else
 	{
 	var input_address=$.address.value+","+$.city.value+","+$.landmark.value+","+$.state.value+","+$.zipcode.value+","+$.country.value;
-	db.execute('INSERT INTO ADDRESS (fulladdress) VALUES (?)',input_address);
+	db.execute('INSERT INTO ADDRESS (fulladdress,landmark) VALUES (?,?)',input_address,$.landmark.value);
 	Ti.API.info(input_address);
 	var rows=db.execute('SELECT * FROM ADDRESS');
 	while (rows.isValidRow()) {

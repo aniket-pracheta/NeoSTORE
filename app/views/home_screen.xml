@@ -28,9 +28,9 @@
 						<Label text="\ue900" class="product_icon icon_menu_size" productid="2"></Label>
 						<Label class="icon_menu_text" productid="2">Chair</Label>
 					</View>
-					<View class="menu_container" onClick="createProductList" productid="5">
-						<Label text="\ue903" class="product_icon icon_menu_size" productid="5"></Label>
-						<Label class="icon_menu_text" productid="5">Cupboards</Label>
+					<View class="menu_container" onClick="createProductList" productid="4">
+						<Label text="\uf236" class="font-icon icon_menu_size" productid="4"></Label>
+						<Label class="icon_menu_text" productid="4">Bed</Label>
 					</View>
 					<View class="menu_container" onClick="goto_myaccount">
 						<Label text="\uf007" class="font-icon icon_menu_size"></Label>
@@ -75,9 +75,9 @@
 				<Label class="gautum chair" productid="2">Chairs</Label>
 				<Label text="\ue900" class="product_icon cupboard product_size" productid="2"></Label>
 			</View>
-			<View class="small_products" top="0"  onClick="createProductList" productid="5">
-				<Label class="gautum cupboard " productid="5">Bed</Label>
-				<Label text="\uf236" class="font-icon chair product_size" productid="5"></Label>
+			<View class="small_products" top="0"  onClick="createProductList" productid="4">
+				<Label class="gautum cupboard " productid="4">Bed</Label>
+				<Label text="\uf236" class="font-icon chair product_size" productid="4"></Label>
 			</View>
 			</View>	
 			
