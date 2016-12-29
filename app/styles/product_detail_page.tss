@@ -63,6 +63,7 @@ color:"#4f4f4f",
 		fontSize: "25dp",		
 	},
 	left:0,
+	width: Titanium.UI.SIZE
 },
 ".star":{
 	font: {
@@ -87,7 +88,7 @@ color:"#4f4f4f",
 },
 ".pro_star[platform=ios formFactor=tablet]":{
 	//borderColor:"red",
-	height:"5%",
+	height:"50dp",
 	width:Titanium.UI.FILL,
 },
 ".star_box":{
@@ -149,7 +150,7 @@ color:"#4f4f4f",
 },
 ".image_big[platform=ios formFactor=tablet]":{
 	width:"40%",
-	height:"30%",
+	height:"40%",
 	//borderColor:"cyan"
 },
 ".detail_images":{
@@ -161,8 +162,8 @@ color:"#4f4f4f",
 },
 ".detail_images[platform=ios formFactor=tablet]":{
 	layout:"horizontal",
-	height:"10%",
-	width:"60%",
+	height:"20%",
+	width:"50%",
 	top:"7dp",
 	//borderColor:"red"
 },
@@ -422,9 +423,25 @@ touchEnabled:true,
 ".roundview1":{
 	top:0,
 	layout:"vertical",
-	height:Titanium.UI.SIZE,
+	height:"20%",
 	backgroundColor:"white",
 	borderColor:"balck",
 	borderRadius:"10",
 }
-
+//platform=ios formFactor=tablet
+".roundview1[platform=ios formFactor=tablet]":{
+	top:0,
+	layout:"vertical",
+	height:Titanium.UI.SIZE,
+	backgroundColor:"white",
+	borderColor:"balck",
+	borderRadius:"10",
+},
+".forround_border[platform=ios formFactor=tablet]":{
+	top:"0dp",
+	layout:"vertical",
+	height:Titanium.UI.SIZE,
+	backgroundColor:"white",
+	borderColor:"balck",
+	borderRadius:"10",
+},

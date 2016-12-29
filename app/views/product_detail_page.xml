@@ -6,18 +6,18 @@
 		<Widget src="footer" id="footer_detail_header"></Widget>
 		<ScrollView class="bigview">
 		<View class="roundview1">
-	    <Label class="biglabel" id="pro_label1">hi this is a table</Label>
-		<Label class="category" id="pro_label2">hi this is a tablefgf</Label>
-		<View class="pro_star">
-		<Label class="producer" id="pro_producer">hi this is a tablefgf</Label>
-	    <View class="star_box">
-		<Label bindId="stars1" id="stars1" class="font-icon star_color" text="\uf005"/>
-		<Label  id="stars2" class="font-icon star_color" text="\uf005"/>
-		<Label id="stars3" class="font-icon star_color" text="\uf005"/>
-		<Label  id="stars4" class="font-icon star_color" text="\uf005"/>
-		<Label  id="stars5" class="font-icon star_color" text="\uf005"/>
-		</View>
-		</View>
+			<Label class="biglabel" id="pro_label1">hi this is a table</Label>
+			<Label class="category" id="pro_label2">hi this is a tablefgf</Label>
+			<View class="pro_star">
+				<Label class="producer" id="pro_producer">hi this is a tablefgf</Label>
+				<View class="star_box">
+					<Label bindId="stars1" id="stars1" class="font-icon star_color" text="\uf005"/>
+					<Label  id="stars2" class="font-icon star_color" text="\uf005"/>
+					<Label id="stars3" class="font-icon star_color" text="\uf005"/>
+					<Label  id="stars4" class="font-icon star_color" text="\uf005"/>
+					<Label  id="stars5" class="font-icon star_color" text="\uf005"/>
+				</View>
+			</View>
 		</View>
 		<View class="forround_border">
 		<View class="cost">

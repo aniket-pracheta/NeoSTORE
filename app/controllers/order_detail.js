@@ -37,7 +37,7 @@ function order_sucess(jsondata) {
 					
 			 template : "first",
 			 properties : {
-			  height : "100dp"
+			  height : (Titanium.Platform.osname == 'ipad')? "190dp":"100dp",
 		 },
 		 });
 	});

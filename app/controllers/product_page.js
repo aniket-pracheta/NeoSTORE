@@ -69,7 +69,7 @@ function make_list_sucess(jsondata) {
 				template : "first",
 					properties : {
 				
-					height :(Titanium.Platform.osname == 'ipad')? "200dp":"97dp",
+					height :(Titanium.Platform.osname == 'ipad')? "220dp":"97dp",
 			       	},
 			
 		    		});
@@ -99,7 +99,7 @@ function make_list_sucess(jsondata) {
 				template : "first",
 					properties : {
 				
-					height :(Titanium.Platform.osname == 'ipad')? "200dp":"97dp",
+					height :(Titanium.Platform.osname == 'ipad')? "220dp":"97dp",
 			       	},
 			
 		    		});
@@ -132,7 +132,7 @@ function make_list_sucess(jsondata) {
 				template : "first",
 					properties : {
 				
-					height :(Titanium.Platform.osname == 'ipad')? "200dp":"97dp",
+					height :(Titanium.Platform.osname == 'ipad')? "220dp":"97dp",
 			       	},
 			
 		    		});
@@ -168,7 +168,7 @@ function make_list_sucess(jsondata) {
 				template : "first",
 					properties : {
 				
-					height :(Titanium.Platform.osname == 'ipad')? "200dp":"97dp",
+					height :(Titanium.Platform.osname == 'ipad')? "220dp":"97dp",
 			       	},
 			
 		    		});
@@ -207,7 +207,7 @@ function make_list_sucess(jsondata) {
 				template : "first",
 					properties : {
 				
-					height :(Titanium.Platform.osname == 'ipad')? "200dp":"97dp",
+					height :(Titanium.Platform.osname == 'ipad')? "220dp":"97dp",
 			       	},
 			
 		    		});

@@ -45,11 +45,34 @@
 	//layout: "horizontal"
 	//backgroundColor:"yellow"
 },
+
+".small_container-1[platform=ios formFactor=tablet]":{
+	borderColor:'#ffffff',
+	borderWidth:"2dp",
+	width:"80%",
+	height:"7%",
+	left:"10%",
+	right:"5%",
+	top:"10dp",
+}
+
 ".radio_container":{
 	top:0,
 	left:"30dp",
 	right:"30dp",
 	height:"62dp",
+	//width:"880px",
+	//width:"300dp",
+	//borderColor:"white",
+	layout: "horizontal"
+},
+
+".radio_container[platform=ios formFactor=tablet]":{
+	//top:0,
+	left:"10%",
+	right:"10%",
+	top:"5dp",
+	height:"13%",
 	//width:"880px",
 	//width:"300dp",
 	//borderColor:"white",
@@ -79,10 +102,19 @@
 	},
 	
 },
+".icon_in_text[platform=ios formFactor=tablet]":{
+   color:"white",
+	left:"5%",
+	//top:"31%",
+	font: {
+		fontSize: "30dp",
+		fontWeight:'bold',
+	},
+},
 
 
 ".gender-radio": {
-	width: "85dp",
+	width: "30%",
 	height:"100%",
 	layout: "horizontal",
 	
@@ -139,6 +171,12 @@ font : {
      fontSize : "13dp",    
     },
 	},
+"#terms[platform=ios formFactor=tablet]":{
+	left:"8dp",
+	font : {
+     fontSize : "30dp",    
+    },
+	},	
 	
 	".terms_condition":{
 			top:"24%",

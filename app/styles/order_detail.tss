@@ -11,7 +11,12 @@
 	touchEnabled:"true",
 	layout:"horizontal"	
 },
-
+".list_view[platform=ios formFactor=tablet]":{
+	height:"160dp",
+	backgroundColor:"white",
+	touchEnabled:"true",
+	layout:"horizontal"	
+},
 "#image":{
 	height:"100%",
 	width:"25%",

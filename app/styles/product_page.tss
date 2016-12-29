@@ -11,7 +11,7 @@
 },
 
 ".list_view[platform=ios formFactor=tablet]":{
-	height:"110dp",
+	height:"150dp",
 	backgroundColor:"white",
 	touchEnabled:"true",
 	layout:"horizontal"	
@@ -27,6 +27,7 @@
 "#image[platform=ios formFactor=tablet]":{
 	height:"100%",
 	width:"28%",
+	touchEnabled:false
 	//borderColor:"red",
 	//left:"5%",
 	//top:"30px"
@@ -47,6 +48,7 @@
 		//fontWeight:'bold',
 	},
 	left:"3%",
+	
 },
 "#label1[platform=ios formFactor=tablet]":{	
 	//borderColor:"yellow",
@@ -56,6 +58,7 @@
 		//fontWeight:'bold',
 	},
 	left:"0",
+	touchEnabled:false
 },
 ".secondlabel":{
 	top:"1%",
@@ -96,7 +99,8 @@
 	height:"90%",
 	//left: "23%",
 	//borderColor:"yellow",
-	layout:"vertical"
+	layout:"vertical",
+	touchEnabled:false
 	
 },
 ".right_view[platform=ios formFactor=tablet]":{
@@ -106,8 +110,8 @@
 	height:"100%",
 	//left: "23%",
 	//borderColor:"yellow",
-	layout:"vertical"
-	
+	layout:"vertical",
+	touchEnabled:false
 },
 ".cost_star":{
 	top:"4%",
@@ -128,6 +132,7 @@
 "#cost":{
 	left:"3%",
 	color:"#FE4040",
+	
 	font: {
 		fontSize: "20dp",
 		//fontWeight:'bold',
@@ -138,6 +143,7 @@
 "#cost[platform=ios formFactor=tablet]":{
 	left:"0",
 	color:"#FE4040",
+	touchEnabled:false,
 	font: {
 		fontSize: "30dp",
 		//fontWeight:'bold',
@@ -193,7 +199,8 @@
 	top:"9%"
 },
 "#listview2[platform=ios formFactor=tablet]":{
-	top:"13%"
+	top:"5%",
+	touchEnabled:true
 },
 ".templates[platform=ios formFactor=tablet]":{
 	properties : {

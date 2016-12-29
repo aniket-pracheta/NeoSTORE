@@ -32,7 +32,7 @@
 },
 ".right_view":{
 	top:"5%",
-	width:"80%",
+	width:"70%",
 	height:"86dp",
 	left: "10dp",
 	touchEnabled:true,

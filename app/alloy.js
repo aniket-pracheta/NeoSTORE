@@ -15,7 +15,10 @@ Alloy.Globals.Map = require('ti.map');
 Alloy.Globals.someGlobalFunction = function(options, sucesscall,failurecall) {
 	var xhr;
 	if (Titanium.Network.networkType == Titanium.Network.NETWORK_NONE) {
+		
 		 alert("Check Internet Connection");
+		 require('loder').removeloder();
+		// return 0;
 	}
 	else
 	{
